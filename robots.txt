@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://srihari-ganesh.github.io/sitemap.xml
