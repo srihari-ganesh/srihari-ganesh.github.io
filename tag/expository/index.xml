@@ -1,1 +1,330 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 1: Counting and Naive Probability</title><link>https://srihari-ganesh.github.io/stat110/week1/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week1/</guid><description>&lt;p>Coming soon!&lt;/p></description></item><item><title>A Local Existence and Uniqueness Theorem for First Order Differential Equations</title><link>https://srihari-ganesh.github.io/projects/math22b/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/math22b/</guid><description>&lt;p>As a student in Math 22b, taught by &lt;a href="https://www.math.harvard.edu/people/grundmeier-dusty/" id="Harvard" type="link">&lt;b>Dr. Dusty Grundmeier&lt;/b>&lt;/a>, I learned introductory proof-based vector calculus with some exposure to limits and continuity. However, I was interested in getting more exposure to real analysis, so for my final project I learned about existence and uniqueness theorems for differential equations and wrote an expository paper presenting a simple case of such a theorem.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 1: Counting and Naive Probability</title><link>https://srihari-ganesh.github.io/stat110/week1/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week1/</guid><description>&lt;h2 id="0-info">0. Info&lt;/h2>
+&lt;ul>
+&lt;li>Associated lectures: 9/5, 9/7&lt;/li>
+&lt;li>Associated pset: Pset 1, due 9/15&lt;/li>
+&lt;li>Where to find me
+&lt;ul>
+&lt;li>Section: Wednesdays 3-4:15pm, see section info on Canvas for location.
+&lt;ul>
+&lt;li>Section will always cover content for the pset due on Friday (in two days)&lt;/li>
+&lt;li>Specifically, this means we&amp;rsquo;ll focus on the lectures from the previous week (six and eight days previous), and not the lecture from the day before section&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Office Hours: Wednesdays 7-11pm, see office hours info on Canvas for location (I will be there for some portion of this time, probably skewed towards the start). I may drop by at the Thursday 7:30-9:30pm office hours in the same location as well.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Syllabus clarifications
+&lt;ul>
+&lt;li>Problem Sets: due Fridays at 5pm. They will cover content up to the previous week (e.g., up to the lecture 8 days before the due date).&lt;/li>
+&lt;li>Attendance: If your grade ends up being slightly below a grade cutoff, attendance in lecture in section may boost you over. Attendance (or lack thereof) will not be used to penalize.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Me: Srihari Ganesh (senior)
+&lt;ul>
+&lt;li>Concentrating in Chemical &amp;amp; Physical Biology and Math w/ a master&amp;rsquo;s in Stat&lt;/li>
+&lt;li>Doing computational biology research in diffusion models for protein structure generation&lt;/li>
+&lt;li>Love teaching Stat + playing IM sports on the side&lt;/li>
+&lt;li>Happy to chat about everything though I&amp;rsquo;m not an expert on anything&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-set-theory">1. Set Theory&lt;/h2>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>A &lt;strong>set&lt;/strong> is an unordered collection of unique items. For example, $A = \{ 8, 1, 2 \}$ is a set with items (&lt;strong>elements&lt;/strong>) $8$, $1$, and $2$.&lt;/p>
+&lt;ul>
+&lt;li>Sets are unordered, so $\{8, 1, 2 \} = \{2, 8, 1\}$.&lt;/li>
+&lt;li>Sets contain unique elemnts, so $\{8, 1, 2, 1\}$ is NOT a set.&lt;/li>
+&lt;li>Sets are a collection of any type of item, so $\{A, B, C\}$, $\{\text{car, cow, walnut}\}$, and $\{$❤️, 👨‍🏫, ⏳$\}$ are all sets.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="11-definitions">1.1 Definitions&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>$A$ is a &lt;strong>subset&lt;/strong> of $B$ (notated $A \subset B$ or $A \subseteq B$) if every element of $A$ is also an element of $B$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>empty set&lt;/strong> (notated $\emptyset$) is the set with no elements, $\{\}$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>union&lt;/strong> (notated $A \cup B$) is the set of all elements that are in $A$ or $B$ (or both).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>intersection&lt;/strong> (notated $A \cap B$) is the set of all elements that are in both $A$ and $B$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>$A$ and $B$ are &lt;strong>disjoint&lt;/strong> if $A$ and $B$ share no elements (notated $A \cap B = \emptyset$)&lt;/p>
+&lt;ul>
+&lt;li>A collection of sets $A_1, \ldots, A_n$ are &lt;strong>disjoint&lt;/strong> if no pair of sets shares any elements ($A_i \cap A_j = \emptyset$ for all $i, j$)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>A collection of sets $B_1, B_2, \ldots, B_n$ are a &lt;strong>parition&lt;/strong> of $B$ if&lt;/p>
+&lt;ul>
+&lt;li>$B_1, B_2, \ldots, B_n$ are disjoint, and&lt;/li>
+&lt;li>$B_1 \cup B_2 \cup \cdots \cup B_n = B$.&lt;/li>
+&lt;/ul>
+&lt;p>Intuitively, $B_1, B_2, \ldots, B_n$ are (non-overlapping) puzzle pieces that form the the puzzle, $B$, when put together.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>complement&lt;/strong> of a set $A$ (notated $A^c$) is the set of all elements not in $A$&lt;/p>
+&lt;ul>
+&lt;li>Complements have to be taken relative to some superset $S$ (notated $A \subset S$). We think of this set as the &amp;ldquo;universe&amp;rdquo; that $A$ lives in, and is usually implied by context.&lt;/li>
+&lt;li>ex. Let $S = \{1, 2, 3 \}, A = \{1, 3\}$. Then $A^c = \{2\}$.&lt;/li>
+&lt;li>Note that $A$ and $A^c$ partition $S$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>cardinality&lt;/strong> of a set, |A|, indicates the size of the set. For finite sets, it is the number of elements in the set.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We notate set membership in the following way: letting $A = \{8, 1, 2\}$,&lt;/p>
+&lt;ul>
+&lt;li>&amp;ldquo;$2$ is in $A$&amp;rdquo; is notated $2 \in A$.&lt;/li>
+&lt;li>&amp;ldquo;$0$ is not in $A$&amp;rdquo; is notated $0 \notin A$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="12-verbal-understanding">1.2 Verbal Understanding&lt;/h3>
+&lt;p>We want to think about basic set operations in words.&lt;/p>
+&lt;ul>
+&lt;li>$x \in A$ reads as &amp;ldquo;$x$ is in $A$&amp;rdquo;.
+&lt;ul>
+&lt;li>We tend to work with sets by thinking about whether some variable or number is in the (e.g., whether or not $x \in A$) instead of just looking at the set written out like $A = \{8, 1, 2\}$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>$A \cup B$ reads as &amp;ldquo;$A$ &lt;em>or&lt;/em> $B$&amp;rdquo;. So we can say $x \in A \cup B$ intuitively reads as &amp;ldquo;$x$ is in $A$ &lt;strong>or&lt;/strong> $x$ is in $B$&amp;rdquo;.
+&lt;ul>
+&lt;li>Be careful to note that we are using the inclusive or, so $A \textit{ or } B$ means $A$, $B$, or both.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>$A \cap B$ reads as &amp;ldquo;$A$ &lt;em>and&lt;/em> $B$&amp;rdquo;. So $x \in A \cap B$ reads as &amp;ldquo;$x$ is in $A$ &lt;strong>and&lt;/strong> $x$ is in $B$&amp;rdquo;.&lt;/li>
+&lt;li>$A^c$ reads as &amp;ldquo;not $A$&amp;rdquo;, so $x \in A^c$ reads as &amp;ldquo;$x$ is not in $A$&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>What if we have multiple operations in the same expression?&lt;/p>
+&lt;ul>
+&lt;li>$x \in (A \cap B)^c$ reads as &amp;ldquo;$x$ is not in both $A$ and $B$&amp;rdquo;. This means that either $x$ is not in $A$ or $x$ is not in $B$, so $x \in A^c \cup B^c$.&lt;/li>
+&lt;li>$x \in (A \cup B)^c$ read as &amp;ldquo;$x$ is not in $A$ or $B$&amp;rdquo;. This means that $x$ is not in $A$ and $x$ is not in $B$, so $x \in A^c \cap B^c$.
+We see that these statements are essentially DeMorgan&amp;rsquo;s laws.&lt;/li>
+&lt;/ul>
+&lt;h3 id="13-demorgans-laws">1.3 DeMorgan&amp;rsquo;s Laws&lt;/h3>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;strong>DeMorgan&amp;rsquo;s Laws&lt;/strong>
+\begin{align}
+(A \cap B)^c &amp;amp;= A^c \cup B^c \\
+(A \cup B)^c &amp;amp;= A^c \cap B^c
+\end{align}
+&lt;/div>
+&lt;/div>
+&lt;p>By talking through the expressions, you should eventually be able to convince yourself that the laws are true.&lt;br>
+These videos also walk through the process visually:
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section1_DeMorgan1.mp4" type="video/mp4">
+&lt;/video>
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section1_DeMorgan2.mp4" type="video/mp4">
+&lt;/video>
+&lt;/p>
+&lt;h2 id="2-counting">2. Counting&lt;/h2>
+&lt;h3 id="20-some-useful-problem-solving-strategies-lifted-from-95-lecture">2.0 Some useful problem-solving strategies (lifted from 9/5 lecture)&lt;/h3>
+&lt;ul>
+&lt;li>Try simple/extreme cases (i.e., set $n$ to be a small number and brute-force)
+&lt;ul>
+&lt;li>For each tool below, we&amp;rsquo;ll motivate it with an example. You can click the drop-down to view the example.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Give objects of interest &lt;em>names&lt;/em> or &lt;em>ID numbers&lt;/em>&lt;/li>
+&lt;li>Draw a diagram&lt;/li>
+&lt;li>Make a story&lt;/li>
+&lt;/ul>
+&lt;h3 id="21-multiplication-rule">2.1 Multiplication Rule&lt;/h3>
+&lt;p>&lt;strong>How many different combinations can you make?&lt;/strong>&lt;br>
+&lt;details class="spoiler " id="spoiler-4">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>&lt;p>If an ice cream parlor has $4$ different flavors and $3$ different cup sizes, there are $4 \times 3 = 12$ different orders I could make.&lt;/p>
+&lt;p>This example exhibits all of the above problem-solving strategies. We took the general multiplication rule (see general statement below) and, made a story about an ice cream parlor, and set $a = 4$, $b=3$. We drew a diagram (the tree below), and gave the objects (flavors and cup sizes) names in that diagram.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Tree diagram of the ice cream parlor example, combining four ice cream flavors and 3 cup sizes to yield 4 times 3 = 12 possible orders." srcset="
+/media/images/Section1_Tree_hu9544750ee73ba0725668d11c52a82e97_147874_29105694be846087f9bc432364e890bc.webp 400w,
+/media/images/Section1_Tree_hu9544750ee73ba0725668d11c52a82e97_147874_9b2c3ae9f8dc6a45b203c506f9118536.webp 760w,
+/media/images/Section1_Tree_hu9544750ee73ba0725668d11c52a82e97_147874_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://srihari-ganesh.github.io/media/images/Section1_Tree_hu9544750ee73ba0725668d11c52a82e97_147874_29105694be846087f9bc432364e890bc.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;/p>
+&lt;/details>&lt;/p>
+&lt;p>&lt;ins>General statement&lt;/ins>: Say the outcome of a full experiment is given by the outcomes of two-subexperiments, $A$ and $B$. If sub-experiment $A$ has $a$ possible outcomes and sub-experiment $B$ has $b$ possible outcomes, then the full experiment has $a \times b$ possible outcomes.&lt;/p>
+&lt;ul>
+&lt;li>Note here that this will work as long as the outcome of $A$ doesn&amp;rsquo;t change the &lt;em>number&lt;/em> of possible outcomes of $B$, even if $A$ changes &lt;em>which&lt;/em> outcomes are possible for $B$.&lt;/li>
+&lt;/ul>
+&lt;h3 id="22-factorial">2.2 Factorial&lt;/h3>
+&lt;p>&lt;strong>How many ways can you order $n$ distinct items?&lt;/strong>&lt;br>
+&lt;details class="spoiler " id="spoiler-5">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>How many ways can $n=52$ card deck of cards be shuffled? I have $52$ options for the first card, then $52-1 = 51$ options for the second card, $52-2 = 50$ options for the third card, and so on. The total number of ways is thus $$52 \times 51 \times 50 \times \cdots \times 2 \times 1.$$&lt;/p>
+&lt;/details>&lt;/p>
+&lt;p>&lt;ins>General statement&lt;/ins>: We use the factorial, $n!$, as a shorthand for this specific application of the multiplication rule. We have $n$ choices for the first item; we can then pick $(n-1)$ choices for the second item, and so on, giving
+$$
+n! = n \times (n-1) \times (n-2) \cdots \times 2 \times 1.
+$$&lt;/p>
+&lt;h3 id="23-permutations">2.3 Permutations&lt;/h3>
+&lt;p>&lt;strong>How many ways can you choose an ordered collection of $k$ distinct items from a set of $n$ distinct items?&lt;/strong>&lt;br>
+&lt;details class="spoiler " id="spoiler-6">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>I want to take a $k=3$ week trip in New England, spending each week in a different state. New England has $n=6$ states, so using the multiplication rule, I have $6 \times 5 \times 4 = 120$ possible trips I can go on.&lt;/p>
+&lt;/details>
+&lt;ins>General statement&lt;/ins>: Using the multiplication rule, the solution is
+$$
+n \times (n-1) \times \cdots \times (n-k+1) = \frac{n!}{(n-k)!}.
+$$&lt;/p>
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;p>Be careful with off-by-one errors when you&amp;rsquo;re listing consecutive integers.&lt;/p>
+&lt;p>For a list of $k$ consecutive integers, the first and last numbers should have a difference of $k-1$.&lt;/p>
+&lt;p>For example, the list &amp;ldquo;$3, 4, 5, 6$&amp;rdquo; has $4$ items, so the difference between the first and last numbers if $6-3 = 3 = 4-1$.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>How many ways can you order a set of $n$ items, where some items are repeated?&lt;/strong>&lt;br>
+&lt;details class="spoiler " id="spoiler-8">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>&lt;p>How many anagrams (orderings/permutations) are there of the word &amp;ldquo;BANANA&amp;rdquo;? In other words, how many $n=6$ letter words have 3 A&amp;rsquo;s, 1 B, and 2 N&amp;rsquo;s?&lt;/p>
+&lt;p>If we treated the letters as distinct, there would be $6!$ ways to order them. However, the 3 A&amp;rsquo;s are identical, so we are overcounting. For example, if we artificially distinguish the A&amp;rsquo;s, we see that&lt;br>
+&amp;ldquo;B&lt;em>A&lt;/em>N&lt;strong>A&lt;/strong>N&lt;ins>A&lt;/ins>&amp;rdquo;, &amp;ldquo;B&lt;strong>A&lt;/strong>N&lt;em>A&lt;/em>N&lt;ins>A&lt;/ins>&amp;rdquo;, &amp;ldquo;B&lt;ins>A&lt;/ins>N&lt;strong>A&lt;/strong>N&lt;em>A&lt;/em>&amp;rdquo;, &amp;ldquo;B&lt;ins>A&lt;/ins>N&lt;em>A&lt;/em>N&lt;strong>A&lt;/strong>&amp;rdquo;, &amp;ldquo;B&lt;strong>A&lt;/strong>N&lt;ins>A&lt;/ins>N&lt;em>A&lt;/em>&amp;rdquo;, and &amp;ldquo;B&lt;em>A&lt;/em>N&lt;ins>A&lt;/ins>N&lt;strong>A&lt;/strong>&amp;rdquo;&lt;br>
+are all counted as different words. This means there we are overcounting the orderings of the 3 A&amp;rsquo;s by $3!$, so we can divide to get $6!/3!$.&lt;br>
+Similarly, we are overcounting the orderings of the 2 N&amp;rsquo;s by $2!$. There is only one B, so we are not overcounting that. This gives a final answer of $\frac{6!}{3!2!} = 120$ orderings.&lt;/p>
+&lt;/p>
+&lt;/details>&lt;/p>
+&lt;p>&lt;ins>General statement&lt;/ins>: say we have $n$ items total with $m$ types, made up of $n_1$ items of type 1, $n_2$ items of type 2, and so forth, with $n = \sum_{i=1}^m n_i$. Then the number of permutations is
+\begin{equation}
+\frac{n!}{n_1! n_2! \cdots n_m!}.
+\end{equation}&lt;/p>
+&lt;h3 id="24-binomial-coefficient">2.4 Binomial Coefficient&lt;/h3>
+&lt;p>&lt;strong>How many ways can you choose an unordered group of $k$ items, without replacement, from a set of $n$ distinct items?&lt;/strong>&lt;br>
+In order words, if a set has $n$ elements, how many subsets with exactly $k$ elements does it have?&lt;/p>
+&lt;details class="spoiler " id="spoiler-9">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>&lt;p>From my $n=4$ nuclear family members, how many ways can I choose $k=2$ of them to go on an all-expenses paid trip to Cambridge, Massachusetts with me?&lt;/p>
+&lt;p>I can use the multiplication rule, so I have $4$ options for the first family member and $3$ options for the second. However, I don&amp;rsquo;t care about the order, so I can divide by $2!$ to get $\frac{4 \times 3}{2!} = 6$ unordered groups of $2$ family members.&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;a href="#23-permutations">Using our previous permutation result&lt;/a>, we can first pick $k$ items in order: $n \times (n-1) \times \cdots \times (n-k+1) = \frac{n!}{(n-k)!}$.&lt;/p>
+&lt;p>Since we don&amp;rsquo;t care about the order, we can then correct our overcounting by dividing by $k!$ to get the answer, which is called the &lt;strong>binomial coefficient&lt;/strong>:
+\begin{equation}
+\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\end{equation}&lt;/p>
+&lt;h3 id="25-counting-subsets">2.5 Counting Subsets&lt;/h3>
+&lt;p>&lt;strong>How many ways can you select an unordered group of items (of any size, including $0$), without replacement, from a set of $n$ distinct items?&lt;/strong>&lt;br>
+Alternatively worded, given a set of size $n$, how many different subsets can you come up with (including the empty set)?&lt;/p>
+&lt;p>The first item of the set is either in the the group or not, so there are 2 possibilities. This applies for each item in the set &amp;mdash; it is either in the group or not. We can apply the multiplication rule to get the that the number of possible groups is
+\begin{equation}
+2 \times 2 \times \cdots \times 2 = 2^n.
+\end{equation}&lt;/p>
+&lt;h2 id="3-naive-definition-of-probability">3. Naive Definition of Probability&lt;/h2>
+&lt;ul>
+&lt;li>The &lt;strong>sample space&lt;/strong> $S$ is the set of all possible &lt;strong>outcomes&lt;/strong> of an experiment (i.e., each element of $S$ is a unique outcome).
+&lt;ul>
+&lt;li>After an experiment is completed, exactly one of the outcomes will have occurred.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>An &lt;strong>event&lt;/strong> $A$ is any subset of $S$ ($A \subset S$) - anything that we could say either &amp;ldquo;happened&amp;rdquo; or &amp;ldquo;didn&amp;rsquo;t happen&amp;rdquo; once the experiment takes place. We calculate the probabilities of events (e.g., the probability that an event $A$ happens).
+&lt;ul>
+&lt;li>After an experiment is completed, every event will have
+&lt;ul>
+&lt;li>&amp;ldquo;Happened&amp;rdquo; or &amp;ldquo;happened&amp;rdquo; if it contains the outcome which actually occurred.&lt;/li>
+&lt;li>&amp;ldquo;Not happened&amp;rdquo; or &amp;ldquo;not occurred&amp;rdquo; if it does not contain the outcome which actually occured.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;details class="spoiler " id="spoiler-10">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>&lt;p>When rolling a standard die, the sample space is typically denoted by $S = \{1, 2, 3, 4, 5, 6\}$, where each element of $S$ is a possible outcome.&lt;/p>
+&lt;p>Possible events could be rolling a $1$ (the event being $A = \{1\}$), rolling an odd number, $B = \{1, 3, 5\}$, or rolling a small number $C = \{1, 2, 3\}$.&lt;/p>
+&lt;p>For a fair die, you might intuitively know that the probability of $A$ is $1/6$, the probability of $B$ is $3/6=1/2$, and the probability of $C$ is $3/6=1/2$. Also see that it&amp;rsquo;s possible that the events $A, B, C$ all occur, even though only one outcome actually occur.&lt;/p>
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section1_Events.mp4" type="video/mp4">
+&lt;/video>
+&lt;/p>
+&lt;/details>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;strong>Naive definition of probability&lt;/strong>:&lt;br>
+We assume that there are a finite number of outcomes (the sample space, $S$, is finite), and that each individual outcome has an equal probability of occuring. Then the probability of an event $A$ is.
+$$
+P_{\text{naive}}(A) = \frac{\text{# of outcomes in $A$}}{\text{# of outcomes in $S$}} = \frac{|A|}{|S|}.
+$$
+&lt;/div>
+&lt;/div>
+&lt;p>Limitations:&lt;/p>
+&lt;ul>
+&lt;li>Assumes that all outcomes are equally likely
+&lt;ul>
+&lt;li>Shaky definition of what &amp;ldquo;equally likely&amp;rdquo; means because we can arbitrarily construct the outcomes.&lt;/li>
+&lt;li>&lt;em>ex.&lt;/em> Say the weather tomorrow has two possible outcomes: $\{\text{precipitation}, \text{no precipitation}\}$. By the naive definition, there&amp;rsquo;s a $50%$ chance of no precipitation.&lt;br>
+Alternatively, I could have said the possible outcomes are $\{\text{rain}, \text{sleet}, \text{hail}, \text{snow}, \text{no precipitation}\}$. Then there&amp;rsquo;s only a $20%$ chance of no precipitation&amp;hellip; so which is it?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Assumes the sample space is finite
+&lt;ul>
+&lt;li>What if the sample space is of possible temperatures? There are infinitely many possible temperatures, they can&amp;rsquo;t each have a $1/\infty$ probability.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-summary">4. Summary&lt;/h2>
+&lt;h3 id="41-set-theory">4.1 Set Theory&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Sets&lt;/strong>: unordered collections of items&lt;/li>
+&lt;li>Important set operations: intersection, union, complement, cardinality&lt;/li>
+&lt;li>Important properties: set membership, subsets, disjoint sets, partitions&lt;/li>
+&lt;li>Theorems: DeMorgan&amp;rsquo;s laws&lt;/li>
+&lt;/ul>
+&lt;h3 id="42-counting">4.2 Counting&lt;/h3>
+&lt;p>All of our counting is driven by the multiplication rule. Here&amp;rsquo;s what we&amp;rsquo;ve built from that, working from a set of $n$ distinct items:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>select how many items?&lt;/th>
+&lt;th>ordered or unordered?&lt;/th>
+&lt;th>with or without replacement?&lt;/th>
+&lt;th>solution&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>take all $n$ items,&lt;/td>
+&lt;td>order the items,&lt;/td>
+&lt;td>without replacement&lt;/td>
+&lt;td>n!&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>select $k$ items,&lt;/td>
+&lt;td>ordered,&lt;/td>
+&lt;td>without replacement&lt;/td>
+&lt;td>$\frac{n!}{(n-k)!}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>select $k$ items,&lt;/td>
+&lt;td>unordered,&lt;/td>
+&lt;td>without replacment&lt;/td>
+&lt;td>$\binom{n}{k}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>select any number of items,&lt;/td>
+&lt;td>unordered,&lt;/td>
+&lt;td>without replacement&lt;/td>
+&lt;td>$2^n$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>We also talked about the permutation problem with $n$ items that aren&amp;rsquo;t necessarily distinct (order all $n$ items without replacement), where we compensate for overcounting after the fact: $$\frac{n!}{n_1! n_2! \cdots n_m!}$$.&lt;/p>
+&lt;p>You&amp;rsquo;ll notice that everything is done without replacement: we&amp;rsquo;ll cover some with-replacement cases soon.&lt;/p>
+&lt;h3 id="43-naive-definition-of-probability">4.3 Naive Definition of Probability&lt;/h3>
+&lt;p>Probably the most intuitive (and yet very flawed) way to define probability: the probability is proportional to the number of outcomes. For example, there are 3 ways to roll an even number on a die, so by this definition, there is a $3/6 = 1/2$ probability of rolling an even number.&lt;/p></description></item><item><title>Stat 110 Section Notes</title><link>https://srihari-ganesh.github.io/projects/stat110/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat110/</guid><description/></item><item><title>A Local Existence and Uniqueness Theorem for First Order Differential Equations</title><link>https://srihari-ganesh.github.io/projects/math22b/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/math22b/</guid><description>&lt;p>As a student in Math 22b, taught by &lt;a href="https://www.math.harvard.edu/people/grundmeier-dusty/" id="Harvard" type="link">&lt;b>Dr. Dusty Grundmeier&lt;/b>&lt;/a>, I learned introductory proof-based vector calculus with some exposure to limits and continuity. However, I was interested in getting more exposure to real analysis, so for my final project I learned about existence and uniqueness theorems for differential equations and wrote an expository paper presenting a simple case of such a theorem.&lt;/p></description></item></channel></rss>
