@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link><atom:link href="https://srihari-ganesh.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Srihari Ganesh</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link></image><item><title>Week 1: Counting and Naive Probability</title><link>https://srihari-ganesh.github.io/stat110/week1/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week1/</guid><description>&lt;h2 id="0-info">0. Info&lt;/h2>
 &lt;ul>
+&lt;li>Section date: 9/13&lt;/li>
 &lt;li>Associated lectures: 9/5, 9/7&lt;/li>
 &lt;li>Associated pset: Pset 1, due 9/15&lt;/li>
 &lt;li>Where to find me
@@ -10,7 +11,7 @@
 &lt;li>Specifically, this means we&amp;rsquo;ll focus on the lectures from the previous week (six and eight days previous), and not the lecture from the day before section&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>Office Hours: Wednesdays 7-11pm, see office hours info on Canvas for location (I will be there for some portion of this time, probably skewed towards the start). I may drop by at the Thursday 7:30-9:30pm office hours in the same location as well.&lt;/li>
+&lt;li>Office Hours: Wednesdays 7-9pm, see office hours info on Canvas/Google Calendar for location. I will often stay for the office hours that come right after (Wednesday 9-11pm), and occasionally may drop by at the Thursday 7:30-9:30pm office hours in the same location as well.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Syllabus clarifications
@@ -60,7 +61,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>A collection of sets $B_1, B_2, \ldots, B_n$ are a &lt;strong>parition&lt;/strong> of $B$ if&lt;/p>
+&lt;p>A collection of sets $B_1, B_2, \ldots, B_n$ are a &lt;strong>partition&lt;/strong> of $B$ if&lt;/p>
 &lt;ul>
 &lt;li>$B_1, B_2, \ldots, B_n$ are disjoint, and&lt;/li>
 &lt;li>$B_1 \cup B_2 \cup \cdots \cup B_n = B$.&lt;/li>
@@ -73,6 +74,13 @@
 &lt;li>Complements have to be taken relative to some superset $S$ (notated $A \subset S$). We think of this set as the &amp;ldquo;universe&amp;rdquo; that $A$ lives in, and is usually implied by context.&lt;/li>
 &lt;li>ex. Let $S = \{1, 2, 3 \}, A = \{1, 3\}$. Then $A^c = \{2\}$.&lt;/li>
 &lt;li>Note that $A$ and $A^c$ partition $S$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>The &lt;strong>difference&lt;/strong> between two sets $B \setminus A$ is the set of all elements in $B$ which are not in $A$.&lt;/p>
+&lt;ul>
+&lt;li>Note that $B \cap A$, $B \setminus A$ partition $B$.&lt;/li>
+&lt;li>We can express always express the set difference in another way: $B \setminus A = B \cap A^c$.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -102,11 +110,12 @@
 &lt;li>$A \cap B$ reads as &amp;ldquo;$A$ &lt;em>and&lt;/em> $B$&amp;rdquo;. So $x \in A \cap B$ reads as &amp;ldquo;$x$ is in $A$ &lt;strong>and&lt;/strong> $x$ is in $B$&amp;rdquo;.&lt;/li>
 &lt;li>$A^c$ reads as &amp;ldquo;not $A$&amp;rdquo;, so $x \in A^c$ reads as &amp;ldquo;$x$ is not in $A$&amp;rdquo;&lt;/li>
 &lt;/ul>
+&lt;p>We can apply this so see that the two versions of the set difference are equivalent. $x \in B \setminus A$ reads as &amp;ldquo;$x$ is in $B$ but not in $A$&amp;rdquo;, while $x \in B \cap A^c$ reads as &amp;ldquo;$x$ is in B and in $A^c$ (i.e., not in $A$).&amp;rdquo;&lt;/p>
 &lt;p>What if we have multiple operations in the same expression?&lt;/p>
 &lt;ul>
 &lt;li>$x \in (A \cap B)^c$ reads as &amp;ldquo;$x$ is not in both $A$ and $B$&amp;rdquo;. This means that either $x$ is not in $A$ or $x$ is not in $B$, so $x \in A^c \cup B^c$.&lt;/li>
 &lt;li>$x \in (A \cup B)^c$ read as &amp;ldquo;$x$ is not in $A$ or $B$&amp;rdquo;. This means that $x$ is not in $A$ and $x$ is not in $B$, so $x \in A^c \cap B^c$.
-We see that these statements are essentially DeMorgan&amp;rsquo;s laws.&lt;/li>
+We see in the next section that these statements are essentially DeMorgan&amp;rsquo;s laws.&lt;/li>
 &lt;/ul>
 &lt;h3 id="13-demorgans-laws">1.3 DeMorgan&amp;rsquo;s Laws&lt;/h3>
 &lt;div class="alert alert-note">
@@ -214,7 +223,7 @@ In order words, if a set has $n$ elements, how many subsets with exactly $k$ ele
 &lt;p>I can use the multiplication rule, so I have $4$ options for the first family member and $3$ options for the second. However, I don&amp;rsquo;t care about the order, so I can divide by $2!$ to get $\frac{4 \times 3}{2!} = 6$ unordered groups of $2$ family members.&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;a href="#23-permutations">Using our previous permutation result&lt;/a>, we can first pick $k$ items in order: $n \times (n-1) \times \cdots \times (n-k+1) = \frac{n!}{(n-k)!}$.&lt;/p>
+&lt;p>&lt;ins> General statement&lt;/ins>: &lt;a href="#23-permutations">Using our previous permutation result&lt;/a>, we can first pick $k$ items in order: $n \times (n-1) \times \cdots \times (n-k+1) = \frac{n!}{(n-k)!}$.&lt;/p>
 &lt;p>Since we don&amp;rsquo;t care about the order, we can then correct our overcounting by dividing by $k!$ to get the answer, which is called the &lt;strong>binomial coefficient&lt;/strong>:
 \begin{equation}
 \binom{n}{k} = \frac{n!}{k!(n-k)!}.
@@ -226,7 +235,27 @@ Alternatively worded, given a set of size $n$, how many different subsets can yo
 \begin{equation}
 2 \times 2 \times \cdots \times 2 = 2^n.
 \end{equation}&lt;/p>
-&lt;h2 id="3-naive-definition-of-probability">3. Naive Definition of Probability&lt;/h2>
+&lt;h3 id="26-bose-einstein">2.6 Bose-Einstein&lt;/h3>
+&lt;p>&lt;strong>How many ways can you choose an unordered group of $k$ items, with replacement, from a set of $n$ items?&lt;/strong>&lt;/p>
+&lt;details class="spoiler " id="spoiler-10">
+&lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
+&lt;p>&lt;p>At a donut shop with $n=3$ different flavors, how many ways distinct orders of $k=5$ donuts can I make?&lt;/p>
+&lt;p>Let&amp;rsquo;s start with smaller values of $n$ and up the complexity. With only $n=1$ flavor, there&amp;rsquo;s only one possible order (all donuts of one flavor). With $n=2$ flavors (e.g., frosted and glazed), the order is uniquely determined by how many frosted donuts there are; for example, if we have $3$ frosted donuts, we know there must be $5-3$ glazed donuts. In the example below, we say that the donuts to the left of the divider are frosted, and those to the right are glazed.&lt;/p>
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section1_BE1.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>For larger $n$, we follow a similar idea and count in a clever way. Your order can be uniquely represented by how many donuts of each flavor you buy, so we can think of placing dividers between donuts to uniquely represent our order. Each &amp;ldquo;box&amp;rdquo; created by the dividers represents a flavor: those to the left of the first divider are frosted, between the first and second divider are glazed, between the second and third divider are jam, etc.&lt;/p>
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section1_BE2.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>Note that we need $4-1 = 3$ dividers to create $4$ categories. So how do we count ways to put $2$ dividers among $5$ donuts? We&amp;rsquo;ll count by treating dividers as distinguishable, then correct for the overcounting later. We have $5+1=6$ options for where to put the first divider (to the left of the first donut, between the first and second donut, etc.). The second divider has $5+1+1=7$ optinos, since there are now $6$ items ($5$ donuts, $1$ divider) that we can go between or to the left/right of. The third divider has $5+2+1=8$ options. By this pattern, we have $6 \times 7 \times 8$ ways to place dividers. However, the dividers themselves don&amp;rsquo;t tell us anything about how the donuts are divied up - only their locations - so we don&amp;rsquo;t care about the order they were placed. Thus, we divide by $3!$ ways to order the dividers to get $\frac{6 \times 7 \times 8}{3!} = \binom{8}{3}$.&lt;/p>
+&lt;p>Another way to think about this is that we have $5 + (4-1) = 8$ &amp;ldquo;slots&amp;rdquo; (donuts and dividers) in a row, and we need to pick out the locations of the $3$ dividers. We can use the binomial coefficient to do this in $\binom{8}{3}$ ways.&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;p>I encourage you to check out the example above for much of the derivation of the Bose-Einstein counting method.&lt;/p>
+&lt;p>&lt;ins>General statement&lt;/ins>: We are trying to split the $k$ items into $n$ categories, which we can do by placing $n-1$ dividers between the $k$ items. We can re-frame this problem as selecting the locations of $n-1$ dividers from $(n-1)+k$ slots (items + dividers), which means our solution is $$\binom{n-1+k}{n-1} = \binom{n-1+k}{k}.$$&lt;/p>
+&lt;p>Note: Bose-Einstein is a bit of a &amp;ldquo;big hammer&amp;rdquo; &amp;mdash; it can solve some pretty complicated problems, but also some simpler ones. You should make sure you have exhausted your other tools, and that your problem matches the &amp;ldquo;unordered, with replacement&amp;rdquo; requirement before trying this out.&lt;/p>
+&lt;h2 id="3-definitions-of-probability">3. Definitions of Probability&lt;/h2>
 &lt;ul>
 &lt;li>The &lt;strong>sample space&lt;/strong> $S$ is the set of all possible &lt;strong>outcomes&lt;/strong> of an experiment (i.e., each element of $S$ is a unique outcome).
 &lt;ul>
@@ -244,7 +273,8 @@ Alternatively worded, given a set of size $n$, how many different subsets can yo
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-10">
+&lt;h3 id="31-naive-definition-of-probability">3.1 Naive Definition of Probability&lt;/h3>
+&lt;details class="spoiler " id="spoiler-11">
 &lt;summary>&lt;ins>Click for example&lt;/ins>&lt;/summary>
 &lt;p>&lt;p>When rolling a standard die, the sample space is typically denoted by $S = \{1, 2, 3, 4, 5, 6\}$, where each element of $S$ is a possible outcome.&lt;/p>
 &lt;p>Possible events could be rolling a $1$ (the event being $A = \{1\}$), rolling an odd number, $B = \{1, 3, 5\}$, or rolling a small number $C = \{1, 2, 3\}$.&lt;/p>
@@ -278,11 +308,42 @@ Alternatively, I could have said the possible outcomes are $\{\text{rain}, \text
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;h3 id="32-general-definition-of-probability">3.2 General Definition of Probability&lt;/h3>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;strong>Definition of probability&lt;/strong>:&lt;br>
+There are just two axioms (rules that probabilities have to follow):&lt;/p>
+&lt;ol>
+&lt;li>$P(S) = 1, P(\emptyset) = 0.$&lt;/li>
+&lt;li>If events $A_1, A_2, \ldots$ are disjoint, then $$
+P\left( \bigcup_{j=1}^\infty A_j\right) = \sum_{j=1}^\infty P(A_j).
+$$&lt;/li>
+&lt;/ol>
+&lt;p>In other words, if $A_1, A_2, \ldots$ partition some event $B$, then $P(B) = \sum_{j=1}^\infty P(A_j)$.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h4 id="321-probability-of-complements">3.2.1 Probability of Complements&lt;/h4>
+&lt;p>Let&amp;rsquo;s say we know the probability of some event $A$. Then $$P(A^c) = 1 - P(A).$$ This follows directly from the axioms of probability: since $A^c, A$ partition the sample space $S$, we know $P(A) + P(A^c) = P(S) = 1$.&lt;/p>
+&lt;h4 id="322-principle-of-inclusion-exclusion-pieprobability-of-unions">3.2.2 Principle of Inclusion-Exclusion (PIE)/Probability of unions&lt;/h4>
+&lt;p>Say we have two events (not necessarily disjoint) $A$ and $B$. We can partition $A \cup B$ into $A \setminus B, A \cap B, B \setminus A$.
+\begin{align*}
+P(A \cup B) &amp;amp;= P(A \setminus B) + P(A \cap B) + P(B \setminus A)\\
+P(A \cup B) &amp;amp;= P(A \setminus B) + P(A \cap B) + P(B \setminus A) + P (A \cap B) - P(A \cap B)\\
+P(A \cup B) &amp;amp;= P(A) + P(B) - P(A \cap B),
+\end{align*}
+where we apply the second axiom of probability using the fact that $A \setminus B, A \cap B$ partition $A$ and the fact that $B \setminus A, A \cap B$ partition $B$.&lt;/p>
+&lt;p>This extends to finding the probability of the union of any $n$ events, which is called the &lt;strong>Principle of Inclusion-Exclusion (PIE)&lt;/strong>
+\begin{align*}
+P(A_1 \cup A_2 \cup \cdots \cup A_n) &amp;amp;= \sum_{i=1}^n P(A_i) - \sum_{i&amp;lt;j} P(A_i \cap A_j) + \sum_{i &amp;lt; j &amp;lt; k} P(A_i \cap A_j \cap A_k) \\
+&amp;amp;- \cdots + (-1)^{n-1} P(A_1 \cap A_2 \cap \cdots \cap A_n).
+\end{align*}&lt;/p>
+&lt;p>We are a bit careless with notation in the sums: $\sum_{i&amp;lt;j}$ means that we sum over every (unordered) pair of events. This formula is better remembered in words: add up the probabilities of all individual events, subtract the probabilities of every pair, add back the probabilities of every triple, etc.; remember that you start positive, then alternate signs.&lt;/p>
+&lt;p>PIE is another tool that is a big hammer: it will always work if you&amp;rsquo;re finding the probability of a union, but it is unwieldy for most problems and should be one of your last resorts.&lt;/p>
 &lt;h2 id="4-summary">4. Summary&lt;/h2>
 &lt;h3 id="41-set-theory">4.1 Set Theory&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>Sets&lt;/strong>: unordered collections of items&lt;/li>
-&lt;li>Important set operations: intersection, union, complement, cardinality&lt;/li>
+&lt;li>Important set operations: intersection, union, complement, difference, cardinality&lt;/li>
 &lt;li>Important properties: set membership, subsets, disjoint sets, partitions&lt;/li>
 &lt;li>Theorems: DeMorgan&amp;rsquo;s laws&lt;/li>
 &lt;/ul>
@@ -322,12 +383,23 @@ Alternatively, I could have said the possible outcomes are $\{\text{rain}, \text
 &lt;td>without replacement&lt;/td>
 &lt;td>$2^n$&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>select $k$ items,&lt;/td>
+&lt;td>unordered,&lt;/td>
+&lt;td>with replacement&lt;/td>
+&lt;td>$\binom{n+k-1}{k}$&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>We also talked about the permutation problem with $n$ items that aren&amp;rsquo;t necessarily distinct (order all $n$ items without replacement), where we compensate for overcounting after the fact: $$\frac{n!}{n_1! n_2! \cdots n_m!}$$.&lt;/p>
-&lt;p>You&amp;rsquo;ll notice that everything is done without replacement: we&amp;rsquo;ll cover some with-replacement cases soon.&lt;/p>
-&lt;h3 id="43-naive-definition-of-probability">4.3 Naive Definition of Probability&lt;/h3>
-&lt;p>Probably the most intuitive (and yet very flawed) way to define probability: the probability is proportional to the number of outcomes. For example, there are 3 ways to roll an even number on a die, so by this definition, there is a $3/6 = 1/2$ probability of rolling an even number.&lt;/p></description></item><item><title>Stat 110 Section Notes</title><link>https://srihari-ganesh.github.io/projects/stat110/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat110/</guid><description/></item><item><title>Potts Mixture Models for Protein Residue Direct Coupling Analysis</title><link>https://srihari-ganesh.github.io/projects/potts/</link><pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/potts/</guid><description>&lt;p>Direct coupling analysis (DCA) is used to identify coevolving protein residues and understand structural and functional constraints in proteins. In such methods, Potts models parametrize the proteins and using a multiple sequence alignment (MSA); these sequences are assumed to come from a single underlying Potts model. However, MSAs can contain heterogeneity: for example, &lt;a href="https://doi.org/10.1038/s41586-023-05750-0" type="link" id="Harvard">in an MSA of the murA-lpxC system, only a subset of the seqeunces interact&lt;/a>. As an undergraduate researcher in the &lt;a href="https://www.deboramarkslab.com/" id="Harvard" type="link">&lt;b>Marks Lab&lt;/b>&lt;/a> at Harvard Medical School, I implemented a mixture model with the EVcouplings pipeline using an expectation-maximization algorithm to simultaneously infer class assignments of each sequence in an MSA and the Potts model parameters of each class. However, the algorithm failed to infer clusters correlated with interaction. This work was supported by the Harvard College Research Program (HCRP).&lt;/p></description></item><item><title>Real-Time Dynamic Programming for *De Novo* Genome Assembly</title><link>https://srihari-ganesh.github.io/projects/stat234/</link><pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat234/</guid><description>&lt;p>The DNA fragment assembly problem is an important and active field of research with applications in every field of biology. Exploratory work has previously been done to attempt to apply reinforcement learning to fragment assembly - namely, Q-learning was used on an episodic Markov Decision Process (MDP) model of the problem. For my final project in &lt;a href="http://people.seas.harvard.edu/~samurphy/teaching/stat234spring2022/syllabus.htm" id="Harvard" type="link">&lt;b>Stat 234&lt;/b>&lt;/a> (a graduate reinforcement learning seminar taught by &lt;a href="http://people.seas.harvard.edu/~samurphy/" id="Harvard" type="link">&lt;b>Professor Susan Murphy&lt;/b>&lt;/a>), I implemented Real-Time Dynamic Programming (RTDP), a learning algorithm that is more suited for searching sparse MDPs, and found improved performance over Q-learning in simulations on sythetic microgenomes. However, issues with memory requirements and the lack of flexibility when using an MDP formulation re-establish that such approaches are likely infeasible at scale.&lt;/p></description></item><item><title>Modeling Evolutionary Dynamics of *E. coli* in the Long-Term Stationary Phase</title><link>https://srihari-ganesh.github.io/projects/ltsp/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/ltsp/</guid><description>&lt;p>Bacteria can maintain a near-constant population size for years without an external food source in a state known as the long-term stationary phase (LTSP). However, they do not hibernate - instead, they survive by recycling the nutrients of dead bacteria, creating a dynamic and evolving environment. In the &lt;a href="https://cluzel.fas.harvard.edu/" id="Harvard" type="link">&lt;b>Cluzel Lab&lt;/b>&lt;/a> at Harvard, we experimentally introduced an evolutionary pressure in &lt;em> E. coli&lt;/em> by transforming a plasmid with overexpressed nonessential proteins, including YFP, into the bacteria to increase their protein burden, and followed the state of the plasmid using the fluorescent reporter. We also developed a system of differential equations to model the system: the introduction of oscillating protein burdens led to coexistence between proteins of different average burdens, which could allow us to better explain past experimental observations. This work was supported by the Program for Research in Science and Engineering (PRISE) at Harvard College.&lt;/p></description></item><item><title>A Local Existence and Uniqueness Theorem for First Order Differential Equations</title><link>https://srihari-ganesh.github.io/projects/math22b/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/math22b/</guid><description>&lt;p>As a student in Math 22b, taught by &lt;a href="https://www.math.harvard.edu/people/grundmeier-dusty/" id="Harvard" type="link">&lt;b>Dr. Dusty Grundmeier&lt;/b>&lt;/a>, I learned introductory proof-based vector calculus with some exposure to limits and continuity. However, I was interested in getting more exposure to real analysis, so for my final project I learned about existence and uniqueness theorems for differential equations and wrote an expository paper presenting a simple case of such a theorem.&lt;/p></description></item><item><title>Welcome to Wowchemy, the website builder for Hugo</title><link>https://srihari-ganesh.github.io/post/getting-started/</link><pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/post/getting-started/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">libr&lt;/span>
+&lt;h3 id="43-definitions-of-probability">4.3 Definitions of Probability&lt;/h3>
+&lt;p>&lt;strong>Naive probability&lt;/strong>: probably the most intuitive (and yet very flawed) way to define probability: the probability is proportional to the number of outcomes. For example, there are 3 ways to roll an even number on a die, so by this definition, there is a $3/6 = 1/2$ probability of rolling an even number.&lt;/p>
+&lt;p>&lt;strong>(Non-naive) probability&lt;/strong>: given by two axioms:&lt;/p>
+&lt;ol>
+&lt;li>$P(S) = 1$&lt;/li>
+&lt;li>$P\left(\bigcup_{j=1}^\infty A_j \right) = \sum_{j=1}^\infty P(A_j)$ for $A_1, A_2, \ldots$ disjoint.&lt;/li>
+&lt;/ol>
+&lt;p>The principle of inclusion-exclusion and the probability of complements follow from the axioms.&lt;/p></description></item><item><title>Stat 110 Section Notes</title><link>https://srihari-ganesh.github.io/projects/stat110/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat110/</guid><description/></item><item><title>Potts Mixture Models for Protein Residue Direct Coupling Analysis</title><link>https://srihari-ganesh.github.io/projects/potts/</link><pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/potts/</guid><description>&lt;p>Direct coupling analysis (DCA) is used to identify coevolving protein residues and understand structural and functional constraints in proteins. In such methods, Potts models parametrize the proteins and using a multiple sequence alignment (MSA); these sequences are assumed to come from a single underlying Potts model. However, MSAs can contain heterogeneity: for example, &lt;a href="https://doi.org/10.1038/s41586-023-05750-0" type="link" id="Harvard">in an MSA of the murA-lpxC system, only a subset of the seqeunces interact&lt;/a>. As an undergraduate researcher in the &lt;a href="https://www.deboramarkslab.com/" id="Harvard" type="link">&lt;b>Marks Lab&lt;/b>&lt;/a> at Harvard Medical School, I implemented a mixture model with the EVcouplings pipeline using an expectation-maximization algorithm to simultaneously infer class assignments of each sequence in an MSA and the Potts model parameters of each class. However, the algorithm failed to infer clusters correlated with interaction. This work was supported by the Harvard College Research Program (HCRP).&lt;/p></description></item><item><title>Real-Time Dynamic Programming for *De Novo* Genome Assembly</title><link>https://srihari-ganesh.github.io/projects/stat234/</link><pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat234/</guid><description>&lt;p>The DNA fragment assembly problem is an important and active field of research with applications in every field of biology. Exploratory work has previously been done to attempt to apply reinforcement learning to fragment assembly - namely, Q-learning was used on an episodic Markov Decision Process (MDP) model of the problem. For my final project in &lt;a href="http://people.seas.harvard.edu/~samurphy/teaching/stat234spring2022/syllabus.htm" id="Harvard" type="link">&lt;b>Stat 234&lt;/b>&lt;/a> (a graduate reinforcement learning seminar taught by &lt;a href="http://people.seas.harvard.edu/~samurphy/" id="Harvard" type="link">&lt;b>Professor Susan Murphy&lt;/b>&lt;/a>), I implemented Real-Time Dynamic Programming (RTDP), a learning algorithm that is more suited for searching sparse MDPs, and found improved performance over Q-learning in simulations on sythetic microgenomes. However, issues with memory requirements and the lack of flexibility when using an MDP formulation re-establish that such approaches are likely infeasible at scale.&lt;/p></description></item><item><title>Modeling Evolutionary Dynamics of *E. coli* in the Long-Term Stationary Phase</title><link>https://srihari-ganesh.github.io/projects/ltsp/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/ltsp/</guid><description>&lt;p>Bacteria can maintain a near-constant population size for years without an external food source in a state known as the long-term stationary phase (LTSP). However, they do not hibernate - instead, they survive by recycling the nutrients of dead bacteria, creating a dynamic and evolving environment. In the &lt;a href="https://cluzel.fas.harvard.edu/" id="Harvard" type="link">&lt;b>Cluzel Lab&lt;/b>&lt;/a> at Harvard, we experimentally introduced an evolutionary pressure in &lt;em> E. coli&lt;/em> by transforming a plasmid with overexpressed nonessential proteins, including YFP, into the bacteria to increase their protein burden, and followed the state of the plasmid using the fluorescent reporter. We also developed a system of differential equations to model the system: the introduction of oscillating protein burdens led to coexistence between proteins of different average burdens, which could allow us to better explain past experimental observations. This work was supported by the Program for Research in Science and Engineering (PRISE) at Harvard College.&lt;/p></description></item><item><title>A Local Existence and Uniqueness Theorem for First Order Differential Equations</title><link>https://srihari-ganesh.github.io/projects/math22b/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/math22b/</guid><description>&lt;p>As a student in Math 22b, taught by &lt;a href="https://www.math.harvard.edu/people/grundmeier-dusty/" id="Harvard" type="link">&lt;b>Dr. Dusty Grundmeier&lt;/b>&lt;/a>, I learned introductory proof-based vector calculus with some exposure to limits and continuity. However, I was interested in getting more exposure to real analysis, so for my final project I learned about existence and uniqueness theorems for differential equations and wrote an expository paper presenting a simple case of such a theorem.&lt;/p></description></item><item><title>Welcome to Wowchemy, the website builder for Hugo</title><link>https://srihari-ganesh.github.io/post/getting-started/</link><pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/post/getting-started/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">libr&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hello&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;ol>
@@ -474,7 +546,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-873246915" class="chart">&lt;/div>
+&lt;div id="chart-814572639" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -483,7 +555,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-873246915', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-814572639', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
