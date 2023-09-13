@@ -80,7 +80,7 @@
 &lt;p>The &lt;strong>difference&lt;/strong> between two sets $B \setminus A$ is the set of all elements in $B$ which are not in $A$.&lt;/p>
 &lt;ul>
 &lt;li>Note that $B \cap A$, $B \setminus A$ partition $B$.&lt;/li>
-&lt;li>We can express always express the set difference in another way: $B \setminus A = B \cap A^c$.&lt;/li>
+&lt;li>An equivalent notation is $B \setminus A = B \cap A^c$.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -323,7 +323,7 @@ $$&lt;/li>
 &lt;/div>
 &lt;/div>
 &lt;h4 id="321-probability-of-complements">3.2.1 Probability of Complements&lt;/h4>
-&lt;p>Let&amp;rsquo;s say we know the probability of some event $A$. Then $$P(A^c) = 1 - P(A).$$ This follows directly from the axioms of probability: since $A^c, A$ partition the sample space $S$, we know $P(A) + P(A^c) = P(S) = 1$.&lt;/p>
+&lt;p>Let&amp;rsquo;s say we know the probability of some event $A$. Then $$P(A^c) = 1 - P(A).$$ This follows directly from the axioms of probability: since $A^c, A$ partition the sample space $S$, we know $P(A) + P(A^c) = P(S) = 1$. When you&amp;rsquo;re asked to calculate the probability of events in the form of &amp;ldquo;at least&amp;rdquo; or &amp;ldquo;at most&amp;rdquo;, the probability of the complement may sometimes be simpler to calculate.&lt;/p>
 &lt;h4 id="322-principle-of-inclusion-exclusion-pieprobability-of-unions">3.2.2 Principle of Inclusion-Exclusion (PIE)/Probability of unions&lt;/h4>
 &lt;p>Say we have two events (not necessarily disjoint) $A$ and $B$. We can partition $A \cup B$ into $A \setminus B, A \cap B, B \setminus A$.
 \begin{align*}
@@ -338,7 +338,7 @@ P(A_1 \cup A_2 \cup \cdots \cup A_n) &amp;amp;= \sum_{i=1}^n P(A_i) - \sum_{i&am
 &amp;amp;- \cdots + (-1)^{n-1} P(A_1 \cap A_2 \cap \cdots \cap A_n).
 \end{align*}&lt;/p>
 &lt;p>We are a bit careless with notation in the sums: $\sum_{i&amp;lt;j}$ means that we sum over every (unordered) pair of events. This formula is better remembered in words: add up the probabilities of all individual events, subtract the probabilities of every pair, add back the probabilities of every triple, etc.; remember that you start positive, then alternate signs.&lt;/p>
-&lt;p>PIE is another tool that is a big hammer: it will always work if you&amp;rsquo;re finding the probability of a union, but it is unwieldy for most problems and should be one of your last resorts.&lt;/p>
+&lt;p>PIE is another tool that is a big hammer: it will always work if you&amp;rsquo;re finding the probability of a union (the probability that at least one event occurs), but it is unwieldy for most problems and should be one of your last resorts.&lt;/p>
 &lt;h2 id="4-summary">4. Summary&lt;/h2>
 &lt;h3 id="41-set-theory">4.1 Set Theory&lt;/h3>
 &lt;ul>
@@ -389,6 +389,34 @@ P(A_1 \cup A_2 \cup \cdots \cup A_n) &amp;amp;= \sum_{i=1}^n P(A_i) - \sum_{i&am
 &lt;td>with replacement&lt;/td>
 &lt;td>$\binom{n+k-1}{k}$&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>select $k$ items,&lt;/td>
+&lt;td>ordered,&lt;/td>
+&lt;td>with replacement&lt;/td>
+&lt;td>$n^k$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>You may also have seen this sampling table in lecture (for counting the numbers of ways to draw a sample of $k$ items from $n$ distinct items):&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Order matters&lt;/th>
+&lt;th>Order doesn&amp;rsquo;t matter&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>With replacement&lt;/td>
+&lt;td>$n^k$&lt;/td>
+&lt;td>$\binom{n+k-1}{k}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Without replacement&lt;/td>
+&lt;td>$\frac{n!}{(n-k)!}$&lt;/td>
+&lt;td>$\binom{n}{k}$&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>We also talked about the permutation problem with $n$ items that aren&amp;rsquo;t necessarily distinct (order all $n$ items without replacement), where we compensate for overcounting after the fact: $$\frac{n!}{n_1! n_2! \cdots n_m!}$$.&lt;/p>
@@ -399,4 +427,37 @@ P(A_1 \cup A_2 \cup \cdots \cup A_n) &amp;amp;= \sum_{i=1}^n P(A_i) - \sum_{i&am
 &lt;li>$P(S) = 1$&lt;/li>
 &lt;li>$P\left(\bigcup_{j=1}^\infty A_j \right) = \sum_{j=1}^\infty P(A_j)$ for $A_1, A_2, \ldots$ disjoint.&lt;/li>
 &lt;/ol>
-&lt;p>The principle of inclusion-exclusion and the probability of complements follow from the axioms.&lt;/p></description></item><item><title>Stat 110 Section Notes</title><link>https://srihari-ganesh.github.io/projects/stat110/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat110/</guid><description/></item></channel></rss>
+&lt;p>The principle of inclusion-exclusion and the probability of complements follow from the axioms.&lt;/p>
+&lt;h2 id="5-practice-problems">5. Practice Problems&lt;/h2>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Stat%20110%20Section%201%20Practice%20Problems.pdf" target="_blank">Practice Problem PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Stat%20110%20Section%201%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>I am interested in five subjects (statistics, math, computer science, chemistry, and biology) and am deciding between 100, 102, 110, and 111 in each department (e.g., my options are Stat 100, Stat 102, Stat 110, Stat 111, Math 100, Math 102, etc.). Assume unless stated otherwise that each class (or set of classes) is equally likely to be chosen if possible.&lt;/p>
+&lt;ol>
+&lt;li>How many different schedules of four courses can I take?&lt;/li>
+&lt;li>I want to send my friend a text of my 4-class schedule. My text will look be a list like &amp;ldquo;Chemistry 101, Stat 110, Biology 111, Math 101&amp;rdquo;, which is considered a different text from &amp;ldquo;Stat 110, Chemistry 101, Biology 111, Math 101&amp;rdquo;. How many different such texts could I send?&lt;/li>
+&lt;li>If I take 5 courses, what is the probability that I take exactly 1 course from each department?&lt;/li>
+&lt;li>My advisor wants to know that I have backup plans, so they ask me to send 2 schedules with 4 courses each, where the schedules can have no overlap. How many such sets of two schedules can I send my advisor?&lt;/li>
+&lt;li>After I finalize my schedule, my advisor now wants to know how many classes I&amp;rsquo;m taking in each subject, so I send them a list that follows the following format of the following example (with the subjects always in this order):&lt;br>
+&lt;br>
+[Statistics: 2, Math: 0, Computer Science: 1, Chemistry: 1, Biology: 1]&lt;br>
+&lt;br>
+How many such lists can I send for a 4-class schedule?&lt;/li>
+&lt;li>If I take 6 courses, what is the probability that there&amp;rsquo;s at least 1 subject in which I am not taking any courses? Solve this problem in two ways.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>(Problem statement taken from Rachel Li and Ginnie Ma&amp;rsquo;s notes)&lt;/em> Hockey Stick Identity: show using a story proof that
+$$
+\sum_{j=k}^n \binom{j}{k} = \binom{n+1}{k+1}.
+$$
+Hint: Imagine arranging a group of people by age, and then think about the oldest person in a chosen subgroup.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use problem 1.4 to construct a story proof for the following identity (assuming $n \ge 2k$). Recall that in problem 1.4, my advisor asked me to make 2 (non-overlapping) schedules with 4 courses each.
+$$
+\binom{n}{2k} \binom{2k}{k} = \binom{n}{k}\binom{n-k}{k}
+$$&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>Stat 110 Section Notes</title><link>https://srihari-ganesh.github.io/projects/stat110/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/projects/stat110/</guid><description/></item></channel></rss>
