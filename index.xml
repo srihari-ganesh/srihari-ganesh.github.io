@@ -59,7 +59,7 @@ P(A_1 \cap \cdots \cap A_n) &amp;amp;= 1 - P((A_1 \cap \cdots \cap A_n)^c)\\
 &lt;div class="alert alert-warning">
 &lt;div>
 &lt;p>&lt;strong>Notation note&lt;/strong>:&lt;/p>
-&lt;p>As probabilists, we are lazy. We will start writing $P(A \cap B)$ as $P(A, B)$ (so commas between events represent intersections) because the intersection symbol is tedious.&lt;/p>
+&lt;p>As probabilists, we are lazy. We will start writing $P(A \cap B)$ as $P(A, B)$ (i.e., commas between events and intersections are equivalent).&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;div class="alert alert-note">
@@ -73,7 +73,9 @@ All conditions go to the right of the bar symbol $|$.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;p>We read $P(A|B)$ is the &amp;ldquo;probability of $A$ given $B$&amp;rdquo; or &amp;ldquo;probability of $A$ conditioned on $B$&amp;rdquo; Intuitively, we can consider that if we know $B$ occurs, $B$ basically becomes our new sample space, so we take the probability that both $A$ and $B$ occurs, $P(A, B)$, and rescale it by the probability that $B$ occurs, $P(B)$.&lt;/p>
-&lt;!-- TODO: ADD VISUALIZATION -->
+&lt;video controls >
+&lt;source src="https://srihari-ganesh.github.io/media/videos/Section2_ConditionalProbability.mp4" type="video/mp4">
+&lt;/video>
 &lt;p>We&amp;rsquo;re also quick to note that conditional probabilities are the same as &amp;ldquo;normal&amp;rdquo; probabilities &amp;mdash; in fact, all probabilities can be considered conditional, we just treat some conditions more implicitly than others since they are more obvious/always involved to the problem. We&amp;rsquo;ll use &lt;strong>extra conditioning&lt;/strong> to refer to problems where some conditions are always present (i.e., we never want to/don&amp;rsquo;t know how to calculate the probability of those conditionns). For example, to calculate the probability that it rains tomorrow ($A$) given that it rained today $B$, we would right $P(A|B)$. However, we are implicitly conditioning on a lot of things: that the world exists tomorrow ($W$), that I will be on Harvard campus when I check whether it rains $H$, etc. So we could incorporate these extra conditions into our problem to write the definition of &lt;strong>conditional probability with extra conditioning&lt;/strong>:
 $$
 P(A|B, H, W) = \frac{P(A, B | H, W)}{P(B | H, W)}
@@ -99,12 +101,24 @@ $$&lt;/p>
 \begin{align*}
 P(B) &amp;amp;= P(B, A_1) + P(B, A_2) + \cdots + P(B, A_n).
 \end{align*}
-We usually break down each of the terms using the result for the probability of an intersection &lt;a href="#31-probability-of-an-intersection">section 3.1&lt;/a>
+See Figure 2.3 from Blizstein &amp;amp; Hwang below for a visualization:
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Visual diagram of the law of total probability, showing an event split up into pieces by its intersections with a partition of the sample space." srcset="
+/media/images/Section2_LOTP_hu81255567074645dc13bc1b2d32e50da6_60337_e16aa315eb347d762ed01077f51a4a21.webp 400w,
+/media/images/Section2_LOTP_hu81255567074645dc13bc1b2d32e50da6_60337_6c867f1081982bae899a8c3d574550e0.webp 760w,
+/media/images/Section2_LOTP_hu81255567074645dc13bc1b2d32e50da6_60337_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://srihari-ganesh.github.io/media/images/Section2_LOTP_hu81255567074645dc13bc1b2d32e50da6_60337_e16aa315eb347d762ed01077f51a4a21.webp"
+width="624"
+height="410"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>We usually break down each of the terms using the result for the probability of an intersection &lt;a href="#31-probability-of-an-intersection">section 3.1&lt;/a>
 $$
 P(B) = P(B | A_1) P(A_1) + P(B | A_2) P(A_2) + \cdots + P(B | A_n) P(A_n)
 $$
-When you only know $B$ in terms of conditional probabilities, we can make those conditional probabilities appear through LOTP. As Joe likes to say, &lt;em>condition on what you wish you knew&lt;/em>.&lt;/p>
-&lt;!-- TODO: ADD VISUALIZATION -->
+When you only know $B$ in terms of conditional probabilities, we can make those conditional probabilities appear through LOTP. As Joe likes to say, &lt;em>condition on what you wish you knew&lt;/em>:&lt;/p>
 &lt;p>LOTP with &lt;em>extra conditioning&lt;/em> is
 $$
 P(B | C) = P(B | A_1, C) P(A_1 | C) + P(B | A_2, C) P(A_2 | C) + \cdots + P(B | A_n, C) P(A_n| C)
@@ -795,7 +809,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-356291874" class="chart">&lt;/div>
+&lt;div id="chart-678154923" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -804,7 +818,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-356291874', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-678154923', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
