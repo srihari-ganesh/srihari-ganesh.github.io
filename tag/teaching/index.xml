@@ -5,7 +5,11 @@
 &lt;li>Associated pset: Pset 2, due 9/22&lt;/li>
 &lt;li>Office hours on 9/20 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;li>Scroll to &lt;a href="#5-summary">section 5&lt;/a> for a concise content summary.&lt;/li>
 &lt;/ul>
+&lt;p>&lt;strong>Practice Problems&lt;/strong>:&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%202%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%202%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
 &lt;h2 id="1-brushing-up-on-the-definition-of-probability">1. Brushing up on the definition of probability&lt;/h2>
 &lt;p>We&amp;rsquo;ll restate the axioms for the general definition of probability:&lt;/p>
 &lt;div class="alert alert-note">
@@ -22,6 +26,17 @@ $$&lt;/li>
 &lt;/div>
 &lt;/div>
 &lt;!-- axioms are what mathematicians use to encode intuitive definitions -->
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;p>&lt;strong>Tips for calculating probabilities&lt;/strong>:&lt;/p>
+&lt;ol>
+&lt;li>Define events for every aspect of the problem (e.g., &amp;ldquo;$A$ = the event that it rains tomorrow, $B$ = the event that it rained today&amp;rdquo;)&lt;/li>
+&lt;li>Write out the probabilities that you are given in the problem using notation (e.g., &amp;ldquo;$P(A|B) = 1/2$, $P(B) = 1/4$).&lt;/li>
+&lt;li>Write the probability that you want to calculate using notation (e.g., we want to calculate the unconditional probability that it rains tomorrow, $P(A)$).&lt;/li>
+&lt;li>Figure out how the tools we have learned allow you to utilize the probabiliies that you do know (step 2) to calculate the probabilities that you don&amp;rsquo;t know (step 3).&lt;/li>
+&lt;/ol>
+&lt;/div>
+&lt;/div>
 &lt;p>There are some important results that follow:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Probability of a complement&lt;/strong>: If $A$ is an event a sample space $S$,
@@ -59,7 +74,7 @@ P(A_1 \cap \cdots \cap A_n) &amp;amp;= 1 - P((A_1 \cap \cdots \cap A_n)^c)\\
 &lt;div class="alert alert-warning">
 &lt;div>
 &lt;p>&lt;strong>Notation note&lt;/strong>:&lt;/p>
-&lt;p>As probabilists, we are lazy. We will start writing $P(A \cap B)$ as $P(A, B)$ (i.e., commas between events and intersections are equivalent).&lt;/p>
+&lt;p>We will start writing $P(A \cap B)$ as $P(A, B)$ (i.e., commas between events and intersections are equivalent).&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;div class="alert alert-note">
@@ -82,6 +97,11 @@ P(A|B, H, W) = \frac{P(A, B | H, W)}{P(B | H, W)}
 $$
 As you can see, when we want certain events to be &lt;em>extra conditions&lt;/em>, they are conditions in every related probability we calculate. Each time we apply a formula for conditional probability, we have to choose whether to treat the each condition like $B$ (free to move around) or like $H$ (extra conditioning/always a condition).&lt;/p>
 &lt;h2 id="3-tools-using-conditional-probability">3. Tools using Conditional Probability&lt;/h2>
+&lt;div class="alert alert-warning">
+&lt;div>
+If you ever need to solve a problem involving a sequence of things (like a game with many turns, or a random walk, or so on) and are stuck, try &lt;strong>first-step analysis&lt;/strong>: conditioning what happens after the first step. You&amp;rsquo;ll often be able to get a recursive equation that is easier to solve.
+&lt;/div>
+&lt;/div>
 &lt;h3 id="31-probability-of-an-intersection">3.1 Probability of an Intersection&lt;/h3>
 &lt;p>For events $A, B$ we can rearrange the definition of conditional probability to find the probability of their intersection:
 $$
@@ -159,7 +179,7 @@ P(B|A) &amp;amp;= P(B)
 &lt;/ul>
 &lt;div class="alert alert-warning">
 &lt;div>
-Independence and disjointness are not the same (and cannot typically both be true)!
+Independence and disjointness are not the same! In fact, if $A, B$ are disjoint, then if $A$ occurs we know that $B$ did not occur, so they are very &lt;em>dependent&lt;/em>.
 &lt;/div>
 &lt;/div>
 &lt;div class="alert alert-note">
@@ -183,9 +203,111 @@ You can see how this is analogous to extra conditioning for the other results. C
 Conditional independence and independence are not the same thing, and one often exists without the other!
 &lt;/div>
 &lt;/div>
+&lt;h2 id="5-summary">5. Summary&lt;/h2>
+&lt;p>&lt;strong>Notation note&lt;/strong>: see that we use commas and intersections interchangeably (i.e., $P(A, B, C) = P(A \cap B \cap C)$).&lt;/p>
+&lt;p>&lt;strong>Tips for calculating probabilities&lt;/strong>:&lt;/p>
+&lt;ol>
+&lt;li>Define events for every aspect of the problem (e.g., &amp;ldquo;$A$ = the event that it rains tomorrow, $B$ = the event that it rained today&amp;rdquo;)&lt;/li>
+&lt;li>Write out the probabilities that you are given in the problem using notation (e.g., &amp;ldquo;$P(A|B) = 1/2$, $P(B) = 1/4$).&lt;/li>
+&lt;li>Write the probability that you want to calculate using notation (e.g., we want to calculate the unconditional probability that it rains tomorrow, $P(A)$).&lt;/li>
+&lt;li>Figure out how the tools we have learned allow you to utilize the probabiliies that you do know (step 2) to calculate the probabilities that you don&amp;rsquo;t know (step 3).&lt;/li>
+&lt;/ol>
+&lt;h3 id="51-definition-of-probability">5.1 Definition of Probability&lt;/h3>
+&lt;p>&lt;strong>Axioms of probability:&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>With sample space $S$, \begin{align*}
+P(S) &amp;amp;= 1\\
+P(\emptyset) &amp;amp;= 0.
+\end{align*}&lt;/li>
+&lt;li>For $A_1, A_2, \ldots, $ that partition $B$ (this can be finite or infinite),
+\begin{align*}
+P(B) = \sum_{j=1}^\infty P(A_j)
+\end{align*}&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Probability of a complement&lt;/strong>: For event $A$,
+$$
+P(A) = 1 - P(A^c)
+$$&lt;/p>
+&lt;p>&lt;strong>Probability of a union&lt;/strong>: For events $A$ and $B$,
+\begin{align*}
+P(A \cup B) &amp;amp;= P(A) + P(B) - P(A \cap B)\\ &amp;amp;= P(A \cap B^c) + P(B \cap A^c) + P(A \cap B)
+\end{align*}&lt;/p>
+&lt;p>&lt;strong>Principle of Inclusion-Exclusion&lt;/strong>: For events $A_1, \ldots, A_n$,
+\begin{align*}
+P(\bigcup_{i=1}^n A_i) &amp;amp;= \sum_i P(A_i) - \sum_{i &amp;lt; j} P(A_i \cap A_j)\\
+&amp;amp;+ \sum_{i &amp;lt; j &amp;lt; k} P(A_i \cap A_j \cap A_k) - \cdots + (-1)^{n+1} P(\bigcap_{i=1}^n A_i).
+\end{align*}&lt;/p>
+&lt;h3 id="52-conditional-probability">5.2 Conditional Probability&lt;/h3>
+&lt;p>&lt;strong>Conditional probability&lt;/strong>: For events $A$ and $B$, the probability of $A$ given $B$ (i.e., given that $B$ occured) is
+\begin{align*}
+P(A|B) = \frac{P(A \cap B)}{P(B)}.
+\end{align*}
+&lt;em>&amp;hellip;with extra conditioning&lt;/em>:
+\begin{align*}
+P(A|B, C) = \frac{P(A \cap B | C)}{P(B | C)}.
+\end{align*}&lt;/p>
+&lt;h3 id="53-conditional-probability-tools">5.3 Conditional Probability Tools&lt;/h3>
+&lt;p>&lt;strong>First-step analysis&lt;/strong>: If you ever need to solve a problem involving a sequence of things (like a game with many turns, or a random walk, or so on) and are stuck, try first-step analysis: conditioning what happens after the first step. You&amp;rsquo;ll often be able to get a recursive equation that is easier to solve.&lt;/p>
+&lt;p>&lt;strong>Probability of an intersection&lt;/strong>:
+\begin{align*}
+P(A_1, A_2, \ldots A_n) &amp;amp;= P(A_1) P(A_2 | A_1) \cdots P(A_n | A_1, \ldots, A_{n-1})\\
+&amp;amp;= P(A_n) P(A_{n-1} | A_n) \cdots P(A_1 | A_2, \ldots, A_n), \\
+&amp;amp;= [\text{chaining in any order that is convenient for you}].
+\end{align*}
+&lt;em>&amp;hellip;with extra conditioning&lt;/em>:
+\begin{align*}
+P(A_1, A_2, \ldots A_n | C) &amp;amp;= P(A_1 | C) P(A_2 | A_1, C) \cdots P(A_n | A_1, \ldots, A_{n-1}, C)
+\end{align*}
+&lt;strong>Law of Total Probability (LOTP)&lt;/strong>: for events $A_1, A_2, \ldots, A_n$ that partition $S$, we can find $P(B)$ by
+\begin{align*}
+P(B) &amp;amp;= P(B, A_1) + P(B, A_2) + \cdots + P(B, A_n) \\
+&amp;amp;= P(B | A_1) P(A_1) + P(B | A_2) P(A_2) + \cdots + P(B | A_n) P(A_n).
+\end{align*}
+We pick $A_1, A_2, \ldots, A_n$ to &amp;ldquo;condition on what we wish we knew.&amp;rdquo; These are situations where you don&amp;rsquo;t know $P(B)$, but you know $P(B | A_1), (B | A_2)$, etc.&lt;/p>
+&lt;p>&lt;em>&amp;hellip;with extra conditioning&lt;/em>:
+\begin{align*}
+P(B|C) &amp;amp;= P(B, A_1|C) + P(B, A_2|C) + \cdots + P(B, A_n|C) \\
+&amp;amp;= P(B | A_1,C) P(A_1|C) + P(B | A_2,C) P(A_2|C) + \cdots + P(B | A_n,C) P(A_n|C).
+\end{align*}
+&lt;strong>Bayes&amp;rsquo; Rule&lt;/strong>: for events $A, B$, if we want to calculate $P(B|A)$ but can only know how to calculate $P(A|B)$,
+\begin{align*}
+P(B|A) &amp;amp;= \frac{P(A|B) P(B)}{P(A)}\\
+&amp;amp;= \frac{P(A|B) P(B)}{P(A|B) P(B) + P(A|B^c) P(B^c)},
+\end{align*}
+where we commonly expand the denominator using the Law of Total Probability (LOTP).&lt;/p>
+&lt;p>&lt;em>&amp;hellip;with extra conditioning&lt;/em>:
+\begin{align*}
+P(B|A, C) &amp;amp;= \frac{P(A|B, C) P(B|C)}{P(A|C)} \\
+&amp;amp;= \frac{P(A|B, C) P(B|C)}{P(A|B, C) P(B|C) + P(A|B^c, C) P(B^c |C)}
+\end{align*}&lt;/p>
+&lt;h3 id="54-independence">5.4 Independence&lt;/h3>
+&lt;p>&lt;strong>Independence&lt;/strong>: $A, B$ are defined to be independent if
+\begin{align*}
+P(A, B) = P(A) P(B).
+\end{align*}
+Note that if $A, B$ are independent, then so are $A, B^c$ and $A^c, B$, and $A^c, B^c$; basically any functions of $A$ and $B$ are independent.&lt;/p>
+&lt;p>&lt;strong>VERY IMPORTANT&lt;/strong>: Disjointness and independence are not the same thing, and disjoint events are in fact usually independent.&lt;/p>
+&lt;p>A set of events $A_1, A_2, \ldots, A_n$ is independent if any subset of the events $A_{j_1}, \ldots, A_{j_k}$ follows the equation.
+\begin{align*}
+P(A_{j_1}, \ldots, A_{j_k}) &amp;amp;= P(A_{j_1}) \cdots P(A_{j_k}).
+\end{align*}
+Basically, for any combination of independent events, we should be able to factor out the probabilities.&lt;/p>
+&lt;p>&lt;strong>Conditional independence&lt;/strong>:
+\begin{align*}
+P(A, B | C) = P(A|C) P(B|C).
+\end{align*}
+&lt;strong>VERY IMPORTANT&lt;/strong>: Independence and conditional independence are not the same/do not imply each other. There is no guarantee that independent events are conditionally independent, or vice versa.&lt;/p>
 &lt;!-- ## -1. Content to cover
 - vandermonde's identity + birthday problem... maybe vibes but not focused. Maybe do a practice problem
-- also disease testing example --></description></item><item><title>Week 1: Counting and Definitions of Probability</title><link>https://srihari-ganesh.github.io/stat110/week1/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week1/</guid><description>&lt;h2 id="0-info">0. Info&lt;/h2>
+- also disease testing example -->
+&lt;!-- What skills to develop?
+- Being able to make problem-specific calculations
+- Identifying when we're independent of conditioning
+- Picking what to condition on - what you wish you knew, or a single-step analysis to get you closer/recursive
+- Make sure we have scattered examples as well! Maybe will work through practice problems as we go instead of leaving all for the end.
+- intuitive limits of values of priors, show that extreme values stay extreme!
+- maybe visualize/show bayesian updating as an average b/w prior and posterior?
+--></description></item><item><title>Week 1: Counting and Definitions of Probability</title><link>https://srihari-ganesh.github.io/stat110/week1/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week1/</guid><description>&lt;h2 id="0-info">0. Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 9/13&lt;/li>
 &lt;li>Associated lectures: 9/5, 9/7&lt;/li>
