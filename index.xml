@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link><atom:link href="https://srihari-ganesh.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Srihari Ganesh</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link></image><item><title>Week 2: Conditional Probability</title><link>https://srihari-ganesh.github.io/stat110/week2/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week2/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link><atom:link href="https://srihari-ganesh.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Srihari Ganesh</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link></image><item><title>Week 3: Conditional Probability Examples and Random Variables</title><link>https://srihari-ganesh.github.io/stat110/week3/</link><pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week3/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 9/27&lt;/li>
+&lt;li>Associated lectures: 9/19, 9/21&lt;/li>
+&lt;li>Associated pset: Pset 2, due 9/29&lt;/li>
+&lt;li>Office hours on 9/27 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;li>Scroll to &lt;a href="#4-summary">section 4&lt;/a> for a concise content summary.&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%203%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%203%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-examples-from-class">1. Examples from class&lt;/h2>
+&lt;p>The lecture on 9/19 was full of examples of conditional probability. Here are my takeaways for each. I did not rewrite the examples because solutions are quite well-written in the book and/or in lecture.&lt;/p>
+&lt;h3 id="11-winter-girl-examples-225-227-in-the-book">1.1 Winter girl (Examples 2.2.5-2.2.7 in the book)&lt;/h3>
+&lt;ul>
+&lt;li>Define your events as specifically as possible, there are a lot of details that surprisingly can change probabilities.&lt;/li>
+&lt;li>See if you can simplify your events (both mathematically and logically). For example, if $A$ is the event that there&amp;rsquo;s at least one girl and $B$ is the event that there are two girls, $P(A, B) = P(B)$ since if there are two girls, there is automatically at least one girls.&lt;/li>
+&lt;/ul>
+&lt;h3 id="12-monty-hall-example-271-and-many-practice-problems-in-the-book">1.2 Monty Hall (Example 2.7.1 and many practice problems in the book)&lt;/h3>
+&lt;p>You can use the Law of Total Probability in some extreme ways! Condition on things that make your life much, much easier - in Monty Hall problems (and the variants that Joe likes to write), I very often condition on the location of the car or use Bayes&amp;rsquo; rule to move information about the car&amp;rsquo;s location into the condition!&lt;/p>
+&lt;h3 id="13-simpsons-paradox-example-283-in-the-book">1.3 Simpson&amp;rsquo;s paradox (Example 2.8.3 in the book)&lt;/h3>
+&lt;p>I think it&amp;rsquo;s a good to develop the skill of coming up with similar paradoxes - at the very least, it can test your understanding of probability. My understanding of this phenomenon is that there are two tasks - a hard and an easy task. Doctor A might have a better success rate in each task, but Doctor B can still have a higher overall success rate.&lt;/p>
+&lt;p>This happens because Doctor A does more of the harder task, which drags their average down, while Doctor B inflates their average by doing the easier task more often. There are some other intuitive corollaries - like how some students may learn a lot but have lower GPAs then other students because they take a higher proportion of challenging classes.&lt;/p>
+&lt;p>To construct these paradoxes, I think you need a hard task (where both doctors have a &amp;ldquo;low&amp;rdquo; success rate) and an easy task (where both doctors have a higher success rate). Then doctor A has to do more of the hard task, while doctor B needs to do more of the easy task, to weight their averages differently.&lt;/p>
+&lt;h3 id="14-gamblers-ruin-example-273-in-the-book">1.4 Gambler&amp;rsquo;s ruin (Example 2.7.3 in the book)&lt;/h3>
+&lt;p>You will be assessed (in pset and/or exam) on your ability to apply the gambler&amp;rsquo;s ruin result in other contexts, but you will never have to re-derive it. So you can figure out how variables in your problem correspond to gambler&amp;rsquo;s ruin (or even set up the difference equation) then just jump to plugging in the solution given.&lt;/p>
+&lt;p>In the gambler&amp;rsquo;s ruin problem, gambler $A$ starts with $i$ dollars and gambler $B$ starts with $N-i$ dollars. They keep making 1 dollar bets (which gambler $A$ has a probability $p$ of winning) until someone runs out of money (either gambler $A$ has $0$ dollars or gambler $B$ has 0 dollars). We often define $q = 1-p$ for notational convenience.&lt;/p>
+&lt;p>If we define $p_i$ to be the probability that gambler $A$ wins if they start with $i$ dollars, then using first-step analysis we find that
+$$
+p_i = p_{i+1} p + p_{i-1}q.
+$$
+This gives a difference equation solution of
+$$
+p_i = \begin{cases} \frac{1 - (\frac{q}{p})^i}{1 - (\frac{q}{p})^N}&amp;amp; p \ne 1/2\\
+\frac{i}{N}&amp;amp; p = 1/2 \end{cases}
+$$&lt;/p>
+&lt;p>To match a problem to this, you should&lt;/p>
+&lt;ul>
+&lt;li>Make sure that &amp;ldquo;bets&amp;rdquo; are worth 1 dollar each.&lt;/li>
+&lt;li>Make sure that gambler $A$ loses if they hit 0 dollars, and wins if they hit some fixed amount of dollars ($N$)&lt;/li>
+&lt;li>Make sure there is a constant probability of winning each bet.&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-random-variables">2. Random variables&lt;/h2>
+&lt;h3 id="21-definition">2.1 Definition&lt;/h3>
+&lt;p>A &lt;strong>random variable&lt;/strong> summarizes some experiment. So if you have a sample space $S$, for each possible outcome $\omega \in S$, your random variable takes on a certain (real number). Here are some examples of random variables:&lt;/p>
+&lt;ul>
+&lt;li>Say we&amp;rsquo;re rolling a die, so $S$ is the set of possible rolls. Then we could have $X = 1$ if we roll a $1$, $X = 2$ if we roll a $2$, and so on.&lt;/li>
+&lt;li>We could define another random variable $Y$ to be the square of the roll. so $Y = 1$ if we roll a 1, $Y = 16$ if we roll a $4$, etc.&lt;/li>
+&lt;li>Random variables don&amp;rsquo;t have to take on different values for every outcome. So we could have $Z = 2$ if we roll an even number and $Z = 1$ if we roll an odd number.&lt;/li>
+&lt;li>They also don&amp;rsquo;t have to be discrete values - we could have a random variable $T$ represent the exact temperature in the room right now.&lt;/li>
+&lt;/ul>
+&lt;h3 id="22-defining-discrete-random-variables">2.2 Defining discrete random variables&lt;/h3>
+&lt;p>A random variable is &lt;strong>discrete&lt;/strong> if it has a finite or countably infinite number of values (something like $1, 2, 3, 4, \ldots$ is countably infinite. If instead your random variable can take on any value in an interval - like any real number, or any real number between 2 and 4, etc. - then it is uncountable).&lt;/p>
+&lt;p>We can uniquely describe a random variable by its &lt;strong>probability mass function&lt;/strong>. This basically tells us the probability that the random variable takes on each possible value. For example, the probability mass function for the first dice-roll example, $X$ is
+$$
+P(X = x) = \begin{cases}
+\frac{1}{6} &amp;amp; x \in \{1, 2, 3, 4, 5, 6\}\\
+0 &amp;amp; \text{else}.
+\end{cases}
+$$
+The little $x$ is a dummy variable - it&amp;rsquo;s just a general way of going through every possible value. For example, we can now tell that there is a $1/6$ probability that $X = 4$, which corresponds to a $1/6$ probability that we roll a $4$, which makes sense.&lt;/p>
+&lt;p>Some important facts:&lt;/p>
+&lt;ul>
+&lt;li>&amp;ldquo;$X = 1$&amp;rdquo; is an event, so we can take its probability. We &lt;em>cannot&lt;/em> take the probability of a random variable, so $P(X)$ is a category error.&lt;/li>
+&lt;li>When writing a PMF
+&lt;ul>
+&lt;li>Every probability should be between $0$ and $1$ (inclusive), which holds for all probabilities.&lt;/li>
+&lt;li>The probabilities in the PMF should sum to $1$:
+$$
+\sum_{x \in \mathbb{R}} P(X = x) = 1.
+$$
+This comes from both axioms of probability, since the events for each possible value of $X$ partition the entire sample space.&lt;/li>
+&lt;li>I always have the &amp;ldquo;$0$, else&amp;rdquo; statement.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The &lt;strong>support&lt;/strong> of a random variable is the set of possible values it can take on. So the support for $X$ is ${1, 2, 3, 4, 5, 6}$, and the support for $Z$ is ${1, 2}$, and so on. You should always define the support, too.&lt;/li>
+&lt;/ul>
+&lt;h3 id="23-a-more-mathy-definition-of-random-variables">2.3 A more mathy definition of random variables&lt;/h3>
+&lt;p>Random variables are functions. If notation makes more sense to you, maybe this will be useful.&lt;/p>
+&lt;p>Remember that in any random experiment, we have a sample space $S$, where each element of $S$ is a possible outcome. Exactly one of those outcomes will happen. You can think of a random variable $X$ as a function that maps outcomes to the real number line, so $X : S \to \mathbb{R}$. So if some outcome $\omega \in S$ happens, then the random variable gives us the real number $X(\omega)$. There&amp;rsquo;s nothing random about the function $X$ - each outcome always goes to the same real number - but instead the randomness comes from which outcome actually ends up happening.&lt;/p>
+&lt;p>So when we think about PMFs and any probabilities with random variables, we&amp;rsquo;re using a bit of shorthand. It&amp;rsquo;s not immediately obvious that $X = x$ is an event, so let&amp;rsquo;s translate (again, remember $x$ is just a fixed number. I could just as easily use $y$ or $a$ as a variable, or $0$ or $1.5$ or $-17$ if I want a specific value):
+\begin{align}
+P(X = x) = P(\{\omega \in S : X(\omega) = x\})
+\end{align}
+That set, $\{\omega \in S : X(\omega) = x\}$, is a subset of the sample space and thus is definitely an event. We can take a probability of that. Note that there can be multiple outcomes in this subset, which is the same as saying that $X$ is &lt;em>not injective&lt;/em>.&lt;/p>
+&lt;p>So when we start talking about fancier random varibles - like $X^2$ - we can still dissect the probabilities
+\begin{align}
+P(X^2 = y) &amp;amp;= P(\{\omega \in S : X^2(\omega) = y\})\\
+&amp;amp;= P(\{\omega \in S : X(\omega) = \sqrt{y} \text{ or } X(\omega) = -\sqrt{y}\})\\
+&amp;amp;= P((X = \sqrt{y}) \cup (X = -\sqrt{y}))\\
+&amp;amp;= P(X = \sqrt{y}) + P(X = -\sqrt{y}),
+\end{align}
+assuming $y$ is positive and splitting up the probability in the last step because the two events are disjoint (a random variable can&amp;rsquo;t equal two different values at the same time).&lt;/p>
+&lt;p>The support can also now be redefined as the function - basically, the support is $\{x \in \mathbb{R} : \text{ there exists } \omega \in S \text{ such that } X(\omega) = x\}$.&lt;/p>
+&lt;h2 id="3-distributions">3. Distributions&lt;/h2>
+&lt;p>A distribution is a type of random variable. I think this makes the most sense through example. For discrete distributions (which correspond to discrete random variables), we usually motivate them with a story and maybe some counting. &lt;strong>Stories are extremely important and should be internalized,&lt;/strong> not just the PMFs.&lt;/p>
+&lt;h3 id="31-bernoulli-distribution">3.1 Bernoulli Distribution&lt;/h3>
+&lt;p>You perform an experiment that consists of $1$ trial, where the possible outcomes are success or failure. There is a probability $p$ of success and probability $q = 1-p$ of failure. This is summarized by a random variable $X$, where $X = 1$ if the trial is a success and $X = 0$ if it is a failure. We then say $X$ is distributed Bernoulli with parameter $p$, or in notation, $X \sim \mathrm{Bern}(p)$.&lt;/p>
+&lt;p>The PMF is
+$$
+P(X = x) = \begin{cases}
+p &amp;amp; x = 1\\
+q &amp;amp; x = 0\\
+0 &amp;amp; \text{else}
+\end{cases}
+$$&lt;/p>
+&lt;p>For a concrete example, a rigged coin toss has a probability $p = 0.7$ of landing heads (success) and probability $q = 0.3$ of landing tails (failure). If $X = 1$ when the coin lands heads and $X = 0$ when it lands tails, then $X \sim \mathrm{Bern}(0.7)$.&lt;/p>
+&lt;p>Note that you CANNOT set a random variable &lt;em>equal&lt;/em> to a distribution. You have to use the $\sim$ symbol and say &amp;ldquo;distributed as.&amp;rdquo;&lt;/p>
+&lt;h3 id="32-binomial-distribution">3.2 Binomial Distribution&lt;/h3>
+&lt;p>You perform an experiment with $n$, independent Bernoulli trials, each of which is a success with the same probability $p$. Then the random variable $Y$, the number of successful trials, is distributed Binomial with $n$ trials and success probability $p$. In notation, $Y \sim \mathrm{Bin}(n, p)$.&lt;/p>
+&lt;p>We can find the PMF with some counting:
+\begin{align}
+P(Y = y) &amp;amp;= \begin{cases}
+\binom{n}{y} p^y (1-p)^{n-y} &amp;amp; y \in \{0, 1, 2, \ldots, n\}\\
+0 &amp;amp; \text{else}.
+\end{cases}
+\end{align}&lt;/p>
+&lt;p>NOTE: a Binomial random variable $Y$ can be represented as the sum of $n$ independent Bernoulli random variables, each with success probability $p$.&lt;/p>
+&lt;h2 id="4-summary">4. Summary&lt;/h2>
+&lt;h3 id="41-examples-from-class">4.1 Examples from class&lt;/h3>
+&lt;p>Some takeaways:&lt;/p>
+&lt;ul>
+&lt;li>Define events very specifically (winter girl)&lt;/li>
+&lt;li>See if you can simplify your problems with logic, not just relying on grinding through math (winter girl)&lt;/li>
+&lt;li>Use the Law of Total Probability to condition on anything/everything you wish you knew
+&lt;ul>
+&lt;li>In Monty Hall, you can often condition on the location of the car!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>To mimic Simpson&amp;rsquo;s paradox, set up some &amp;ldquo;hard&amp;rdquo; and &amp;ldquo;easy&amp;rdquo; tasks and make the better doctor do more of the hard tasks&lt;/li>
+&lt;li>Learn how to turn a problem into the gambler&amp;rsquo;s ruin problem:
+&lt;ul>
+&lt;li>Make losing happen at $0$, and winning happen at some fixed $N$&lt;/li>
+&lt;li>Make sure each bet/step is only one dollar in either direction&lt;/li>
+&lt;li>Make sure the probability of winning each individual bet is constant&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="42-random-variables">4.2 Random variables&lt;/h3>
+&lt;p>&lt;strong>Random variables&lt;/strong> are a numerical (real number) summary of the outcome of your experiment. So for each possible outcome, the random variable takes on a certain value. Multiple outcomes can lead to the same value of the random variable. The &lt;strong>support&lt;/strong> of a random variable is the set of possible values it can take on.&lt;/p>
+&lt;p>We define discrete random variables by their &lt;strong>probability mass function&lt;/strong>. You should define the probability $P(X = x)$ for each $x$ in the random variable&amp;rsquo;s support, and always write probability $0$ for any value of $x$ that is not in the support. The PMF should always give valid probabilities, and should sum to $1$.&lt;/p>
+&lt;h3 id="43-distributions">4.3 Distributions&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Bernoulli distribution&lt;/strong>: you conduct a single trial that succeeds with probability $p$. $X = 1$ if the trial succeeds and $X = 0$ if it fails. Then $X \sim \mathrm{Bern}(p)$ and has a PMF
+$$
+P(X = x) = \begin{cases}
+p &amp;amp; x = 1\\
+1 - p &amp;amp; x = 0\\
+0 &amp;amp; \text{else}
+\end{cases}
+$$&lt;/li>
+&lt;li>&lt;strong>Binomial distribution&lt;/strong>: you conducts $n$ independent trials that each succeed with probability $p$. $Y$ is the total number of successes among the $n$ trials. Then $Y \sim \mathrm{Bin}(n, p)$ and the PMF is
+$$
+P(Y = y) = \begin{cases}
+\binom{n}{y} p^y (1-p)^{n-y} &amp;amp; y \in \{0, 1, \ldots, n\}\\
+0 &amp;amp; \text{else}
+\end{cases}
+$$&lt;/li>
+&lt;/ul></description></item><item><title>Week 2: Conditional Probability</title><link>https://srihari-ganesh.github.io/stat110/week2/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week2/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 9/20&lt;/li>
 &lt;li>Associated lectures: 9/12, 9/14&lt;/li>
@@ -931,7 +1090,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-239658147" class="chart">&lt;/div>
+&lt;div id="chart-758213496" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -940,7 +1099,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-239658147', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-758213496', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
