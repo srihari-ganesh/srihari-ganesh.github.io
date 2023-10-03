@@ -1,8 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Sep 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 3: Conditional Probability Examples and Random Variables</title><link>https://srihari-ganesh.github.io/stat110/week3/</link><pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week3/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 4: Discrete Distributions and Expectation</title><link>https://srihari-ganesh.github.io/stat110/week4/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week4/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 10/4&lt;/li>
+&lt;li>Associated lectures: 9/24, 9/26&lt;/li>
+&lt;li>Associated pset: Pset 4, due 10/6&lt;/li>
+&lt;li>Midterm: 10/10&lt;/li>
+&lt;li>Office hours on 10/4 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;li>Given the structure of my section, I&amp;rsquo;m shifting away from a lot of explanation on this webpage. I may come back in the future and add more examples, but it doesn&amp;rsquo;t make much sense since we&amp;rsquo;re mainly doing practice problems in section.&lt;/li>
+&lt;/ul>
+&lt;!-- - Scroll to [section 5](#5-summary) for a concise content summary. -->
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%204%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%204%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-random-variables">1. Random variables&lt;/h2>
+&lt;p>Let&amp;rsquo;s use the precise mathematical definition from last time: &lt;strong>random variables&lt;/strong> assign real numbers to possible outcomes of an experiment. In other words, they map the sample space to the real line. So for a random variable $X$, for every outcome in the sample space, $\omega \in S$, there is a corrsponding real number, $X(\omega) \in \mathbb{R}$.&lt;/p>
+&lt;p>Here&amp;rsquo;s the terminology of a random variable that we&amp;rsquo;ve talked about thus far, where we continue using $X$ as an example of a random variable.&lt;/p>
+&lt;ul>
+&lt;li>The &lt;strong>support&lt;/strong>: what is the set of values that a random variable can take on? This is equivalent to the image/range of of $X$ on $S$, $X(S)$.&lt;/li>
+&lt;li>For a named distribution like a Binomial, we say $X$ is distributed Binomial using $X \sim \mathrm{Bin}(n, p)$, where we have to set possible values of the parameters $n$ and $p$ for our specific problem. You CANNOT set $X = \mathrm{Bin}(n, p)$: named distributions cannot equal random variables, they are just a blueprint for what the random variable looks like.&lt;/li>
+&lt;li>The &lt;strong>probability mass function (PMF)&lt;/strong>: for any real number $x$ (or $t$ or $y$, it&amp;rsquo;s just a filler variable), what is the probability that $X$ takes on this value? This is notated $P(X = x)$.
+&lt;ul>
+&lt;li>You should address every possible value of $x$: $P(X = x) = 0$ if $x$ is not in the support of $X$, $\sum_{x \in \text{ support of } X } P(X = x) = 1$, and every probability should be valid (nonnegative, between $0$ and $1$ inclusive).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;em>NEW:&lt;/em> the &lt;strong>cumulative density function (CDF)&lt;/strong>: for any real number $x$, what is the probability that $X$ takes on a value that is less than or equal to $x$? This is notated $P(X \le x)$.
+&lt;ul>
+&lt;li>You should again address every possible value of $x$, both in and outside of the support.&lt;/li>
+&lt;li>Here, the requirements for a valid CDF are that $P(X \le x) = 0$ if $x$ is less than the smallest value in the support and $P(X \le x) = 1$ if $x$ is greater than the biggest value in the support. For an infinite support, we should have $P(X \le x) \to 0$ as $x \to -\infty$ and $P(X \le x) \to 1$ as $x \to \infty$.&lt;/li>
+&lt;li>Additionally, a CDF should be non-decreasing (i.e., either increasing or a flat line).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>We often abbreviate to say random variables are &lt;strong>independent and identically distributed (i.i.d.)&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;p>Here&amp;rsquo;s a general approach for defining the distribution of a random variable (r.v.). You can give the distribution using either the PMF, the CDF, or a named distribution with the parameters defined.&lt;/p>
+&lt;ol>
+&lt;li>Define the support of your r.v.&lt;/li>
+&lt;li>See if the random variable matches the story of any of the named distributions we have discussed. To see if an r.v. matches a distribution, some things to check are
+&lt;ul>
+&lt;li>For which named distributions is the support of your r.v. possible?&lt;/li>
+&lt;li>Are there draws/samples/trials? If so, are they independent?&lt;/li>
+&lt;li>If there is sampling, is it done with or without replacement?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>If you can match a named distribution, what are the parameters? Are those parameters allowed for that named distribution?&lt;/li>
+&lt;li>If you can&amp;rsquo;t match a named distribution, how can you calculate the PMF using the information you checked about sampling and your counting skills?&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-discrete-distributions">2. Discrete distributions&lt;/h2>
+&lt;p>You can find things like the support, PMF, CDF, and expectation in the table of distributions at the end of the textbook or start of the midterm handout. We&amp;rsquo;ll focus on the stories and connections between distributions. For these discrete random variables (except for the Poisson), you should develop comfort with calculating their PMFs from scratch.&lt;/p>
+&lt;h3 id="21-bernoulli">2.1 Bernoulli&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>: We run a trial with probability $p$ of success. Let the random variable $X$ be $1$ if the trial succeeds or $0$ if the trial fails. Then $X \sim \mathrm{Bern}(p)$.&lt;/p>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>For $X \sim \mathrm{Bern}(p)$, $1-X \sim \mathrm{Bern}(1-p)$.&lt;/li>
+&lt;li>For $X \sim \mathrm{Bern}(p)$, $X^2 = X$, so $X^2 \sim \mathrm{Bern}(p)$. If you&amp;rsquo;re wondering why, check the support!&lt;/li>
+&lt;/ul>
+&lt;h3 id="22-binomial">2.2 Binomial&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>: We run $n$ &lt;strong>independent&lt;/strong> trials, each with an &lt;strong>equal&lt;/strong> probability $p$ of success. Let $X$ be the number of successful trials. Then $X \sim \mathrm{Bin}(n,p)$.&lt;/p>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>For $n$ &lt;strong>independent and identically distributed&lt;/strong> Bernoulli random variables $X_1, \ldots, X_n \stackrel{i.i.d.}{\sim} Bern(p)$, $$\sum_{i=1}^n X_i \sim \mathrm{Bin}(n, p).$$
+&lt;ul>
+&lt;li>This means $\mathrm{Bern}(p)$ is equivalent to $\mathrm{Bin}(1,p)$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>For independent random variables $X \sim \mathrm{Bin}(n, p)$ and $Y \sim \mathrm{Bin}(m, p)$, $$X+Y \sim \mathrm{Bin}(n+m,p).$$&lt;/li>
+&lt;/ul>
+&lt;h3 id="23-hypergeometric">2.3 Hypergeometric&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>Capture/recapture elk&lt;/em>: There are $N$ elk in the forest. In the past, we captured and tagged $m$ of the elk. We now recapture $n$ of the elk, where every set of $n$ is equally likely and elk are sampled without replacement. Let $X$ be the number of tagged elk among our $n$ recaptured elk. Then $X \sim \mathrm{HGeom}(m, N-m, n)$.&lt;/li>
+&lt;li>&lt;em>White and black balls in an urn&lt;/em>: There are $w$ white balls and $b$ black balls in a urn. We draw $n$ balls from the urn without replacement, where each set of $n$ balls is equally likely to be drawn. Let $X$ be the number of white balls in our sample. Then $X \sim \mathrm{HGeom}(w, b, n)$.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Notice the comparison between the Binomial and the Hypergeometric: using the urn story, if we sampled &lt;em>with&lt;/em> replacement our random variable would be distributed $\mathrm{Bin}(n, \frac{w}{w+b})$.&lt;/li>
+&lt;/ul>
+&lt;h3 id="24-geometricfirst-success">2.4 Geometric/First Success&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>: Suppose we&amp;rsquo;re running independent Bernoulli trials with probability $p$ of success. We stop running trials once one succeeds. Let $X$ be the number of failed trials before (and &lt;em>not&lt;/em> including) the first successful trial. Then $X \sim \mathrm{Geom}(p)$.&lt;/p>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>The First Success distribution is essentially the same as the Geometric, but we include the first successful trial as part of our count. So it always holds that for $X \sim \mathrm{Geom}(p)$, we have $X+1 \sim \mathrm{FS}(p)$.&lt;/li>
+&lt;li>Note that the Geometric/First Success distributions have infinite supports, while the Binomial has a fixed number of trials. This is a quick way to tell them apart.&lt;/li>
+&lt;/ul>
+&lt;h3 id="25-negative-binomial">2.5 Negative Binomial&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>: Suppose we&amp;rsquo;re running independent Bernoulli trials with probability $p$ of success. We stop running trials after the $r^{th}$ success. Let $X$ be the number of failed trials before the $r^{th}$ success (not including any of the successes in that count). Then $X \sim \mathrm{NBin}(r,p)$.&lt;/p>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>For &lt;strong>independent and identically distributed&lt;/strong> $X_1, X_2, \ldots, X_r \stackrel{i.i.d.}{\sim} \mathrm{Geom}(p)$, we get $\sum_{i=1}^r X_i \sim \mathrm{NBin}(r, p)$.
+&lt;ul>
+&lt;li>This means $\mathrm{NBin}(1,p)$ is equivalent to $\mathrm{Geom}(p)$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- ### 2.6 Poisson
+**Story**: There isn't
+**Connections**:
+- -->
+&lt;h2 id="3-expectation">3. Expectation&lt;/h2>
+&lt;p>The &lt;strong>expectation&lt;/strong> of a random variable $X$ with support $A$ is the weighted average of its possible values, where we weight based on the probability of $X$ taking on each value in its support. It is formally defined as
+$$
+E(X) = \sum_{x \in A} x P(X = x)
+$$
+&lt;strong>Linearity&lt;/strong> states that for any random variables $X, Y$ (which can be dependent!) and real number $c$,
+\begin{align*}
+E(X + Y) &amp;amp;= E(X) + E(Y),\\
+E(cX) &amp;amp;= cE(X).
+\end{align*}
+The &lt;strong>law of the unconscious statistician (LOTUS)&lt;/strong> states that the expectation of any function of a random variable, $g(X)$, can be found by
+$$
+E(g(X)) = \sum_{x \in A} g(x) P(X = x).
+$$
+For example, if we want to find $E(X^2)$, we simply swap $x^2$ in for $x$ in the expectation formula to get $E(X^2) = \sum_{x \in A} x^2 P(X = x)$. Note that the probabilities here don&amp;rsquo;t change, only what goes in front.&lt;/p>
+&lt;h3 id="31-indicator-random-variables">3.1 Indicator Random Variables&lt;/h3>
+&lt;p>An &lt;strong>indicator random variable&lt;/strong> converts an event into a Bernoulli random variable. For an event $A$ with $P(A) = p$, the corresponding indicator random variable $I(A) \sim \mathrm{Bern}(p)$. This random variable is defined such that $I(A) = 1$ if $A$ occurs and $I(A) = 0$ if $A^c$ occurs. You might see other equivalent notation like $I_A$ or $I$, just be clear about which event your indicator random variable corresponds to.&lt;/p>
+&lt;p>The &lt;strong>fundamental bridge&lt;/strong> (vocab which is not used outside of Stat 110) gives that
+$$
+E(I(A)) = P(A).
+$$
+We use this result a lot to calculate expectations of random variables that can be expressed as the sum of indicators. This is nice because the indicators can be dependent, but linearity allows us to break the expectations apart! A very common workflow to calculate an expectation is to write&lt;/p>
+&lt;ol>
+&lt;li>Write the random variable as the sum of indicators, $X = \sum_i I(A_i)$, where each $A_i$ is an event.&lt;/li>
+&lt;li>Apply linearity, $E(X) = \sum_i E(I(A_i))$.&lt;/li>
+&lt;li>Use the fundamental bridge, $E(X) = \sum_i P(A_i)$.&lt;/li>
+&lt;/ol>
+&lt;!-- ### 3.2 St. Petersburg -->
+&lt;h2 id="4-handy-math-facts">4. Handy math facts&lt;/h2>
+&lt;ul>
+&lt;li>You are expected to know how to find the sum of an infinite geometric series: if $|x| &amp;lt; 1$,
+$$
+\sum_{n=0}^\infty x^n = \frac{1}{1-x}.
+$$
+otherwise the sum does not exist (it diverges). For finite geometric series (and any $x \ne 1$),
+$$
+\sum_{n=0}^\infty x^n = \frac{1-x^n}{1-x}.
+$$&lt;/li>
+&lt;li>You are also expected to be familiar with some $e^x$ approximations, but you usually won&amp;rsquo;t be asked to approximate without prompting. The Taylor series of $e^x$ is
+$$
+e^x = \sum_{n=0}^\infty \frac{x^n}{n!}.
+$$
+The compound interest formula also gives
+$$
+e^x = \lim_{n \to \infty} (1+\frac{x}{n})^n.
+$$&lt;/li>
+&lt;/ul>
+&lt;h2 id="5-summary">5. Summary&lt;/h2></description></item><item><title>Week 3: Conditional Probability Examples and Random Variables</title><link>https://srihari-ganesh.github.io/stat110/week3/</link><pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week3/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 9/27&lt;/li>
 &lt;li>Associated lectures: 9/19, 9/21&lt;/li>
-&lt;li>Associated pset: Pset 2, due 9/29&lt;/li>
+&lt;li>Associated pset: Pset 3, due 9/29&lt;/li>
 &lt;li>Office hours on 9/27 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
 &lt;li>Scroll to &lt;a href="#4-summary">section 4&lt;/a> for a concise content summary.&lt;/li>
