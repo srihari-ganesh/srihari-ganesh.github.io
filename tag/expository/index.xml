@@ -6,9 +6,8 @@
 &lt;li>Midterm: 10/10&lt;/li>
 &lt;li>Office hours on 10/4 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
-&lt;li>Given the structure of my section, I&amp;rsquo;m shifting away from a lot of explanation on this webpage. I may come back in the future and add more examples, but it doesn&amp;rsquo;t make much sense since we&amp;rsquo;re mainly doing practice problems in section.&lt;/li>
+&lt;li>Given the structure of my section, I&amp;rsquo;m shifting away from a lot of explanation on this webpage. I may come back in the future and add more examples, but it doesn&amp;rsquo;t make much sense since we&amp;rsquo;re mainly doing practice problems in section. So this week, I have no concise summary section on the webpage because it&amp;rsquo;s all pretty tight - check out the handout below if you want it.&lt;/li>
 &lt;/ul>
-&lt;!-- - Scroll to [section 5](#5-summary) for a concise content summary. -->
 &lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
 &lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%204%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%204%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
@@ -46,7 +45,7 @@
 &lt;li>If you can&amp;rsquo;t match a named distribution, how can you calculate the PMF using the information you checked about sampling and your counting skills?&lt;/li>
 &lt;/ol>
 &lt;h2 id="2-discrete-distributions">2. Discrete distributions&lt;/h2>
-&lt;p>You can find things like the support, PMF, CDF, and expectation in the table of distributions at the end of the textbook or start of the midterm handout. We&amp;rsquo;ll focus on the stories and connections between distributions. For these discrete random variables (except for the Poisson), you should develop comfort with calculating their PMFs from scratch.&lt;/p>
+&lt;p>You can find details like the support, PMF, CDF, expectation, and variance in the table of distributions on page 605 of the textbook or page 3 of the midterm handout. We&amp;rsquo;ll focus on the stories and connections between distributions. For these discrete random variables (except for the Poisson), you should develop comfort with calculating their PMFs from scratch.&lt;/p>
 &lt;h3 id="21-bernoulli">2.1 Bernoulli&lt;/h3>
 &lt;p>&lt;strong>Story&lt;/strong>: We run a trial with probability $p$ of success. Let the random variable $X$ be $1$ if the trial succeeds or $0$ if the trial fails. Then $X \sim \mathrm{Bern}(p)$.&lt;/p>
 &lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
@@ -92,10 +91,21 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;!-- ### 2.6 Poisson
-**Story**: There isn't
-**Connections**:
-- -->
+&lt;h3 id="26-poisson">2.6 Poisson&lt;/h3>
+&lt;p>&lt;strong>Story&lt;/strong>: There&amp;rsquo;s no exact story to derive a Poisson. The only situation in which you&amp;rsquo;ll have to come up with the Poisson on your own is in approximation, and that is quite rare.&lt;/p>
+&lt;p>&lt;strong>Approximate story&lt;/strong>: Say there are many rare events $A_1, A_2, \ldots, A_n$ (so $n$ large and $P(A_i) = &amp;laquo; 1$, which stands for much smaller than $1$) which are nearly independent (which doesn&amp;rsquo;t have a rigorous definition). Then if we let $\lambda = \sum_{i=1}^n P(A_i)$, $X = \sum_{i=1}^n I(A_i)$ is approximately distributed $\mathrm{Pois}(\lambda)$.&lt;/p>
+&lt;p>&lt;strong>Connections&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>As you can see in the approximate story, you can use the Poisson to count the number of independent/weakly-dependent rare events that occur.&lt;/li>
+&lt;li>Suppose $X \sim \mathrm{Pois}(\lambda)$ and $Y \sim \mathrm{Pois}(\mu)$ with $X, Y$ independent. Then $X + Y \sim \mathrm{Pois}(\lambda + \mu)$.&lt;/li>
+&lt;li>Chicken-Egg: suppose a chicken lays $N$ eggs, with $N \sim \mathrm{Pois}(\lambda)$. Suppose each egg has a probability $p$ of hatching, with each egg&amp;rsquo;s hatching being independent, and let $X$ be the number of eggs that hatch and $Y$ be the number of eggs that don&amp;rsquo;t hatch.
+&lt;ul>
+&lt;li>$X$ and $Y$ are independent. $X$ and $Y$ are very conditionally independent given $N$ since $N = X+Y$.&lt;/li>
+&lt;li>$X \sim \mathrm{Pois}(\lambda p)$, $Y \sim \mathrm{Pois}(\lambda (1-p))$.&lt;/li>
+&lt;li>$X | N = n \sim \mathrm{Bin}(n, p)$.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="3-expectation">3. Expectation&lt;/h2>
 &lt;p>The &lt;strong>expectation&lt;/strong> of a random variable $X$ with support $A$ is the weighted average of its possible values, where we weight based on the probability of $X$ taking on each value in its support. It is formally defined as
 $$
@@ -124,6 +134,29 @@ We use this result a lot to calculate expectations of random variables that can 
 &lt;li>Use the fundamental bridge, $E(X) = \sum_i P(A_i)$.&lt;/li>
 &lt;/ol>
 &lt;!-- ### 3.2 St. Petersburg -->
+&lt;h3 id="32-variance">3.2 Variance&lt;/h3>
+&lt;p>The &lt;strong>variance&lt;/strong> is a measure of spread, defined for a random variable $X$ as
+$$
+Var(X) = E((X - E(X))^2).
+$$
+Here basically all of the facts you have to know about variance:&lt;/p>
+&lt;ul>
+&lt;li>It&amp;rsquo;s usually calculated using an equivalent formula, $$Var(X) = E(X^2) - (E(X))^2.$$&lt;/li>
+&lt;li>It is always nonnegative. In fact, variance is only zero if $P(X = x) = 1$ for some $x \in \mathbb R$: in other words, $X$ takes on a certain value with probability $1$. If this is not the case, the variance will be positive.&lt;/li>
+&lt;li>For a scalar $c \in \mathbb R$ (a number, not random) and a random variable $X$,
+\begin{align*}
+Var(cX) &amp;amp;= c^2 Var(X)\\
+Var(X + c) &amp;amp;= Var(X).
+\end{align*}&lt;/li>
+&lt;li>For &lt;em>independent&lt;/em> random variables $X$ and $Y$
+$$
+Var(X + Y) = Var(X) + Var(Y).
+$$
+For &lt;em>dependent&lt;/em> random variables $X$ and $Y$,
+$$
+Var(X+Y) \ne Var(X) + Var(Y).
+$$&lt;/li>
+&lt;/ul>
 &lt;h2 id="4-handy-math-facts">4. Handy math facts&lt;/h2>
 &lt;ul>
 &lt;li>You are expected to know how to find the sum of an infinite geometric series: if $|x| &amp;lt; 1$,
@@ -142,8 +175,7 @@ The compound interest formula also gives
 $$
 e^x = \lim_{n \to \infty} (1+\frac{x}{n})^n.
 $$&lt;/li>
-&lt;/ul>
-&lt;h2 id="5-summary">5. Summary&lt;/h2></description></item><item><title>Week 3: Conditional Probability Examples and Random Variables</title><link>https://srihari-ganesh.github.io/stat110/week3/</link><pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week3/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;/ul></description></item><item><title>Week 3: Conditional Probability Examples and Random Variables</title><link>https://srihari-ganesh.github.io/stat110/week3/</link><pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week3/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 9/27&lt;/li>
 &lt;li>Associated lectures: 9/19, 9/21&lt;/li>
