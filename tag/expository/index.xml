@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 4: Discrete Distributions and Expectation</title><link>https://srihari-ganesh.github.io/stat110/week4/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week4/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 14 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 5: Continuous Distributions</title><link>https://srihari-ganesh.github.io/stat110/week5/</link><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week5/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 10/18&lt;/li>
+&lt;li>Associated lecture: 10/12&lt;/li>
+&lt;li>Associated pset: Pset 5: 10/20&lt;/li>
+&lt;li>Office hours on 10/18 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%205%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%205%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-continuous-random-variables">1. Continuous Random Variables&lt;/h2>
+&lt;p>A &lt;strong>continuous&lt;/strong> random variable has an interval for its support.&lt;/p>
+&lt;ul>
+&lt;li>More precisely: a continuous random variable has an uncountable support, while discrete random variables have finite/countably infinite supports.&lt;/li>
+&lt;/ul>
+&lt;p>We heavily lean on the &lt;strong>cumulative distribution function (CDF)&lt;/strong>: for any random variable $X$, the CDF $F: \mathbb R \to [0, 1]$ is defined $F(x) = P(X \le x)$.&lt;/p>
+&lt;p>We don&amp;rsquo;t use the probability mass function (PMF) anymore, because $P(X = x) = 0$ for any $x$. This probability $0$ does not mean &amp;ldquo;impossible,&amp;rdquo; though. We instead use the probability density function:&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+The &lt;strong>probability density function&lt;/strong> of a random variable $X$ with CDF $F$ is a function $f: \mathbb{R} \to \mathbb{R}$:
+$$
+f(x) = \frac{d}{dx} F(x)
+$$
+Probability densities are the continuous analog to probabilities, but they are NOT probabilities. A valid PDF is nonnegative and satisfies
+$$
+\int_{-\infty}^\infty f(x) dx = 1
+$$
+&lt;/div>
+&lt;/div>
+&lt;h3 id="11-uses-of-cdfs-and-pdfs">1.1 Uses of CDFs and PDFs&lt;/h3>
+&lt;p>For &lt;em>any&lt;/em> random variable $X$ (continuous or discrete), you can use the CDF to calculate the following:
+\begin{align*}
+P(X &amp;gt; x) &amp;amp;= 1 - P(X \le x) = 1-F(x)\\
+P(x_1 &amp;lt; X \le x_2) &amp;amp;= P(X \le x_2) - P(X \le x_1) = F(x_2) - F(x_1)
+\end{align*}
+For the CDFs of continuous random variables,&lt;/p>
+&lt;ul>
+&lt;li>You can assume the CDF is differentiable.&lt;/li>
+&lt;li>$P(X \le x) = P(X &amp;lt; x)$, so you can swap out $\le$ and $&amp;lt;$ in calculations like the above.&lt;/li>
+&lt;/ul>
+&lt;p>For a continuous random variable, we can find the probabilities of intervals by integrating the PDF and adjusting the bounds:
+\begin{align*}
+P(X \le x) = P(X &amp;lt; x) &amp;amp;= \int_{-\infty}^x f(x) dx\\
+P(X \ge x) = P(X &amp;gt; x) &amp;amp;= \int_{x}^{\infty} f(x) dx\\
+P(x_1 &amp;lt; X &amp;lt; x_2) &amp;amp;= \int_{x_1}^{x_2} f(x) dx.
+\end{align*}&lt;/p>
+&lt;h3 id="12-continuous-analogs-of-all-of-our-tools">1.2 Continuous analogs of all of our tools&lt;/h3>
+&lt;p>The general rules are:&lt;/p>
+&lt;ul>
+&lt;li>Integrals instead of sums&lt;/li>
+&lt;li>PDFs instead of PMFs&lt;/li>
+&lt;/ul>
+&lt;p>So here&amp;rsquo;s a table with the tools we&amp;rsquo;ve talked about:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Tool&lt;/th>
+&lt;th>Discrete&lt;/th>
+&lt;th>Continuous&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Expectation&lt;/td>
+&lt;td>$E(X) = \sum_{x} x P(X = x)$&lt;/td>
+&lt;td>$E(X) = \int_{-\infty}^{\infty} x f_X(x) dx$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LOTUS&lt;/td>
+&lt;td>$E(g(X)) = \sum_x g(x) P(X = x)$&lt;/td>
+&lt;td>$E(g(X)) = \int_{-\infty}^\infty g(x) f_X(x) dx$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Bayes&amp;rsquo; rule&lt;/td>
+&lt;td>$P(X = x \vert Y = y) = \frac{P(Y=y \vert X = x) P(X = x)}{P(A)}$&lt;/td>
+&lt;td>$f_{X\vert Y=y}(x) = \frac{f_{Y\vert X=x}(y) f_X(x)}{f_Y(y)}$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="2-uniform">2. Uniform&lt;/h2>
+&lt;p>For any interval $(a, b)$, we can define a uniform distribution with that support, denoted $U \sim \mathrm{Unif}(a, b)$. A uniform distribution is equivalent to having a constant PDF over the support. There is no uniform whose support is the full real line.
+\begin{align*}
+f_U(x) &amp;amp;= \begin{cases}
+\frac{1}{b-a} &amp;amp; x \in (a, b)\\
+0 &amp;amp; x \notin (a, b)
+\end{cases}\\
+F_U(x) = P(U &amp;lt; x) &amp;amp;= \begin{cases}
+0 &amp;amp; x \le a\\\
+\frac{x-a}{b-a} &amp;amp; x \in (a, b)\\
+1 &amp;amp; x \ge b
+\end{cases}
+\end{align*}&lt;/p></description></item><item><title>Week 4: Discrete Distributions and Expectation</title><link>https://srihari-ganesh.github.io/stat110/week4/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week4/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 10/4&lt;/li>
 &lt;li>Associated lectures: 9/24, 9/26, 10/3&lt;/li>
@@ -108,11 +200,15 @@
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="3-expectation">3. Expectation&lt;/h2>
-&lt;p>The &lt;strong>expectation&lt;/strong> of a random variable $X$ with support $A$ is the weighted average of its possible values, where we weight based on the probability of $X$ taking on each value in its support. It is formally defined as
+&lt;div class="alert alert-note">
+&lt;div>
+The &lt;strong>expectation&lt;/strong> of a random variable $X$ with support $A$ is the weighted average of its possible values, where we weight based on the probability of $X$ taking on each value in its support. It is formally defined as
 $$
 E(X) = \sum_{x \in A} x P(X = x)
 $$
-&lt;strong>Linearity&lt;/strong> states that for any random variables $X, Y$ (which can be dependent!) and real number $c$,
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Linearity&lt;/strong> states that for any random variables $X, Y$ (which can be dependent!) and real number $c$,
 \begin{align*}
 E(X + Y) &amp;amp;= E(X) + E(Y),\\
 E(cX) &amp;amp;= cE(X).
@@ -136,11 +232,15 @@ We use this result a lot to calculate expectations of random variables that can 
 &lt;/ol>
 &lt;!-- ### 3.2 St. Petersburg -->
 &lt;h3 id="32-variance">3.2 Variance&lt;/h3>
-&lt;p>The &lt;strong>variance&lt;/strong> is a measure of spread, defined for a random variable $X$ as
+&lt;div class="alert alert-note">
+&lt;div>
+The &lt;strong>variance&lt;/strong> is a measure of spread, defined for a random variable $X$ as
 $$
 Var(X) = E((X - E(X))^2).
 $$
-Here basically all of the facts you have to know about variance:&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>Here basically all of the facts you have to know about variance:&lt;/p>
 &lt;ul>
 &lt;li>It&amp;rsquo;s usually calculated using an equivalent formula, $$Var(X) = E(X^2) - (E(X))^2.$$&lt;/li>
 &lt;li>It is always nonnegative. In fact, variance is only zero if $P(X = x) = 1$ for some $x \in \mathbb R$: in other words, $X$ takes on a certain value with probability $1$. If this is not the case, the variance will be positive.&lt;/li>
