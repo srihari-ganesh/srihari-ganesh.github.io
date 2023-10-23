@@ -1,8 +1,198 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/teaching/</link><atom:link href="https://srihari-ganesh.github.io/tag/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 14 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://srihari-ganesh.github.io/tag/teaching/</link></image><item><title>Week 5: Continuous Distributions</title><link>https://srihari-ganesh.github.io/stat110/week5/</link><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week5/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/teaching/</link><atom:link href="https://srihari-ganesh.github.io/tag/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://srihari-ganesh.github.io/tag/teaching/</link></image><item><title>Week 6: Universality of the Uniform, Normal, Expo, and Moments</title><link>https://srihari-ganesh.github.io/stat110/week6/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week6/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 10/25&lt;/li>
+&lt;li>Associated lectures: 10/17, 10/19&lt;/li>
+&lt;li>Associated pset: Pset 5, due 10/27&lt;/li>
+&lt;li>Office hours on 10/25 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Please reach out if you wanted to sign up for a midterm debrief and missed the chance&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%206%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%206%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-universality-of-the-uniform">1. Universality of the Uniform&lt;/h2>
+&lt;p>Recall that the standard uniform, $U \sim \mathrm{Unif}(0, 1)$, has support $(0, 1)$ with PDF $1$ in the support.&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;strong>Universality of the Uniform (UoU)&lt;/strong>: If $F$ is a valid CDF that is continuous and strictly increasing over the support, then&lt;/p>
+&lt;ol>
+&lt;li>Let $U \sim \mathrm{Unif}(0, 1)$. Then $F^{-1} (U)$ is a random variable with CDF $F$.&lt;/li>
+&lt;li>Let $X$ have CDF $F$. Then $F(X) \sim \mathrm{Unif}(0,1)$.&lt;/li>
+&lt;/ol>
+&lt;p>The first result applies to discrete random variables as well. The second result only works for continuous random variables.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>This result is quite useful for simulation - if you have access to draws from a Uniform distribution, then you can transform them into draws from any distribution with a known (inverse) CDF.&lt;/p>
+&lt;p>We can prove UoU with the tools we&amp;rsquo;ve learned in class. For continuous random variables with $F$ as described in the theorem,&lt;/p>
+&lt;ol>
+&lt;li>For $x \in \mathbb{R}$,
+\begin{align*}
+P(F^{-1}(U) &amp;lt; x) = P(F(F^{-1}(U)) &amp;lt; F(x)) = P(U &amp;lt; F(x)) = F(x).
+\end{align*}
+So $F^{-1}(U)$ has CDF $F$. We used the CDF of $U$ in the last step, since $F(x) \in [0, 1]$.&lt;/li>
+&lt;li>For $u \in [0, 1]$,
+\begin{align*}
+P(F(X) &amp;lt; u) &amp;amp;= P\left(F^{-1}(F(X)) &amp;lt; F^{-1}(u)\right)\\
+&amp;amp;= P(X &amp;lt; F^{-1}(u)) = F(F^{-1}(u)) = u,
+\end{align*}
+so $F(X) \sim \mathrm{Unif}(0, 1)$ since it has the CDF of a standard uniform.&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-normal-distribution">2. Normal distribution&lt;/h2>
+&lt;h3 id="21-standard-normal">2.1 Standard Normal&lt;/h3>
+&lt;p>$Z \sim \mathcal{N}(0, 1)$ is a &lt;strong>standard Normal&lt;/strong> random variable with support $\mathbb R$. We notate the CDF as $\Phi$ and PDF as $\phi$.&lt;/p>
+&lt;ul>
+&lt;li>(&lt;em>Symmetry&lt;/em>) The standard Normal is symmetric about $0$. In math, for $x \in \mathbb R$, $\phi(x) = \phi(-x)$.
+&lt;ul>
+&lt;li>This also implies that $\Phi(x) = 1 - \Phi(-x)$.&lt;/li>
+&lt;li>So $\Phi(0) = 0.5$.&lt;/li>
+&lt;li>For $Z \sim \mathcal{N}(0, 1)$, $-Z \sim \mathcal{N}(0, 1)$ as well.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>(&lt;em>Empirical rule/68-95-99.7 rule&lt;/em>)
+\begin{align*}
+P(-1 &amp;lt; Z &amp;lt; 1) &amp;amp;\approx 0.68,\\
+P(-2 &amp;lt; Z &amp;lt; 2) &amp;amp;\approx 0.95,\\
+P(-3 &amp;lt; Z &amp;lt; 3) &amp;amp;\approx 0.997.
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;p>In this class, you can give exact answers in terms of $\Phi$ and $\phi$. On psets, you should also use a calculator/programming language/the empirical rule to get numerical approximations of $\Phi$.&lt;/p>
+&lt;h3 id="22-normal">2.2 Normal&lt;/h3>
+&lt;p>$X \sim \mathcal{N}(\mu, \sigma^2)$ (with $\mu \in \mathbb R, \sigma &amp;gt; 0$) is a &lt;strong>Normal&lt;/strong> random variable with mean $\mu$ and variance $\sigma^2$, and also has support $\mathbb R$.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>(&lt;em>Location-scale&lt;/em>)
+For $Z \sim \mathcal{N}(0, 1)$, $\mu + \sigma Z \sim \mathcal{N}(\mu, \sigma^2)$.&lt;/p>
+&lt;p>More generally, for $X \sim \mathcal{N}(\mu_1, \sigma_1^2)$, $\mu_2 + \sigma_2 X \sim \mathcal{N}(\mu_2 + \mu_1 \sigma_2, \sigma_1^2 \sigma_2^2)$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(&lt;em>Standardization&lt;/em>)
+For $X \sim \mathcal{N}(\mu, \sigma^2)$, $\frac{X-\mu}{\sigma} \sim \mathcal{N}(0, 1)$.\
+We often use this to get results in terms of $\Phi$:
+\begin{align*}
+P(X &amp;lt; x) = P(\frac{X-\mu}{\sigma} &amp;lt; \frac{x-\mu}{\sigma}) = \Phi(\frac{x-\mu}{\sigma}).
+\end{align*}&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(&lt;em>Empirical rule&lt;/em>) For $X \sim \mathcal{N}(\mu, \sigma^2)$,
+\begin{align*}
+P(\mu-\sigma &amp;lt; X &amp;lt; \mu+\sigma) &amp;amp;\approx 0.68\\
+P(\mu-2\sigma &amp;lt; X &amp;lt; \mu+2\sigma) &amp;amp;\approx 0.95\\
+P(\mu-3\sigma &amp;lt; X &amp;lt; \mu+3\sigma) &amp;amp;\approx 0.997
+\end{align*}&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(&lt;em>Sum of independent Normals&lt;/em>)
+Let $X \sim \mathcal{N}(\mu_1, \sigma_1^2)$ and $Y \sim \mathcal{N}(\mu_2, \sigma_2^2)$ with $X, Y$ independent. Then
+\begin{align*}
+X + Y &amp;amp;\sim \mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2),\\
+X - Y &amp;amp;\sim \mathcal{N}(\mu_1 - \mu_2, \sigma_1^2 + \sigma_2^2).
+\end{align*}&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+(&lt;em>Variance when subtracting&lt;/em>)
+See that we always add the variance above! This is also a general rule: for any independent random variables $X$ and $Y$,
+\begin{align*}
+Var(X+Y) = Var(X - Y) = Var(X) + Var(Y).
+\end{align*}
+See that this is consistent with the fact that $Var(-Y) = (-1)^2 Var(Y) = Var(Y)$.
+&lt;/div>
+&lt;/div>
+&lt;h2 id="3-exponential-distribution">3. Exponential distribution&lt;/h2>
+&lt;p>$X \sim \mathrm{Expo}(\lambda)$ is an &lt;strong>Exponential&lt;/strong> random variable with mean $\frac{1}{\lambda}$ and variance $\frac{1}{\lambda^2}$. $\lambda$ is called the &lt;strong>rate parameter&lt;/strong>.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>(&lt;em>Memorylessness&lt;/em>)
+For $X \sim \mathrm{Expo}(\lambda)$ and any $s, t &amp;gt; 0$, the &lt;strong>memoryless&lt;/strong> property of the Exponential distribution states the following (equivalent) results:
+\begin{align*}
+P(X &amp;gt; s + t \vert X &amp;gt; s) &amp;amp;= P(X &amp;gt; t)\\
+(X - s \vert X &amp;gt; s) &amp;amp;\sim \mathrm{Expo}(\lambda).
+\end{align*}
+See specifically that $X-s | X&amp;gt;s$ is independent of the value of $s$.&lt;/p>
+&lt;p>The Exponential distribution is the only continuous distribution with this property. Additionally, the Geometric distribution is the only discrete distribution with support ${0, \ldots, }$ that is memoryless.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;p>For most results we talk about, you can&amp;rsquo;t put a random variable in the place of a constant - you might recall from last week&amp;rsquo;s problem set that we couldn&amp;rsquo;t let the sum of $N$ independent $\mathrm{Pois}(\lambda)$ r.v.s, with $N$ random, be distributed $\mathrm{Pois}(N\lambda)$. However, with memorylessness, you can put random variables in the place of the $s$ above - so for some random variable $Y$, $P(X &amp;gt; t +Y | X &amp;gt; Y) = P(X &amp;gt; t)$ and $(X-Y|X &amp;gt; Y) \sim \mathrm{Expo}(\lambda)$ still.&lt;/p>
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>&lt;ins>Click for proof&lt;/ins>&lt;/summary>
+&lt;p>We can prove by using LOTP and applying the constant version of memorylessness. We&amp;rsquo;ll assume $Y$ is discrete here, but continuous case is analogous (swap sums for integrals, PMFs for PDFs).
+\begin{align*}
+P(X &amp;gt; t+Y | X &amp;gt; Y) &amp;amp;= \sum_{y} P(X &amp;gt; t+y | X &amp;gt; Y, Y = y) P(Y=y)\\
+&amp;amp;= \sum_{y} P(X &amp;gt; t+y | X &amp;gt; y, Y = y) P(Y=y).
+\end{align*}
+We&amp;rsquo;ll take a brief sidebar to show that $P(X &amp;gt; t + y | X &amp;gt; y , Y = y) = P(X &amp;gt; t+y | X&amp;gt;y)$; I think you can jump from the former to the latter using unconditional independence of $X$ and $Y$ since the extra condition is a function of $X$, but we&amp;rsquo;ll be explicit here. We will use the definition of conditional probability, the fact that $X&amp;gt;t+y$ implies that $X&amp;gt;y$, and the unconditional independence of $X$ and $Y$.
+\begin{align*}
+P(X &amp;gt; t+y | X &amp;gt; y, Y = y) &amp;amp;= \frac{P(X &amp;gt; t+y, X &amp;gt; y, Y =y)}{P(X &amp;gt; y, Y = y)}\\
+&amp;amp;= \frac{P(X &amp;gt; t+y, Y =y)}{P(X &amp;gt; y ,Y =y)}\\
+&amp;amp;= \frac{P(X &amp;gt; t+y) P(Y = y) }{P(X&amp;gt;y)P(Y=y)}\\
+&amp;amp;= \frac{P(X&amp;gt;t+y)}{P(X&amp;gt;y)}\\
+&amp;amp;= \frac{P(X&amp;gt;t+y, X&amp;gt;y)}{P(X&amp;gt;y)}\\
+&amp;amp;= P(X&amp;gt;t+y | X&amp;gt;y).
+\end{align*}
+With this information,
+\begin{align*}
+P(X &amp;gt; t+Y | X &amp;gt;Y) &amp;amp;= \sum_y P(X&amp;gt;t+y|X&amp;gt;y, Y=y) P(Y=y)\\
+&amp;amp;= \sum_y P(X&amp;gt;t+y|X&amp;gt;y) P(Y=y)\\
+&amp;amp;= \sum_y P(X&amp;gt;t) P(Y=y)\\
+&amp;amp;= P(X&amp;gt;t) \sum_y P(Y=y)\\
+&amp;amp;= P(X&amp;gt;t) (1) = P(X&amp;gt;t),
+\end{align*}
+where we use memorylessness to say $P(X&amp;gt;t+y | X&amp;gt;y) = P(X&amp;gt;t)$.&lt;/p>
+&lt;/details>
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>(&lt;em>Example of Memorylessness&lt;/em>)
+Suppose you&amp;rsquo;re waiting for a bus that will arrive in $X \sim \mathrm{Expo}(\lambda)$ minutes. If you wait for the bus for 10 minutes and it has not arrived, then the remaining time that you have to wait is still distributed $\mathrm{Expo}(\lambda)$: $X - 10 | X &amp;gt; 10 \sim \mathrm{Expo}(\lambda)$. So no matter how long you wait, the remaining time for you to wait has the same distribution.&lt;/li>
+&lt;li>(&lt;em>Minimum of Expos&lt;/em>)
+The minimum of $n$ i.i.d. $\mathrm{Expo}(\lambda)$ random variables is distributed $\mathrm{Expo}(n\lambda)$. In notation, for $X_1, \ldots, X_n \overset{i.i.d.}{\sim} \mathrm{Expo}(\lambda)$, $\min(X_1, \ldots, X_n) \sim \mathrm{Expo}(n\lambda)$.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;p>&lt;strong>Maximum of Expos&lt;/strong>&lt;/p>
+&lt;p>The maximum of $n$ i.i.d. Exponential distributions is &lt;em>not&lt;/em> does not follow an Exponential distribution.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;strong>Finding the distribution of minimums/maximums&lt;/strong>&lt;/p>
+&lt;p>The results above can be found in the book, but they provide a general template for finding the distributions of minimums and maximums.&lt;/p>
+&lt;p>Let $X_1, \ldots, X_n$ be any random variables. Then the events ${\min(X_1, \ldots, X_n) &amp;gt; x}$ and $(X_1 &amp;gt; x) \cap (X_2 &amp;gt; x) \cap \cdots \cap (X_n &amp;gt; x)$ are equivalent. To convince yourself of this, think about what this means in words: the minimum of a set of numbers is greater than $x$ if and only if each one of the numbers is great than $x$.&lt;/p>
+&lt;p>To find the CDF of $\min(X_1, \ldots, X_n)$, a common workflow is
+\begin{align*}
+P(\min(X_1, \ldots, X_n) \le x) &amp;amp;= 1 - P(\min(X_1, \ldots, X_n) &amp;gt; x) = 1 - P(X_1 &amp;gt; x, X_2 &amp;gt; x, \ldots, X_n &amp;gt; x).
+\end{align*}
+If $X_1, \ldots, X_n$ are independent, then we can get that
+\begin{align*}
+P(X_1 &amp;gt; x, X_2 &amp;gt; x, \ldots, X_n &amp;gt; x) &amp;amp;= P(X_1 &amp;gt; x) P(X_2 &amp;gt; x) \cdots P(X_n &amp;gt; x)
+\end{align*}
+If $X_1, \ldots, X_n$ are also identically distributed, we conclude with
+\begin{align*}
+P(X_1 &amp;gt; x) P(X_2 &amp;gt; x) \cdots P(X_n &amp;gt; x) &amp;amp;= (P(X_1 &amp;gt; x))^n.
+\end{align*}&lt;/p>
+&lt;p>For maximums, we follow a similar workflow, except instead using the fact that $${\max(X_1, \ldots, X_n) &amp;lt; x} = \bigcap_{i=1}^n (X_i &amp;lt; x).$$&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="4-momentsmoment-generating-functions">4. Moments/Moment Generating Functions&lt;/h2>
+&lt;p>For a random variable $X$, the $\mathbf{n^{th}}$ &lt;strong>moment&lt;/strong> is $E(X^n)$.&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;strong>Moment Generating Function&lt;/strong>&lt;/p>
+&lt;p>For a random variable $X$, the &lt;strong>moment generating function (MGF)&lt;/strong> is $M_X(t) = E(e^{tX})$ for $t \in \mathbb{R}$. If the MGF exists, then
+\begin{align*}
+M_X(0) &amp;amp;= 1,\
+\frac{d^n}{dt^n} M_X(t) |_{t=0} = M_X^{(n)}(t) &amp;amp;= E(X^n).
+\end{align*}
+You should sanity-check that $M_X(0) = 1$ whenever you calculate an MGF.&lt;/p>
+&lt;/div>
+&lt;/div></description></item><item><title>Week 5: Continuous Distributions</title><link>https://srihari-ganesh.github.io/stat110/week5/</link><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week5/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 10/18&lt;/li>
 &lt;li>Associated lecture: 10/12&lt;/li>
-&lt;li>Associated pset: Pset 5: 10/20&lt;/li>
+&lt;li>Associated pset: Pset 5, due 10/20&lt;/li>
 &lt;li>Office hours on 10/18 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
 &lt;/ul>
