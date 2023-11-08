@@ -1,4 +1,270 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 6: Universality of the Uniform, Normal, Expo, and Moments</title><link>https://srihari-ganesh.github.io/stat110/week6/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week6/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>expository | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/expository/</link><atom:link href="https://srihari-ganesh.github.io/tag/expository/index.xml" rel="self" type="application/rss+xml"/><description>expository</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>expository</title><link>https://srihari-ganesh.github.io/tag/expository/</link></image><item><title>Week 8: Multinomial, Multivariate Normal</title><link>https://srihari-ganesh.github.io/stat110/week8/</link><pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week8/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 11/8&lt;/li>
+&lt;li>Associated lectures: 10/31, 11/2&lt;/li>
+&lt;li>Associated pset: Pset 5, due 11/10&lt;/li>
+&lt;li>Office hours on 11/8 from 9-11pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%208%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%208%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-multinomial">1. Multinomial&lt;/h2>
+&lt;p>We first generalize the notion of Bernoulli trials to many categories; this vocabulary for &amp;ldquo;categorical trials&amp;rdquo; is not standard/necessary for the class, just introduced by me to help define the Multinomial.&lt;/p>
+&lt;p>Consider &lt;em>categorical trials&lt;/em>, where the outcome of a trial falls into one of $k$ categories (e.g., the roll of a die has $6$ categories, the flip of a coin has $2$, etc.). Let $\mathbf p \in \mathbb R^k$ be a probability vector (where each entry is in $[0, 1]$ and the entries add up to $p$), where $p_i$ is the probability that the outcome falls into the $i^{\text{th}}$ category. $\newcommand{\Mult}{\mathrm{Mult}}\newcommand{\cov}{\mathrm{Cov}}\newcommand{\Pois}{\mathrm{Pois}}\newcommand{\Bin}{\mathrm{Bin}}$&lt;/p>
+&lt;p>&lt;strong>Multinomial story&lt;/strong>: Suppose we run $n$ independent and identically distributed (i.i.d.) categorical trials with $k$ categories and probability vector $\mathbf p$. Let $\mathbf X$ (a $k$-dimensional random vector) count the number of trials that fell into each category. Then $\mathbf X$ is distributed &lt;strong>Multinomial&lt;/strong>: $\mathbf X \sim \Mult_k(n, \mathbf p)$.&lt;/p>
+&lt;h3 id="11-multinomial-properties">1.1 Multinomial Properties&lt;/h3>
+&lt;ul>
+&lt;li>&lt;em>Marginal&lt;/em>: For $\mathbf X \sim \Mult_k(n, \mathbf p)$, $X_j \sim \Bin(n, p_j)$.&lt;/li>
+&lt;li>&lt;em>Conditioning&lt;/em>: For $\mathbf X \sim \Mult_k(n, \mathbf p)$,
+\begin{align*}
+(X_2, \ldots, X_n) | X_1 = x_1 &amp;amp;\sim \Mult_{k-1}(n-x_1, \left(\frac{p_2}{1 - p_1}, \ldots, \frac{p_n}{1-p_1} \right) ).
+\end{align*}&lt;/li>
+&lt;li>&lt;strong>Lumping&lt;/strong>: Suppose $\mathbf X \sim \Mult_k(n, \mathbf p)$. Then we can group (&lt;strong>lump&lt;/strong>) categories in any way to get a new Multinomial random variable by adding up the associated probabilities. For example, if $(X_1, X_2, X_3, X_4, X_5) \sim \Mult_5\left( n, (p_1, p_2, p_3, p_4, p_5) \right)$, then some valid examples are
+\begin{align*}
+(X_1+X_4, X_2, X_3+X_5) &amp;amp;\sim \Mult_3\left(n, ( p_1+p_4, p_2, p_3+p_5 )\right),\\
+(X_1+X_2, X_3, X_4, X_5) &amp;amp;\sim \Mult_4\left(n, ( p_1+p_2, p_3, p_4, p_5 )\right).
+\end{align*}&lt;/li>
+&lt;li>&lt;em>Covariance&lt;/em>: For $\mathbf X \sim \Mult_k(n, \mathbf p)$, $\cov(X_i, X_j) = -np_ip_j$.&lt;/li>
+&lt;li>&lt;em>Chicken-Egg extension&lt;/em>: Suppose $N \sim \Pois(\lambda)$ and $\mathbf X | N = n \sim \Mult_k (n, \mathbf p)$ where $k, \mathbf p$ don&amp;rsquo;t depend on $n$. Then for $j = 1, 2, \ldots, k$,
+\begin{align*}
+X_j &amp;amp;\sim \Pois(\lambda p_j).
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-multivariate-normal">2. Multivariate Normal&lt;/h2>
+&lt;p>Suppose $\mathbf X$ is a $k$-dimensional random vector. Then $\mathbf X$ follows &lt;strong>Multivariate Normal (MVN)&lt;/strong> distribution if for any constants $t_1, \ldots, t_k \in \mathbb R$,
+\begin{align*}
+t_1 X_1 + \cdots + t_k X_k
+\end{align*}
+is Normal (where $0$ is consider to follow a &lt;em>degenerate&lt;/em> Normal distribution). The $k=2$ case is called the &lt;strong>Bivariate Normal&lt;/strong>.&lt;/p>
+&lt;h3 id="21-multivariate-normal-properties">2.1 Multivariate Normal Properties&lt;/h3>
+&lt;ul>
+&lt;li>&lt;em>Uncorrelated MVN implies independence&lt;/em>: Suppose $(X, Y)$ is bivariate normal with $\cov(X, Y) = 0$ (i.e., $X$ and $Y$ are uncorrelated). Then $X$ and $Y$ are independent.&lt;br>
+More generally, if $\mathbf X$ and $\mathbf Y$ (potentially vectors) are components of the same MVN and $X_i, Y_j$ are uncorrelated for any $i, j$, then $\mathbf X$ and $\mathbf Y$ are independent.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+Please note the specific conditions under which this result holds. It is always true that independent random variables are uncorrelated, but the converse is not a general truth. For example, two uncorrelated Normal random variables are not necessarily independent; we could only make that statement if we knew they were components of the same MVN.
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;em>Independence of sum and difference&lt;/em>: Suppose $X \sim \mathcal N(\mu_1, \sigma^2)$ and $Y \sim \mathcal N(\mu_2, \sigma^2)$ are independent. Then $X+Y$ and $X-Y$ are also independent.&lt;/li>
+&lt;li>&lt;em>Concatenation&lt;/em>: Suppose $\mathbf X = (X_1, \ldots, X_n)$ and $\mathbf Y = (Y_1, \ldots Y_m)$ are both Multivariate Normal with $\mathbf X, \mathbf Y$ independent of each other. Then $(X_1, \ldots, X_n, Y_1, \ldots, Y_m)$ is also Multivariate Normal.&lt;/li>
+&lt;li>&lt;em>Subvector&lt;/em>: Suppose $(X, Y, Z)$ is Multivariate Normal. Then $(X, Y)$ is also Multivariate Normal. In general, any subvector of a Multivariate Normal still follows a Multivariate Normal distribution.&lt;/li>
+&lt;/ul></description></item><item><title>Week 7: Poisson Processes, Joint Distributions, and Covariance</title><link>https://srihari-ganesh.github.io/stat110/week7/</link><pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week7/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 11/1&lt;/li>
+&lt;li>Associated lectures: 10/24, 10/26&lt;/li>
+&lt;li>Associated pset: Pset 5, due 11/3&lt;/li>
+&lt;li>Office hours on 11/1 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%207%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%207%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p>
+&lt;h2 id="1-moment-generating-functions-mgfs">1. Moment Generating Functions (MGFs)&lt;/h2>
+&lt;p>For a random variable $X$, the $\mathbf{n^{th}}$ &lt;strong>moment&lt;/strong> is $E(X^n)$.&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+For a random variable $X$, the &lt;strong>moment generating function (MGF)&lt;/strong> is $$M_X(t) = E(e^{tX})$$ for $t \in \mathbb{R}$. If the MGF exists, then
+\begin{align*}
+M_X(0) &amp;amp;= 1,\\
+\frac{d^n}{dt^n} M_X(t) |_{t=0} = M_X^{(n)}(t) &amp;amp;= E(X^n).
+\end{align*}
+You should sanity-check that $M_X(0) = 1$ whenever you calculate an MGF.
+&lt;/div>
+&lt;/div>
+&lt;p>Useful MGF results:&lt;/p>
+&lt;ul>
+&lt;li>For independent random variables, $X, Y$ with MGFs $M_X, M_Y$, then $M_{X+Y}(t) = M_X(t) M_Y(t)$.&lt;/li>
+&lt;li>For random variable $X$ and scalars $a, b$,
+\begin{align*}
+M_{a+bX}(t) = e^{at} M_X(bt)
+\end{align*} since $M_{a+bX}(t) = E(e^{t(a+bX)}) = e^{at} E(e^{btX})$.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>A distribution is uniquely determined by any of the following:&lt;/p>
+&lt;!-- \begin{enumerate} -->
+&lt;ul>
+&lt;li>PMF (common for discrete),&lt;/li>
+&lt;li>PDF,&lt;/li>
+&lt;li>CDF (common for continuous),&lt;/li>
+&lt;li>MGF, or&lt;/li>
+&lt;li>matching to a named distribution (common).&lt;/li>
+&lt;/ul>
+&lt;!-- \end{enumerate} -->
+&lt;/div>
+&lt;/div>
+&lt;h2 id="2-poisson-processes">2. Poisson Processes&lt;/h2>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>Consider a problem similar to Blissville/Blotchville, where $T_1, T_2, \ldots,$ represent the arrival times of busses (the amount of time from when we started waiting to when each bus arrives). Then the bus arrival process is a &lt;strong>Poisson process&lt;/strong> with rate $\lambda$ if it satisfies the following conditions:&lt;/p>
+&lt;ol>
+&lt;li>For any interval in time of length $t &amp;gt; 0$, the number of arrivals in that interval is distributed $\mathrm{Pois}(\lambda t)$.&lt;/li>
+&lt;li>For any non-overlapping (disjoint) intervals of time, the number of bus arrivals are independent.
+This applies for any &amp;ldquo;arrival process&amp;rdquo; where $T_1, T_2, \ldots$ correspond to arrival times.&lt;/li>
+&lt;/ol>
+&lt;/div>
+&lt;/div>
+&lt;div class="alert alert-warning">
+&lt;div>
+Pay attention to units: $\lambda$ is a rate. So if $\lambda$ has units of arrivals per hour, then $t$ should have units of hours.
+&lt;/div>
+&lt;/div>
+&lt;p>Results:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Inter-arrival times&lt;/strong>: In a Poisson process with rate $\lambda$, the inter-arrival times (the time for the first arrival, $T_1$, and the times between consecutive arrives $T_2-T_1, T_3-T_2, \ldots$) are each independently distributed
+\begin{align*}
+T_1, T_2-T_1, T_3-T_2, \ldots \stackrel{i.i.d.}{\sim} \mathrm{Expo}(\lambda).
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+Additionally note that $T_2, T_3, \ldots,$ are &lt;em>not&lt;/em> exponentially distributed. In fact, they follow Gamma distributions (which we will introduce soon): $T_n \sim \mathrm{Gamma}(n, \lambda)$.
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;strong>Count-time duality&lt;/strong>: Fix a time $t &amp;gt; 0$. Let $N_t$ be the number of arrivals in the time interval $[0, t]$, and let $T_n$ be the arrival time of the $n$-th arrival. Then
+\begin{align*}
+(T_n &amp;gt; t) = (N_t &amp;lt; n).
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-marginal-conditional-and-joint-distributions">3. Marginal, Conditional, and Joint Distributions&lt;/h2>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;em>Marginal, conditional, and joint distributions&lt;/em>&lt;/p>
+&lt;p>Consider two random variables $X, Y$.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Joint&lt;/th>
+&lt;th>Marginal&lt;/th>
+&lt;th>Conditional&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Distribution&lt;/td>
+&lt;td>$(X, Y)$&lt;/td>
+&lt;td>$X$&lt;/td>
+&lt;td>$X\vert Y=y$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PMF&lt;/td>
+&lt;td>$P(X = x, Y = y)$&lt;/td>
+&lt;td>$P(X = x)$&lt;/td>
+&lt;td>$P(X = x\vert Y = y)$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CDF&lt;/td>
+&lt;td>$P(X \le x, Y \le y)$&lt;/td>
+&lt;td>$P(X \le x)$&lt;/td>
+&lt;td>$P(X \le x \vert Y = y)$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>For example, $P(X \vert Y = y)$ is a marginal PMF. All of these apply if we flip $X$ and $Y$, and PDFs follow analogously from PMFs.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;strong>Marginalization&lt;/strong>:
+If we know the joint distribution of random variables $(X, Y)$, then we can find the marginal distribution of $X$ (and analogously, $Y$) by LOTP:
+\begin{align*}
+P(X = x) &amp;amp;= \sum_y P(X = x, Y = y), &amp;amp; \text{$X,Y$ discrete}.\\
+f_X(x) &amp;amp;= \int_{-\infty}^\infty f_{X,Y}(x, y), &amp;amp; \text{$X,Y$ continuous}.
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+Note that marginal distributions of $X$ and $Y$ are not sufficient (not enough information) to find the joint distribution of $X, Y$.
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;em>Joint from marginal and conditional&lt;/em>:
+If we know the marginal distribution of $X$ and the conditional distributions $Y | X=x$ for any $x$, then we can find the joint distribution of $(X, Y)$ by factoring out our probability:
+\begin{align*}
+P(X = x, Y = y) &amp;amp;= P(X = x) P(Y = y | X = x), &amp;amp; \text{$X, Y$ discrete.}\\
+f_{X, Y} (x, y) &amp;amp;= f_{X}(x) f_{Y|X=x} (y), &amp;amp; \text{ $X, Y$ continuous.}
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;strong>Independence of random variables&lt;/strong>:
+Random variables $X, Y$ are &lt;strong>independent&lt;/strong> if for all $x$ and $y$, any of the following hold (they imply each other, if valid):
+\begin{align*}
+F_{X, Y} (x, y) = P(X \le x, Y \le Y) &amp;amp;= P(X \le x) P(Y \le Y) = F_X(x)F_Y(y), &amp;amp; \text{ CDFs for any $X, Y$.}\\
+P(X = x, Y = y) &amp;amp;= P(X = x) P(Y = y), &amp;amp; \text{PMFs for discrete $X, Y$.}\\
+f_{X, Y} (x, y) &amp;amp;= f_X(x) f_Y(y), &amp;amp;\text{PDFs for continuous, $X, Y$.}
+\end{align*}
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;em>2D LOTUS&lt;/em>:
+Let $X, Y$ be random variables with known joint distribution. For $g: \mathrm{support}(X) \times \mathrm{support}(Y) \to \mathbb R$, LOTUS extends to 2 dimensions (or analogously for any larger dimensions) to give
+\begin{align*}
+E(g(X, Y)) &amp;amp;= \begin{cases}
+\sum_x \sum_y g(x, y) P(X = x, Y = y), &amp;amp; \text{ $X, Y$ discrete}\\
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y) f_{X, Y}(x, y)dx dy, &amp;amp; \text{ $X, Y$ continuous}.
+\end{cases}
+\end{align*}&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-covariance-and-correlation">4. Covariance and Correlation&lt;/h2>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>&lt;strong>Covariance and Correlation&lt;/strong>&lt;/p>
+&lt;p>$\newcommand{\cov}{\mathrm{Cov}}\newcommand{\corr}{\mathrm{Corr}}\newcommand{\var}{\mathrm{Var}}\newcommand{\sd}{\mathrm{SD}}$
+The &lt;strong>covariance&lt;/strong> of random variables $X, Y$ is
+\begin{align*}
+\cov(X, Y) &amp;amp;= E\left( \left[X - EX \right] \left[Y - EY\right]\right)
+\end{align*}
+where $EX$ is shorthand for $E(X)$. Equivalently,
+\begin{align*}
+\cov(X, Y) &amp;amp;= E(XY) - E(X) E(Y).
+\end{align*}&lt;/p>
+&lt;p>The &lt;strong>correlation&lt;/strong> of random variables $X, Y$ is
+\begin{align*}
+\corr(X, Y) &amp;amp;= \frac{\cov(X, Y)}{\sqrt{\var(X) \var(Y)}}\
+&amp;amp;= \frac{\cov(X, Y)}{\sd(X)\sd(Y)},
+\end{align*}
+where $\sd(X) = \sqrt{\var(X)}$ is the standard deviation of $X$. Equivalently, we first standardize $X$ and $Y$, then find their covariance:
+\begin{align*}
+\corr(X, Y) &amp;amp;= \cov\left( \frac{X - E(X)}{\sd(X)}, \frac{Y - E(Y)}{\sd (Y)} \right).
+\end{align*}&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>$X$ and $Y$ are&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>positively correlated&lt;/strong> if $\corr(X, Y) &amp;gt; 0$,&lt;/li>
+&lt;li>&lt;strong>negatively correlated&lt;/strong> if $\corr(X, Y) &amp;lt; 0$,&lt;/li>
+&lt;li>&lt;strong>uncorrelated&lt;/strong> if $\corr(X, Y) = 0$.&lt;/li>
+&lt;/ul>
+&lt;p>Since correlation and covariance have the same sign, this also applies for positive/negative/zero covariance.&lt;/p>
+&lt;p>&lt;strong>Properties of covariance&lt;/strong>: see page 327 in Blitzstein &amp;amp; Huang for full list. Let $X, Y, W, Z$ be random variables, as well as those of the form $X_1, X_2, \ldots,$.&lt;/p>
+&lt;ul>
+&lt;li>If $X, Y$ are independent, then $\cov(X, Y) = 0$ (so $X, Y$ are uncorrelated).&lt;/li>
+&lt;li>$\cov(X, X) = \var(X)$.&lt;/li>
+&lt;li>$\var(\sum_i X_i) = \sum_i \var(X_i) + \sum_{i&amp;lt;j} 2 \cov(X_i, X_j)$.
+&lt;ul>
+&lt;li>This can be especially useful for finding the variance of a sum of indicators.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>\begin{align*}\cov(X+Y, W+Z) &amp;amp;= \cov(X, W) + \cov(X, Z)\\ &amp;amp;+ \cov(Y, W) + \cov(Y, Z).\end{align*}&lt;/li>
+&lt;li>$\cov(aX, bY) = ab \cov(X, Y)$.&lt;/li>
+&lt;/ul>
+&lt;p>The last two properties are referred to as &lt;strong>bilinearity&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>Properties of correlation&lt;/strong>
+Let $X, Y$ be random variables.&lt;/p>
+&lt;ul>
+&lt;li>-If $X, Y$ are independent, then $\corr(X, Y) = 0$ (so $X, Y$ are uncorrelated)&lt;/li>
+&lt;li>$-1 \le \corr(X, Y) \le 1$.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;strong>Uncorrelated does NOT imply independent&lt;/strong>: In the previous two results, we noted independent random variables have zero correlation and zero covariance. However, the converse does not apply: uncorrelated random variables are not necessarily independent.
+&lt;/div>
+&lt;/div></description></item><item><title>Week 6: Universality of the Uniform, Normal, Expo, and Moments</title><link>https://srihari-ganesh.github.io/stat110/week6/</link><pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week6/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 10/25&lt;/li>
 &lt;li>Associated lectures: 10/17, 10/19&lt;/li>
