@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/teaching/</link><atom:link href="https://srihari-ganesh.github.io/tag/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://srihari-ganesh.github.io/tag/teaching/</link></image><item><title>Week 8: Multinomial, Multivariate Normal</title><link>https://srihari-ganesh.github.io/stat110/week8/</link><pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week8/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>teaching | Srihari Ganesh</title><link>https://srihari-ganesh.github.io/tag/teaching/</link><atom:link href="https://srihari-ganesh.github.io/tag/teaching/index.xml" rel="self" type="application/rss+xml"/><description>teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>teaching</title><link>https://srihari-ganesh.github.io/tag/teaching/</link></image><item><title>Week 9: Multinomial, Multivariate Normal</title><link>https://srihari-ganesh.github.io/stat110/week9/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week9/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 11/15&lt;/li>
+&lt;li>Associated lectures: 11/7, 11/9&lt;/li>
+&lt;li>Associated pset: Pset 9, due 11/17&lt;/li>
+&lt;li>Office hours on 11/15 from 7-9pm at Quincy Dining Hall&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%209%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%209%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p></description></item><item><title>Week 8: Multinomial, Multivariate Normal</title><link>https://srihari-ganesh.github.io/stat110/week8/</link><pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week8/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 11/8&lt;/li>
 &lt;li>Associated lectures: 10/31, 11/2&lt;/li>
-&lt;li>Associated pset: Pset 5, due 11/10&lt;/li>
+&lt;li>Associated pset: Pset 8, due 11/10&lt;/li>
 &lt;li>Office hours on 11/8 from 9-11pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
 &lt;/ul>
@@ -55,7 +65,7 @@ Please note the specific conditions under which this result holds. It is always 
 &lt;ul>
 &lt;li>Section date: 11/1&lt;/li>
 &lt;li>Associated lectures: 10/24, 10/26&lt;/li>
-&lt;li>Associated pset: Pset 5, due 11/3&lt;/li>
+&lt;li>Associated pset: Pset 7, due 11/3&lt;/li>
 &lt;li>Office hours on 11/1 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
 &lt;/ul>
@@ -268,7 +278,7 @@ Let $X, Y$ be random variables.&lt;/p>
 &lt;ul>
 &lt;li>Section date: 10/25&lt;/li>
 &lt;li>Associated lectures: 10/17, 10/19&lt;/li>
-&lt;li>Associated pset: Pset 5, due 10/27&lt;/li>
+&lt;li>Associated pset: Pset 6, due 10/27&lt;/li>
 &lt;li>Office hours on 10/25 from 7-9pm at Quincy Dining Hall&lt;/li>
 &lt;li>Please reach out if you wanted to sign up for a midterm debrief and missed the chance&lt;/li>
 &lt;li>Remember to fill out the attendance form&lt;/li>
