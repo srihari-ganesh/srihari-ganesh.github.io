@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link><atom:link href="https://srihari-ganesh.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Srihari Ganesh</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link></image><item><title>Week 10: Adam's &amp; Eve's Laws, Inequalities, and Limit Theorems</title><link>https://srihari-ganesh.github.io/stat110/week10/</link><pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week10/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link><atom:link href="https://srihari-ganesh.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Srihari Ganesh</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><image><url>https://srihari-ganesh.github.io/media/icon_hu238e72ff877ecedb95a45ec9a2f2431b_15216_512x512_fill_lanczos_center_3.png</url><title>Srihari Ganesh</title><link>https://srihari-ganesh.github.io/</link></image><item><title>Week 11/12: Adam's &amp; Eve's Laws, Inequalities, and Limit Theorems</title><link>https://srihari-ganesh.github.io/stat110/week11-12/</link><pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week11-12/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;ul>
+&lt;li>Section date: 12/6&lt;/li>
+&lt;li>Associated lectures: 11/28, 11/30&lt;/li>
+&lt;li>Associated pset: Pset 11, due 12/8&lt;/li>
+&lt;li>No OH this week, but hosting exam prep OH on Sunday, December 11 at 8pm.&lt;/li>
+&lt;li>Go to the PPPPP tonight at 6pm for some practice test simulation!&lt;/li>
+&lt;li>Remember to fill out the attendance form&lt;/li>
+&lt;/ul>
+&lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2011%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2011%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p></description></item><item><title>Week 10: Adam's &amp; Eve's Laws, Inequalities, and Limit Theorems</title><link>https://srihari-ganesh.github.io/stat110/week10/</link><pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week10/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 11/29&lt;/li>
 &lt;li>Associated lectures: 11/14, 11/16&lt;/li>
@@ -7,10 +18,8 @@
 &lt;li>Remember to fill out the attendance form&lt;/li>
 &lt;/ul>
 &lt;h3 id="01-summary--practice-problem-pdfs">0.1 Summary + Practice Problem PDFs&lt;/h3>
-&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2010%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>
-&amp;ndash;&amp;gt;&lt;/p>
-&lt;!--
-&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2010%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a></description></item><item><title>Week 9: Transformations, Gamma/Beta, Conditional Expectation</title><link>https://srihari-ganesh.github.io/stat110/week9/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week9/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2010%20Handout.pdf" target="_blank">Summary + Practice Problems PDF&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://srihari-ganesh.github.io/uploads/stat110/Section%2010%20Solutions.pdf" target="_blank">Practice Problem Solutions PDF&lt;/a>&lt;/p></description></item><item><title>Week 9: Transformations, Gamma/Beta, Conditional Expectation</title><link>https://srihari-ganesh.github.io/stat110/week9/</link><pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate><guid>https://srihari-ganesh.github.io/stat110/week9/</guid><description>&lt;h2 id="0-logistical-info">0. Logistical Info&lt;/h2>
 &lt;ul>
 &lt;li>Section date: 11/15&lt;/li>
 &lt;li>Associated lectures: 11/7, 11/9&lt;/li>
@@ -1846,7 +1855,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-198427653" class="chart">&lt;/div>
+&lt;div id="chart-123769845" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -1855,7 +1864,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-198427653', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-123769845', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
