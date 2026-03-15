@@ -52,6 +52,11 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-24-solver",
+          title: '24 Solver',
+          description: "Find all arithmetic expressions using 4 numbers that equal 24",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/24solver/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
