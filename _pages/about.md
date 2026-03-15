@@ -28,9 +28,9 @@ I am always open to chatting. In particular, **if you're trying to figure things
 Previous background:
 
 - 2024-2026: Machine Learning Scientist at [Nabla Bio](https://nabla.bio/)
-  - Worked on *de novo* antibody design. Did partner projects, large-scale inference, model training, and data wrangling
+  - Worked on _de novo_ antibody design. Did partner projects, large-scale inference, model training, and data wrangling
 - 2020-2024: Undergraduate student at Harvard University
   - Bachelor's degree: joint concentration in Chemical and Physical Biology & Mathematics
   - Master's degree: Statistics
-  - Thesis: *Symmetric Diffusion Models for Scalable Cyclic Protein Complex Backbone Generation*
+  - Thesis: _Symmetric Diffusion Models for Scalable Cyclic Protein Complex Backbone Generation_
     - Advised by Dr. Jason Yim in Professor Regina Barzilay's group at MIT CSAIL
