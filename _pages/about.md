@@ -2,33 +2,35 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: "Machine learning for science<br>Previously: ML at <a href='https://nabla.bio/'>Nabla Bio</a> · Harvard '24"
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Contact me on <a href="https://linkedin.com/in/srihari-ganesh">LinkedIn</a> or at <a href="mailto:sriharig02@gmail.com">sriharig02@gmail.com</a></p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false # includes a list of news items
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I do machine learning for science. I spent the past 4 years working on ML for proteins. I'm beginning a new chapter in a different area of application soon.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am always open to chatting. In particular, **if you're trying to figure things out** and you think knowing or talking to me could be of use, **please reach out**. I'm no expert but trying to help others is the best use of my time.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Previous background:
+
+- 2024-2026: Machine Learning Scientist at [Nabla Bio](https://nabla.bio/)
+  - Worked on *de novo* antibody design. Did partner projects, large-scale inference, model training, and data wrangling
+- 2020-2024: Undergraduate student at Harvard University
+  - Bachelor's degree: joint concentration in Chemical and Physical Biology & Mathematics
+  - Master's degree: Statistics
+  - Thesis: *Symmetric Diffusion Models for Scalable Cyclic Protein Complex Backbone Generation*
+    - Advised by Dr. Jason Yim in Professor Regina Barzilay's group at MIT CSAIL
