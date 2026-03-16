@@ -6,7 +6,7 @@ nav: false
 published: true
 ---
 
-If you've bothered finding this page I imagine there's something more you want to learn about me. So here's tmi (too much information).
+If you've bothered finding this page I imagine there's something more you want to find out about me. So here's too much information (tmi). The existence of this page is motivated by the fact that I can never seem to get the full scope of what people do, so I hope that, with me, everything is as meets the eye. This is not a resume.
 
 # 1. Research/Work Experience
 
@@ -57,7 +57,9 @@ If you've bothered finding this page I imagine there's something more you want t
 
 </details>
 
-# 2. Coursework
+<br>
+
+# 2. Coursework & Test Scores
 
 <details markdown="1">
 <summary>2020 - 2024: Harvard (A.B. in Chemical and Physical Biology + Mathematics, A.M. in Statistics)</summary>
@@ -67,45 +69,54 @@ If you've bothered finding this page I imagine there's something more you want t
   - Grouped by what requirements they counted for
   - CPB = Chemical and Physical Biology
 
+  <details markdown="1">
+  <summary>Awards</summary>
 
-| Course | Description | Requirements fulfilled | Notes |
-|--------|-------------|------------------------|-------|
-| 6.036 | Intro to Machine Learning | Stat - 100-level | MIT |
+  - 3x John Harvard Scholar
+  - Detur Book Prize
+  - Sophia Freund Prize
+  - Summa cum laude
+
+  </details>
+
+| Course | Description | Requirements | Notes |
+|--------|-------------|--------------|-------|
+| 6.036 | Intro to Machine Learning | Stat | MIT |
 | 6.7900 | Intro to Machine Learning | | MIT, Graduate |
-| Chem 20 | Organic Chemistry I | CPB - Organic Chemistry | |
-| Chem 30 | Organic Chemistry II | CPB - Organic Chemistry | |
-| Chem 154 | Physical Inorganic Chemistry | CPB - General Chemistry | |
-| Chem 160 | Quantum Chemistry | CPB - General Chemistry | |
-| Chem 161 | Statistical Thermodynamics | CPB - Physical Chemistry | |
-| CPB 99A | Thesis | CPB - Honors Thesis, CPB - Upper Level | |
-| CPB 99B | Thesis | CPB - Honors Thesis | |
+| Chem 20 | Organic Chemistry I | CPB | |
+| Chem 30 | Organic Chemistry II | CPB | |
+| Chem 154 | Physical Inorganic Chemistry | CPB | |
+| Chem 160 | Quantum Chemistry | CPB | |
+| Chem 161 | Statistical Thermodynamics | CPB | |
+| CPB 99A | Thesis | CPB | |
+| CPB 99B | Thesis | CPB | |
 | CS 124 | Data Structures & Algorithms | | Pass |
-| Ec 50 | Big Data | College - Social Sciences | |
-| Expos 20 | Intro to Expository Writing | College - Writing | |
-| French 10 | Intro French I | College - Language | |
-| French 11 | Intro French II | College - Language | |
-| Gened 1102 | Law and Politics of Social Change | College - GenEd | |
-| Gened 1110 | Classical Mythology | College - GenEd | |
-| Gened 1121 | Economic Justice | College - GenEd | Pass |
-| Gened 1158 | Water | College - GenEd | |
-| LS 1b | Genetics | CPB - Intro Biology | |
-| Math 22a | Linear Algebra | CPB - Math, Math | |
-| Math 22b | Multivariate Calculus | CPB - Math, Math | |
-| Math 112 | Real Analysis | Math - Analysis | |
-| Math 122 | Algebra I: Group Theory | Math - Algebra | |
-| Math 136 | Differential Geometry | Math - Topology/Geometry | |
-| MCB 60 | Cellular Biology | CPB - Intermediate Biology | |
-| MCB 65 | Physical Biochemistry | CPB - Intermediate Biology | |
-| Music 2 | Intro to Music Theory | College - Arts & Humanities | |
-| Physics 15a | Mechanics | CPB - Physics | |
-| PS 12b | Electricity & Magnetism | CPB - Physics | |
-| Stat 110 | Probability | Stat - 100-level, CPB - Upper Level | |
-| Stat 111 | Statistical Inference | Stat - 100-level, CPB - Upper Level | |
-| Stat 210 | Probability Theory | Stat - 200-level | Graduate |
-| Stat 211 | Statistical Inference | Stat - 200-level | Graduate, A- |
-| Stat 220 | Bayesian Statistics | Stat - 200-level | Graduate |
-| Stat 234 | Reinforcement Learning | Stat - 200-level | Graduate |
-| Stat 244 | Linear and Generalized Linear Models | Stat - 200-level | Graduate |
+| Ec 50 | Big Data | Social Sciences | |
+| Expos 20 | Intro to Expository Writing | Writing | |
+| French 10 | Intro French I | Language | |
+| French 11 | Intro French II | Language | |
+| Gened 1102 | Law and Politics of Social Change | GenEd | |
+| Gened 1110 | Classical Mythology | GenEd | |
+| Gened 1121 | Economic Justice | GenEd | Pass |
+| Gened 1158 | Water | GenEd | |
+| LS 1b | Genetics | CPB | |
+| Math 22a | Linear Algebra | CPB, Math | |
+| Math 22b | Multivariate Calculus | CPB, Math | |
+| Math 112 | Real Analysis | Math | |
+| Math 122 | Algebra I: Group Theory | Math | |
+| Math 136 | Differential Geometry | Math | |
+| MCB 60 | Cellular Biology | CPB | |
+| MCB 65 | Physical Biochemistry | CPB | |
+| Music 2 | Intro to Music Theory | Arts & Humanities | |
+| Physics 15a | Mechanics | CPB | |
+| PS 12b | Electricity & Magnetism | CPB | |
+| Stat 110 | Probability | Stat | |
+| Stat 111 | Statistical Inference | Stat | |
+| Stat 210 | Probability | Stat | Graduate |
+| Stat 211 | Statistical Inference | Stat | Graduate, A- |
+| Stat 220 | Bayesian Statistics | Stat | Graduate |
+| Stat 234 | Reinforcement Learning | Stat | Graduate |
+| Stat 244 | Linear and Generalized Linear Models | Stat | Graduate |
 
 <br>
 
@@ -114,12 +125,142 @@ If you've bothered finding this page I imagine there's something more you want t
 <details markdown="1">
 <summary>2016 - 2020: High School</summary>
 
-See the Tests section for AP courses taken. Also dual-enrolled at a local community college in 12th grade for Multivariate Calculus and Differential Equations.
+- Took & got 5s on 13 APs:
+  - 9th: Chemistry
+  - 10th: Calculus AB, Statistics (self-study)
+  - 11th: Biology, Calculus BC, Computer Science A, English Language and Composition, Physics: Mechanics
+  - 12th (online due to COVID): English Literature and Composition, Macroeconomics, Microeconomics, Psychology
+- Dual-enrolled at a local community college in 12th grade for Multivariate Calculus and Differential Equations.
+- Standardized Tests
+  - SAT: 1600 (once per school year for 8th - 11th grade, 1520 -> 1520 -> 1570 -> 1600)
+  - ACT: 36 (once per school year from 7th - 10th grade, 32 -> 35 -> 36 -> 36)
+  - Subject tests: 800 on Math Level 2, Biology, Chemistry, Physics, 780 on Math Level 1
+  - PSAT: 1470 (10th) -> 1490 (11th)
 
 </details>
 
-# 3. Tests
+<br>
 
-# 4. Teaching
+# 3. Teaching
 
-# 5. Activities
+<details markdown="1">
+<summary>Harvard course assistant (paid)</summary>
+
+- TF = teaching fellow: teach section, grade, hold office hours
+- CA = course assistant: mainly office hours
+
+| Course | Role | Terms |
+|--------|------|-------|
+| Stat 110 - Probability | TF | Fall 2021, Fall 2022, Fall 2023 |
+| Stat 111 - Statistical Inference | TF | Spring 2024 |
+| CS 181 - Machine Learning | TF | Spring 2023 |
+| Chem 20 - Organic Chemistry I | CA | Spring 2022 |
+| Chem 30 - Organic Chemistry II | CA | Fall 2022 |
+
+</details>
+
+Also volunteer (grade school) math tutoring 2016 - 2023, volunteer AP chemistry tutoring 2017 - 2020
+
+<br>
+
+# 4. Activities
+
+At this point, mainly just running & lifting but I'm slowly working my way back from some knee pain.
+
+<details markdown="1">
+<summary>Percussion</summary>
+
+- College
+  - Percussionist in the Harvard-Radcliffe Orchestra
+  - For fun:
+    - The Offering by Michael Burritt ([video](https://youtu.be/H0kKIURddmE))
+    - Violin Partita No. 2 in D minor by J. S. Bach, Allemande ([video](https://youtu.be/OpL15XLC4NQ))
+- High school
+  - Marching band (marimba), concert band (percussion), orchestra (timpani)
+  - Also played in Detroit Symphony Youth Orchestra & Wind Ensemble senior year
+  <details markdown="1">
+  <summary>Awards</summary>
+
+  - 3x MSBOA All-State, 1st chair orchestra in 2023
+  - North Oakland concerto competition winner (Prism Rhapsody, marimba)
+
+  In school:
+  - Front ensemble section leader
+  - 1st chair in concert band
+  - Department award
+
+  </details>
+  <details markdown="1">
+  <summary>Most of my solo/duet rep</summary>
+
+  - Solos:
+    - Rain Dance by Alice Gomez
+    - Preludio No. 1 by Ney Rosauro
+    - Dream of the Cherry Blossoms by Keiko Abe
+  - Concertos/concertinos:
+    - Concertino for Xylophone and Orchestra by Toshiro Mayuzumi (mvts. 1 & 2)
+    - Concerto No. 2 for Marimba and Orchestra by Ney Rosauro, mvt. 2 ([video](https://youtu.be/NIVhcjJIpFI))
+    - Prism Rhapsody by Keiko Abe ([partial audio](https://youtu.be/naT_KD7RufA))
+  - NEC audition rep (I did not get in):
+    - Marimba: Violin Partita No. 2 in D minor by J. S. Bach, Gigue ([video](https://youtu.be/L8fcA0dRcLI))
+    - Snare: Etude No. 1 from Douze Etudes pour Caisse-Claire by Jacques Delecluse ([video](https://youtu.be/2VpnPVWWWSE))
+    - Timpani: Exercise No. 57 from Modern Method for Timpani by Saul Goodman ([video](https://youtu.be/UdndWyuaNIM))
+  - Duets:
+    - 2+1 (2 players on 1 marimba)
+    - Verve (marimba + bass clarinet)
+
+  </details>
+
+</details>
+
+<details markdown="1">
+<summary>Recreational sports</summary>
+- Running (since late 2022)
+  - 5K: PR 24:29 (2024)
+  - Half-Marathon: 1:56:39 (2023) -> 1:49:49 (2024)
+  - [Marathon](https://marathonview.net/marathon-results-of-Srihari-Ganesh): 4:07:07 (2025)
+- Lifting (since late 2024)
+- Played a lot of intramurals in Quincy House at Harvard my last two years
+  - especially ultimate frisbee (Spring 2024 intramural champions!)
+  - Also was a practice player for Harvard Bredline for a bit
+  - Was an IM house rep my senior year and received a Quincy Scroll and David A. Aloian-Robert L. Beal Award "for significant contributions to the quality of life of the Quincy House Community"
+- 2017 JV tennis benchwarmer
+
+</details>
+
+<details markdown="1">
+<summary>Math</summary>
+
+Grew up doing math contests, learned at [ICAE](https://www.icae.org/scripts_sql/icae/code/index.htm)
+
+Highlights:
+- 2023 Putnam: 42/120
+- 2x USAJMO qualifier (2017, 2018): 11/42 -> 12
+- 6x AIME qualifier (2015 - 2020): 5/15 -> 5 -> 10 -> 10 -> 6 -> 9
+- Math department award in high school
+- 2016 MathCounts State Champion
+
+</details>
+
+<details markdown="1">
+<summary>Chemistry</summary>
+
+- 2x USNCO Honors (2019, 2020)
+
+</details>
+
+<details markdown="1">
+<summary>School clubs/activities</summary>
+College:
+- [GUSH](https://gushclub.org/) (2020-2023), president 2022-2023
+- Harvard-Radcliffe Orchestra (2020-2024), percussionist sometimes
+- Cambridge Afterschool Program (2021-2023), volunteer tutor
+
+High school:
+- HOSA (2016-2020), medical math competitor, president 2019-2020
+- Math club (2016-2020), math competitor, president 2018-2020
+- National Honor Society (2018-2020), president 2019-2020
+- DECA (2019-2020), business finance series
+- ACEing Autism tennis clinic volunteer
+
+</details>
