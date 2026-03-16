@@ -69,15 +69,7 @@ If you've bothered finding this page I imagine there's something more you want t
   - Grouped by what requirements they counted for
   - CPB = Chemical and Physical Biology
 
-  <details markdown="1">
-  <summary>Awards</summary>
-
-- 3x John Harvard Scholar
-- Detur Book Prize
-- Sophia Freund Prize
-- Summa cum laude
-
-  </details>
+Awards: summa cum laude, 3x John Harvard Scholar, Detur Book Prize, Sophia Freund Prize
 
 | Course      | Description                          | Requirements      | Notes         |
 | ----------- | ------------------------------------ | ----------------- | ------------- |
