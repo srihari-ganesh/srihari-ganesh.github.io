@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Contact me on <a href="https://linkedin.com/in/srihari-ganesh">LinkedIn</a> or at <a href="mailto:sriharig02@gmail.com">sriharig02@gmail.com</a></p>
+    <p>Contact me on <a href="https://linkedin.com/in/srihari-ganesh">LinkedIn</a> or at sriharig02@gmail.com</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -25,7 +25,7 @@ I do machine learning for science. I spent the past 4 years working on ML for pr
 
 I am always open to chatting. In particular, **if you're trying to figure things out** and you think knowing or talking to me could be of use, **please reach out**. I'm no expert but trying to help others is the best use of my time.
 
-Previous background:
+Previous background (if you want more detail, check out my [tmi](/tmi/) page):
 
 - 2024-2026: Machine Learning Scientist at [Nabla Bio](https://nabla.bio/)
   - Worked on _de novo_ antibody design. Did partner projects, large-scale inference, model training, and data wrangling
