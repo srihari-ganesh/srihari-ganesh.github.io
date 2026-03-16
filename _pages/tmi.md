@@ -14,7 +14,7 @@ If you've bothered finding this page I imagine there's something more you want t
 <summary>June 2024 - March 2026: Machine Learning Scientist at <a href="https://nabla.bio/">Nabla Bio</a></summary>
 
 - Hired at L1 -> L2 in February 2025 -> L3 in September 2025
-- Subject matter: design of (*de novo*) antibodies and soluble proxies for multi-pass membrane proteins (MPMPs)
+- Subject matter: design of (_de novo_) antibodies and soluble proxies for multi-pass membrane proteins (MPMPs)
 - Types of work: partner projects, large-scale inference, model training, data wrangling, onboarding new hires
 - Whitepapers:
   - [De novo design of epitope-specific antibodies against soluble and multipass membrane proteins (January 2025)](https://doi.org/10.1101/2025.01.21.633066)
@@ -27,7 +27,7 @@ If you've bothered finding this page I imagine there's something more you want t
 <summary>February 2023 - May 2024: Undergraduate researcher in <a href="https://www.rbg.mit.edu/">Professor Regina Barzilay's group</a> at MIT CSAIL</summary>
 
 - Advised by Dr. Jason Yim
-- Wrote my senior thesis here, titled *Symmetric Diffusion Models for Scalable Cyclic Protein Complex Backbone Generation*
+- Wrote my senior thesis here, titled _Symmetric Diffusion Models for Scalable Cyclic Protein Complex Backbone Generation_
 - 2023 [Herchel Smith](https://uraf.harvard.edu/herchel-smith-summer-program) fellow
 - Built by extending a protein structure generative model ([FrameDiff](https://doi.org/10.48550/arXiv.2302.02277))
   - Modified diffusion process and architecture to respect the equivariances of symmetric protein complexes, which makes modeling more efficient
@@ -52,7 +52,7 @@ If you've bothered finding this page I imagine there's something more you want t
 <details markdown="1">
 <summary>December 2020 - August 2021: Undergraduate researcher in <a href="https://cluzel.fas.harvard.edu/">Professor Philippe Cluzel's group</a> in Harvard Department of Molecular and Cellular Biology</summary>
 
-- Studied evolutionary dynamics of *E. coli* in long-term stationary phase (experimental & computational)
+- Studied evolutionary dynamics of _E. coli_ in long-term stationary phase (experimental & computational)
 - 2021 [PRISE](https://uraf.harvard.edu/prise) fellow
 
 </details>
@@ -72,51 +72,51 @@ If you've bothered finding this page I imagine there's something more you want t
   <details markdown="1">
   <summary>Awards</summary>
 
-  - 3x John Harvard Scholar
-  - Detur Book Prize
-  - Sophia Freund Prize
-  - Summa cum laude
+- 3x John Harvard Scholar
+- Detur Book Prize
+- Sophia Freund Prize
+- Summa cum laude
 
   </details>
 
-| Course | Description | Requirements | Notes |
-|--------|-------------|--------------|-------|
-| 6.036 | Intro to Machine Learning | Stat | MIT |
-| 6.7900 | Intro to Machine Learning | | MIT, Graduate |
-| Chem 20 | Organic Chemistry I | CPB | |
-| Chem 30 | Organic Chemistry II | CPB | |
-| Chem 154 | Physical Inorganic Chemistry | CPB | |
-| Chem 160 | Quantum Chemistry | CPB | |
-| Chem 161 | Statistical Thermodynamics | CPB | |
-| CPB 99A | Thesis | CPB | |
-| CPB 99B | Thesis | CPB | |
-| CS 124 | Data Structures & Algorithms | | Pass |
-| Ec 50 | Big Data | Social Sciences | |
-| Expos 20 | Intro to Expository Writing | Writing | |
-| French 10 | Intro French I | Language | |
-| French 11 | Intro French II | Language | |
-| Gened 1102 | Law and Politics of Social Change | GenEd | |
-| Gened 1110 | Classical Mythology | GenEd | |
-| Gened 1121 | Economic Justice | GenEd | Pass |
-| Gened 1158 | Water | GenEd | |
-| LS 1b | Genetics | CPB | |
-| Math 22a | Linear Algebra | CPB, Math | |
-| Math 22b | Multivariate Calculus | CPB, Math | |
-| Math 112 | Real Analysis | Math | |
-| Math 122 | Algebra I: Group Theory | Math | |
-| Math 136 | Differential Geometry | Math | |
-| MCB 60 | Cellular Biology | CPB | |
-| MCB 65 | Physical Biochemistry | CPB | |
-| Music 2 | Intro to Music Theory | Arts & Humanities | |
-| Physics 15a | Mechanics | CPB | |
-| PS 12b | Electricity & Magnetism | CPB | |
-| Stat 110 | Probability | Stat | |
-| Stat 111 | Statistical Inference | Stat | |
-| Stat 210 | Probability | Stat | Graduate |
-| Stat 211 | Statistical Inference | Stat | Graduate, A- |
-| Stat 220 | Bayesian Statistics | Stat | Graduate |
-| Stat 234 | Reinforcement Learning | Stat | Graduate |
-| Stat 244 | Linear and Generalized Linear Models | Stat | Graduate |
+| Course      | Description                          | Requirements      | Notes         |
+| ----------- | ------------------------------------ | ----------------- | ------------- |
+| 6.036       | Intro to Machine Learning            | Stat              | MIT           |
+| 6.7900      | Intro to Machine Learning            |                   | MIT, Graduate |
+| Chem 20     | Organic Chemistry I                  | CPB               |               |
+| Chem 30     | Organic Chemistry II                 | CPB               |               |
+| Chem 154    | Physical Inorganic Chemistry         | CPB               |               |
+| Chem 160    | Quantum Chemistry                    | CPB               |               |
+| Chem 161    | Statistical Thermodynamics           | CPB               |               |
+| CPB 99A     | Thesis                               | CPB               |               |
+| CPB 99B     | Thesis                               | CPB               |               |
+| CS 124      | Data Structures & Algorithms         |                   | Pass          |
+| Ec 50       | Big Data                             | Social Sciences   |               |
+| Expos 20    | Intro to Expository Writing          | Writing           |               |
+| French 10   | Intro French I                       | Language          |               |
+| French 11   | Intro French II                      | Language          |               |
+| Gened 1102  | Law and Politics of Social Change    | GenEd             |               |
+| Gened 1110  | Classical Mythology                  | GenEd             |               |
+| Gened 1121  | Economic Justice                     | GenEd             | Pass          |
+| Gened 1158  | Water                                | GenEd             |               |
+| LS 1b       | Genetics                             | CPB               |               |
+| Math 22a    | Linear Algebra                       | CPB, Math         |               |
+| Math 22b    | Multivariate Calculus                | CPB, Math         |               |
+| Math 112    | Real Analysis                        | Math              |               |
+| Math 122    | Algebra I: Group Theory              | Math              |               |
+| Math 136    | Differential Geometry                | Math              |               |
+| MCB 60      | Cellular Biology                     | CPB               |               |
+| MCB 65      | Physical Biochemistry                | CPB               |               |
+| Music 2     | Intro to Music Theory                | Arts & Humanities |               |
+| Physics 15a | Mechanics                            | CPB               |               |
+| PS 12b      | Electricity & Magnetism              | CPB               |               |
+| Stat 110    | Probability                          | Stat              |               |
+| Stat 111    | Statistical Inference                | Stat              |               |
+| Stat 210    | Probability                          | Stat              | Graduate      |
+| Stat 211    | Statistical Inference                | Stat              | Graduate, A-  |
+| Stat 220    | Bayesian Statistics                  | Stat              | Graduate      |
+| Stat 234    | Reinforcement Learning               | Stat              | Graduate      |
+| Stat 244    | Linear and Generalized Linear Models | Stat              | Graduate      |
 
 <br>
 
@@ -149,13 +149,13 @@ If you've bothered finding this page I imagine there's something more you want t
 - TF = teaching fellow: teach section, grade, hold office hours
 - CA = course assistant: mainly office hours
 
-| Course | Role | Terms |
-|--------|------|-------|
-| Stat 110 - Probability | TF | Fall 2021, Fall 2022, Fall 2023 |
-| Stat 111 - Statistical Inference | TF | Spring 2024 |
-| CS 181 - Machine Learning | TF | Spring 2023 |
-| Chem 20 - Organic Chemistry I | CA | Spring 2022 |
-| Chem 30 - Organic Chemistry II | CA | Fall 2022 |
+| Course                           | Role | Terms                           |
+| -------------------------------- | ---- | ------------------------------- |
+| Stat 110 - Probability           | TF   | Fall 2021, Fall 2022, Fall 2023 |
+| Stat 111 - Statistical Inference | TF   | Spring 2024                     |
+| CS 181 - Machine Learning        | TF   | Spring 2023                     |
+| Chem 20 - Organic Chemistry I    | CA   | Spring 2022                     |
+| Chem 30 - Organic Chemistry II   | CA   | Fall 2022                       |
 
 </details>
 
@@ -192,7 +192,6 @@ At this point, mainly just running & lifting but I'm slowly working my way back 
   </details>
   <details markdown="1">
   <summary>Most of my solo/duet rep</summary>
-
   - Solos:
     - Rain Dance by Alice Gomez
     - Preludio No. 1 by Ney Rosauro
@@ -234,6 +233,7 @@ At this point, mainly just running & lifting but I'm slowly working my way back 
 Grew up doing math contests, learned at [ICAE](https://www.icae.org/scripts_sql/icae/code/index.htm)
 
 Highlights:
+
 - 2023 Putnam: 42/120
 - 2x USAJMO qualifier (2017, 2018): 11/42 -> 12
 - 6x AIME qualifier (2015 - 2020): 5/15 -> 5 -> 10 -> 10 -> 6 -> 9
@@ -257,6 +257,7 @@ College:
 - Cambridge Afterschool Program (2021-2023), volunteer tutor
 
 High school:
+
 - HOSA (2016-2020), medical math competitor, president 2019-2020
 - Math club (2016-2020), math competitor, president 2018-2020
 - National Honor Society (2018-2020), president 2019-2020
