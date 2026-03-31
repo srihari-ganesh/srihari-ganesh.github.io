@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Machine learning for science<br>Previously: ML at <a href='https://nabla.bio/'>Nabla Bio</a> · Harvard '24"
+subtitle: "Member of Technical Staff at <a href='https://axiommath.ai/'>Axiom Math</a><br>Previously: ML at <a href='https://nabla.bio/'>Nabla Bio</a> · Harvard '24"
 
 profile:
   align: left
@@ -21,7 +21,7 @@ latest_posts:
   enabled: false
 ---
 
-I do machine learning for science. I spent the past 4 years working on ML for proteins. I'm beginning a new chapter in a different area of application soon.
+I recently joined [Axiom](https://axiommath.ai/) as a Member of Technical Staff to work on machine learning (ML) for math. I'm generally interested in ML for science and spent the past 4 years applying ML for proteins.
 
 I am always open to chatting. In particular, **if you're trying to figure things out** and you think knowing or talking to me could be of use, **please reach out**. I'm no expert but trying to help others is the best use of my time.
 

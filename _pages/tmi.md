@@ -11,6 +11,13 @@ If you've bothered finding this page I imagine there's something more you want t
 # 1. Research/Work Experience
 
 <details markdown="1">
+<summary>March 2026 - Present: Member of Technical Staff at <a href="https://axiommath.ai/">Axiom Math</a></summary>
+
+- Machine learning for math
+
+</details>
+
+<details markdown="1">
 <summary>June 2024 - March 2026: Machine Learning Scientist at <a href="https://nabla.bio/">Nabla Bio</a></summary>
 
 - Hired at L1 -> L2 in February 2025 -> L3 in September 2025
