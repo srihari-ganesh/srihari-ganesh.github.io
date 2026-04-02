@@ -59,6 +59,11 @@ ninja.data = [{
           description: "A browser-based solver for the 24 card game. Solutions grouped by idea. (written almost entirely with Claude Code)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/24solver/";
+            },},{id: "projects-topological-natty",
+          title: 'Topological Natty',
+          description: "My team beat a team that beat a team that beat the national champs so we&#39;re basically champs",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/topological_natty/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
