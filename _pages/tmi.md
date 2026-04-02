@@ -255,6 +255,9 @@ College:
 - [GUSH](https://gushclub.org/) (2020-2023), president 2022-2023
 - Harvard-Radcliffe Orchestra (2020-2024), percussionist sometimes
 - Cambridge Afterschool Program (2021-2023), volunteer tutor
+- Quincy House (2024-2025, post-college), non-resident tutor
+  - reliving undergraduate glory days: intramural sports & course planning
+  - I love Harvard undergraduate course planning so please reach out if you want to talk about it
 
 High school:
 
