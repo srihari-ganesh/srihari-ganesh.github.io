@@ -19,7 +19,8 @@ ninja.data = [
   },
   {%- assign sorted_pages = site.pages | sort: "nav_order" -%}
   {%- for p in sorted_pages -%}
-    {%- if p.nav and p.autogen == null -%}
+    {%- if p.search != nil -%}{%- assign show_in_search = p.search -%}{%- else -%}{%- assign show_in_search = p.nav -%}{%- endif -%}
+    {%- if show_in_search and p.autogen == null -%}
       {%- if p.dropdown -%}
         {%- for child in p.children -%}
           {%- unless child.title == 'divider' -%}
@@ -309,7 +310,7 @@ ninja.data = [
       },
     {%- endfor -%}
   {%- endif -%}
-  {%- if site.enable_darkmode -%}
+  {%- if site.enable_darkmode and site.theme_in_search -%}
     {
       id: 'light-theme',
       title: 'Change theme to light',

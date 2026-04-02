@@ -3,6 +3,7 @@ layout: page
 title: tmi
 permalink: /tmi/
 nav: false
+search: true
 published: true
 ---
 
