@@ -127,8 +127,8 @@ Awards: summa cum laude, 3x John Harvard Scholar, Detur Book Prize, Sophia Freun
 
 - Took & got 5s on 13 APs:
   - 9th: Chemistry
-  - 10th: Calculus AB, Statistics (self-study)
-  - 11th: Biology, Calculus BC, Computer Science A, English Language and Composition, Physics: Mechanics
+  - 10th: Calculus AB, Physics C: Mechanics, Statistics (self-study)
+  - 11th: Biology, Calculus BC, Computer Science A, English Language and Composition, Physics C: Electricity & Magnetism
   - 12th (online due to COVID): English Literature and Composition, Macroeconomics, Microeconomics, Psychology
 - Dual-enrolled at a local community college in 12th grade for Multivariate Calculus and Differential Equations.
 - Standardized Tests
