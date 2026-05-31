@@ -165,7 +165,44 @@ Also volunteer (grade school) math tutoring 2016 - 2023, volunteer AP chemistry 
 
 # 4. Activities
 
-At this point, mainly just running & lifting but I'm slowly working my way back from some knee pain.
+Currently, just sports.
+
+<details markdown="1">
+<summary>Recreational sports</summary>
+
+<details markdown="1">
+<summary>Running (since 2022) · <a href="https://marathonview.net/marathon-results-of-Srihari-Ganesh">marathon results on MarathonView</a></summary>
+
+| Date            | Race                                     | Distance                          | Surface | Time    | Results                                                                                             |
+| --------------- | ---------------------------------------- | --------------------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------- |
+| Apr 19, 2025    | Newport Rhode Races Marathon             | Marathon                          | Road    | 4:07:07 | [link](https://runsignup.com/Race/Results/34170/IndividualResult/BfYN?resultSetId=541743#U83366933) |
+| Feb 2, 2025     | The Great Stew Chase                     | 15K                               | Road    | 1:23:19 | [link](https://results.raceroster.com/v2/en-US/results/kcr4axw63nrc9dhn/detail/x9457ttegfeg62ag)    |
+| Dec 8, 2024     | Cambridge Winter Classic 5K Road Race    | 5K                                | Road    | 24:46   | [link](https://rtrt.me/ulink/TLMRA/TLMR-WINTER-CLASSIC-2024/tracker/R8BPJ74U/focus)                 |
+| Nov 3, 2024     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:49:49 | [link](https://rtrt.me/ulink/TLMRA/TLMR-CAMBRIDGE-HALF-2024/tracker/RTRA4953/focus)                 |
+| Oct 6, 2024     | Cambridge Fall Classic 5K Road Race      | 5K                                | Road    | 24:29   | [link](https://rtrt.me/ulink/TLMRA/TLMR-FALL-CLASSIC-2024/tracker/RR4KL5NT/focus)                   |
+| Sep 13–14, 2024 | Ragnar Reach the Beach                   | ~20 mi (4 legs of 204.8 mi relay) | Road    | —       | [link](https://results.laurelt.com/rtb/results?pk=7906506)                                          |
+| Nov 5, 2023     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:56:39 | [link](https://rtrt.me/ulink/_RT/TLMR-CAMBRIDGE-HALF-2023/tracker/R5SXMRZG/focus)                   |
+| Sep 9, 2023     | Trail Animals Running Club Fall Classic  | 10K (trail)                       | Trail   | 1:08:36 | —                                                                                                   |
+| Apr 23, 2023    | Cambridge Spring Classic 5K Road Race    | 5K                                | Road    | 26:56   | [link](https://rtrt.me/ulink/_RT/TLMR-SPRING-CLASSIC-2023/tracker/RAP9FY6T/focus)                   |
+
+</details>
+
+<details markdown="1">
+<summary>Weightlifting (since 2024; olympic since 2026) · <a href="https://www.openweightlifting.org/lifter?name=Srihari%20Ganesh&federation=US">Olympic weightlifting meet results on OpenWeightlifting</a></summary>
+
+| Date         | Meet                                                                                         | Sn 1 | Sn 2 | Sn 3 | CJ 1 | CJ 2 | CJ 3 | Total   | BW (kg) |
+| ------------ | -------------------------------------------------------------------------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ------- | ------- |
+| May 17, 2026 | [Hassle Free Last Chance](https://usaweightlifting.sport80.com/public/rankings/results/7382) | 60   | 63   | -66  | 70   | 74   | 78   | **141** | 90      |
+
+</details>
+
+- Played a lot of intramurals in Quincy House at Harvard my last two years
+  - especially ultimate frisbee (Spring 2024 intramural champions!)
+  - Also was a practice player for Harvard Bredline for a bit
+  - Was an IM house rep my senior year and received a Quincy Scroll and David A. Aloian-Robert L. Beal Award "for significant contributions to the quality of life of the Quincy House Community"
+- 2017 high school JV tennis benchwarmer
+
+</details>
 
 <details markdown="1">
 <summary>Percussion</summary>
@@ -209,21 +246,6 @@ At this point, mainly just running & lifting but I'm slowly working my way back 
     - Verve (marimba + bass clarinet)
 
   </details>
-
-</details>
-
-<details markdown="1">
-<summary>Recreational sports</summary>
-- Running (since late 2022)
-  - 5K: PR 24:29 (2024)
-  - Half-Marathon: 1:56:39 (2023) -> 1:49:49 (2024)
-  - [Marathon](https://marathonview.net/marathon-results-of-Srihari-Ganesh): 4:07:07 (2025)
-- Lifting (since late 2024)
-- Played a lot of intramurals in Quincy House at Harvard my last two years
-  - especially ultimate frisbee (Spring 2024 intramural champions!)
-  - Also was a practice player for Harvard Bredline for a bit
-  - Was an IM house rep my senior year and received a Quincy Scroll and David A. Aloian-Robert L. Beal Award "for significant contributions to the quality of life of the Quincy House Community"
-- 2017 JV tennis benchwarmer
 
 </details>
 
@@ -279,3 +301,4 @@ I also ~~occasionally~~ often get hooked on little speedy brain games:
   - On default settings: 120 seconds, addition/subtraction 2-100, multiplication/division 2-12 x 2-100
 - [24](<https://en.wikipedia.org/wiki/24_(puzzle)>)
   - Used to play with friends in college and built the [solver](https://srihari-ganesh.github.io/24solver/) that I wish we had
+- [Texnique](https://texnique.xyz/): high score 112
