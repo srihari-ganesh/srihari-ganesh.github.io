@@ -297,7 +297,7 @@ I also ~~occasionally~~ often get hooked on little speedy brain games:
 
 - WordHunt (on [GamePigeon](https://gamepigeonapp.com)): 4x4 high score 87.3k
   - for context, the best players I'm aware of have reached 130k+
-- [Zetamac](https://arithmetic.zetamac.com): high score 145
+- [Zetamac](https://arithmetic.zetamac.com): high score 149
   - On default settings: 120 seconds, addition/subtraction 2-100, multiplication/division 2-12 x 2-100
 - [24](<https://en.wikipedia.org/wiki/24_(puzzle)>)
   - Used to play with friends in college and built the [solver](https://srihari-ganesh.github.io/24solver/) that I wish we had
