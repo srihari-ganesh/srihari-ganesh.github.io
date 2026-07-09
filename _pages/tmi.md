@@ -14,7 +14,10 @@ If you've bothered finding this page I imagine there's something more you want t
 <details markdown="1">
 <summary>March 2026 - Present: Member of Technical Staff at <a href="https://axiommath.ai/">Axiom Math</a></summary>
 
-- Machine learning for math
+- Subject matter: hosted Lean infrastructure ([AXLE](https://axle.axiommath.ai/)), prover agents
+- Types of work: cloud infrastructure
+- Papers:
+  - [AXLE: A Cloud Infrastructure for Lean 4 Theorem Proving Utilities (June 2026)](https://doi.org/10.48550/arXiv.2606.26442)
 
 </details>
 

@@ -21,7 +21,7 @@ latest_posts:
   enabled: false
 ---
 
-I recently joined [Axiom](https://axiommath.ai/) as a Member of Technical Staff to work on machine learning (ML) for math. I'm generally interested in ML for science and spent the past 4 years applying ML to proteins.
+I am a Member of Technical Staff at [Axiom Math](https://axiommath.ai/), where we work on AI for formal systems. I previously spent 4 years applying ML to protein modeling and design.
 
 I am always open to chatting. In particular, **if you're trying to figure things out** and you think knowing or talking to me could be of use, **please reach out**. I'm no expert (outside of maybe Harvard undergraduate STEM course planning) but trying to help others is the best use of my time.
 
