@@ -168,7 +168,7 @@ Also volunteer (grade school) math tutoring 2016 - 2023, volunteer AP chemistry 
 
 # 4. Activities
 
-Currently, just sports.
+Currently, sports & marimba.
 
 <details markdown="1">
 <summary>Recreational sports</summary>
@@ -195,6 +195,7 @@ Currently, just sports.
 
 | Date         | Meet                                                                                         | Sn 1 | Sn 2 | Sn 3 | CJ 1 | CJ 2 | CJ 3 | Total   | BW (kg) |
 | ------------ | -------------------------------------------------------------------------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ------- | ------- |
+| Nov 1, 2026  | Golden West                                                                                  | 67   | 70   | 73   | 90   | 93   | 96   | **169** | 85.3    |
 | May 17, 2026 | [Hassle Free Last Chance](https://usaweightlifting.sport80.com/public/rankings/results/7382) | 60   | 63   | -66  | 70   | 74   | 78   | **141** | 90      |
 
 </details>
