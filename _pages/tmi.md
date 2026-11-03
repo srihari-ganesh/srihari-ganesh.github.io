@@ -195,7 +195,7 @@ Currently, sports & marimba.
 
 | Date         | Meet                                                                                         | Sn 1 | Sn 2 | Sn 3 | CJ 1 | CJ 2 | CJ 3 | Total   | BW (kg) |
 | ------------ | -------------------------------------------------------------------------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ------- | ------- |
-| Nov 1, 2026  | Golden West                                                                                  | 67   | 70   | 73   | 90   | 93   | 96   | **169** | 85.3    |
+| Nov 1, 2026  | [Golden West](https://usaweightlifting.sport80.com/public/rankings/results/7566)             | 67   | 70   | 73   | 90   | 93   | 96   | **169** | 85.5    |
 | May 17, 2026 | [Hassle Free Last Chance](https://usaweightlifting.sport80.com/public/rankings/results/7382) | 60   | 63   | -66  | 70   | 74   | 78   | **141** | 90      |
 
 </details>
