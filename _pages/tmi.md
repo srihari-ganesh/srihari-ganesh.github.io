@@ -146,6 +146,8 @@ Awards: summa cum laude, 3x John Harvard Scholar, Detur Book Prize, Sophia Freun
 
 # 3. Teaching
 
+I like teaching and I would love to do more of it. Please reach out!
+
 <details markdown="1">
 <summary>Harvard course assistant</summary>
 
@@ -162,7 +164,15 @@ Awards: summa cum laude, 3x John Harvard Scholar, Detur Book Prize, Sophia Freun
 
 </details>
 
-Also volunteer (grade school) math tutoring 2016 - 2023, volunteer AP chemistry tutoring 2017 - 2020
+<details markdown="1">
+<summary>Volunteer tutoring</summary>
+
+| Level       | Subjects                | Years          |
+| ----------- | ----------------------- | -------------- |
+| K-8         | Mostly math and reading | 2016 - present |
+| High School | AP Chemistry            | 2017 - 2020    |
+
+</details>
 
 <br>
 
