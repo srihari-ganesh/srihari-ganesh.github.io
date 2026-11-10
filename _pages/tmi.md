@@ -176,17 +176,18 @@ Currently, sports & marimba.
 <details markdown="1">
 <summary>Running (since 2022) · <a href="https://marathonview.net/marathon-results-of-Srihari-Ganesh">marathon results on MarathonView</a></summary>
 
-| Date            | Race                                     | Distance                          | Surface | Time    | Results                                                                                             |
-| --------------- | ---------------------------------------- | --------------------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------- |
-| Apr 19, 2025    | Newport Rhode Races Marathon             | Marathon                          | Road    | 4:07:07 | [link](https://runsignup.com/Race/Results/34170/IndividualResult/BfYN?resultSetId=541743#U83366933) |
-| Feb 2, 2025     | The Great Stew Chase                     | 15K                               | Road    | 1:23:19 | [link](https://results.raceroster.com/v2/en-US/results/kcr4axw63nrc9dhn/detail/x9457ttegfeg62ag)    |
-| Dec 8, 2024     | Cambridge Winter Classic 5K Road Race    | 5K                                | Road    | 24:46   | [link](https://rtrt.me/ulink/TLMRA/TLMR-WINTER-CLASSIC-2024/tracker/R8BPJ74U/focus)                 |
-| Nov 3, 2024     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:49:49 | [link](https://rtrt.me/ulink/TLMRA/TLMR-CAMBRIDGE-HALF-2024/tracker/RTRA4953/focus)                 |
-| Oct 6, 2024     | Cambridge Fall Classic 5K Road Race      | 5K                                | Road    | 24:29   | [link](https://rtrt.me/ulink/TLMRA/TLMR-FALL-CLASSIC-2024/tracker/RR4KL5NT/focus)                   |
-| Sep 13–14, 2024 | Ragnar Reach the Beach                   | ~20 mi (4 legs of 204.8 mi relay) | Road    | —       | [link](https://results.laurelt.com/rtb/results?pk=7906506)                                          |
-| Nov 5, 2023     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:56:39 | [link](https://rtrt.me/ulink/_RT/TLMR-CAMBRIDGE-HALF-2023/tracker/R5SXMRZG/focus)                   |
-| Sep 9, 2023     | Trail Animals Running Club Fall Classic  | 10K (trail)                       | Trail   | 1:08:36 | —                                                                                                   |
-| Apr 23, 2023    | Cambridge Spring Classic 5K Road Race    | 5K                                | Road    | 26:56   | [link](https://rtrt.me/ulink/_RT/TLMR-SPRING-CLASSIC-2023/tracker/RAP9FY6T/focus)                   |
+| Date            | Race                                     | Distance                          | Surface | Time    | Results                                                                                                    |
+| --------------- | ---------------------------------------- | --------------------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Nov 8, 2026     | Bionic 5K + 1Mile                        | 1 Mile                            | Gravel  | 7:31    | [link](https://results.raceroster.com/v3/events/jvpez9sjpufvt4xp/race/385507/participant/pmykbzsdw3bkdtfk) |
+| Apr 19, 2025    | Newport Rhode Races Marathon             | Marathon                          | Road    | 4:07:07 | [link](https://runsignup.com/Race/Results/34170/IndividualResult/BfYN?resultSetId=541743#U83366933)        |
+| Feb 2, 2025     | The Great Stew Chase                     | 15K                               | Road    | 1:23:19 | [link](https://results.raceroster.com/v2/en-US/results/kcr4axw63nrc9dhn/detail/x9457ttegfeg62ag)           |
+| Dec 8, 2024     | Cambridge Winter Classic 5K Road Race    | 5K                                | Road    | 24:46   | [link](https://rtrt.me/ulink/TLMRA/TLMR-WINTER-CLASSIC-2024/tracker/R8BPJ74U/focus)                        |
+| Nov 3, 2024     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:49:49 | [link](https://rtrt.me/ulink/TLMRA/TLMR-CAMBRIDGE-HALF-2024/tracker/RTRA4953/focus)                        |
+| Oct 6, 2024     | Cambridge Fall Classic 5K Road Race      | 5K                                | Road    | 24:29   | [link](https://rtrt.me/ulink/TLMRA/TLMR-FALL-CLASSIC-2024/tracker/RR4KL5NT/focus)                          |
+| Sep 13–14, 2024 | Ragnar Reach the Beach                   | ~20 mi (4 legs of 204.8 mi relay) | Road    | —       | [link](https://results.laurelt.com/rtb/results?pk=7906506)                                                 |
+| Nov 5, 2023     | Cambridge Half Marathon at CambridgeSide | Half Marathon                     | Road    | 1:56:39 | [link](https://rtrt.me/ulink/_RT/TLMR-CAMBRIDGE-HALF-2023/tracker/R5SXMRZG/focus)                          |
+| Sep 9, 2023     | Trail Animals Running Club Fall Classic  | 10K (trail)                       | Trail   | 1:08:36 | —                                                                                                          |
+| Apr 23, 2023    | Cambridge Spring Classic 5K Road Race    | 5K                                | Road    | 26:56   | [link](https://rtrt.me/ulink/_RT/TLMR-SPRING-CLASSIC-2023/tracker/RAP9FY6T/focus)                          |
 
 </details>
 
